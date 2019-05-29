@@ -96,7 +96,9 @@
                 <div class="left">
                     <div class="text-div">
                         <p class="sub-text">Find Your Next Experience</p>
-                        <h1>Discover Life's Best Experiences</h1>
+                        <h1>
+                            <span class="txt-rotate" data-period="2000" data-rotate='[ "Discover Life Best Experiences.", "Attend Awesome Events.", "Go With Friends.", "Have Mad Fun." ]'></span>
+                        </h1>
                         <div class="input-group flex-nowrap">
                             <div class="input-group-prepend first">
                                 <span class="input-group-text" id="addon-wrapping"><i class="fas fa-search"></i></span>
@@ -114,7 +116,7 @@
                 </div>
                 <div class="right">
 
-                    <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
+                    <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel" data-interval="10000">
                       <div class="carousel-inner">
                         <div class="carousel-item active">
                           <img src="images/welcome-img.jpg" class="hero-image" alt="Image Slide">
@@ -536,11 +538,63 @@
         
 
         <script>
-            $('.carousel').carousel({
-                pause: false,
-                interval: 200
-            });
-        </script>
+            var TxtRotate = function(el, toRotate, period) {
+              this.toRotate = toRotate;
+              this.el = el;
+              this.loopNum = 0;
+              this.period = parseInt(period, 10) || 2000;
+              this.txt = '';
+              this.tick();
+              this.isDeleting = false;
+            };
+
+            TxtRotate.prototype.tick = function() {
+              var i = this.loopNum % this.toRotate.length;
+              var fullTxt = this.toRotate[i];
+
+              if (this.isDeleting) {
+                this.txt = fullTxt.substring(0, this.txt.length - 1);
+              } else {
+                this.txt = fullTxt.substring(0, this.txt.length + 1);
+              }
+
+              this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+
+              var that = this;
+              var delta = 300 - Math.random() * 100;
+
+              if (this.isDeleting) { delta /= 2; }
+
+              if (!this.isDeleting && this.txt === fullTxt) {
+                delta = this.period;
+                this.isDeleting = true;
+              } else if (this.isDeleting && this.txt === '') {
+                this.isDeleting = false;
+                this.loopNum++;
+                delta = 500;
+              }
+
+              setTimeout(function() {
+                that.tick();
+              }, delta);
+            };
+
+            window.onload = function() {
+              var elements = document.getElementsByClassName('txt-rotate');
+              for (var i=0; i<elements.length; i++) {
+                var toRotate = elements[i].getAttribute('data-rotate');
+                var period = elements[i].getAttribute('data-period');
+                if (toRotate) {
+                  new TxtRotate(elements[i], JSON.parse(toRotate), period);
+                }
+              }
+              // INJECT CSS
+              var css = document.createElement("style");
+              css.type = "text/css";
+              css.innerHTML = ".txt-rotate > .wrap { border-right: 0.08em solid #666 }";
+              document.body.appendChild(css);
+            };
+        </script>        
 
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
