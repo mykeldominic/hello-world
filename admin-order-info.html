@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>EventsFleek | Admin Order Info</title>
+        <link rel="icon" href="favicon.ico" />
+        
+        <!-- Bootstrap CSS CDN -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+        <!--Semantics CSS CDN -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+
+        <!-- Font-Awesome CSS CDN -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/font-awesome.min.css"/>
+
+        <!-- Font -->
+        <link href="https://fonts.googleapis.com/css?family=Lato:400,700,900" rel="stylesheet">
+
+        <!-- Our Custom CSS -->
+        <link rel="stylesheet" href="css/admin-order-info.css"/>
+        
+        <!-- JS -->
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+    </head>
+
+    <body>
+
+        <!-- Navbar Starts Here -->
+        <nav class="navbar navbar-expand-md sticky-top">
+            <a class="navbar-brand logo" href="index.html">
+                <img src="images/logo.png" />
+                <p>Eventsfleek</p>
+            </a>
+
+            <div class="navbar-collapse" id="navbarDropdown">
+                <ul class="navbar-nav mr-auto">
+                </ul>
+
+                <ul class="navbar-nav mr-right">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="#" id="dropdown08" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span class="username"><img src="images/account-img-circle.png">Michael Miles<i class="fas fa-chevron-down"></i></span>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="dropdown08">
+                            <a class="dropdown-item" href="admin-sign-in.html">Logout</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!-- Navbar Ends Here -->
+
+
+        <!-- Sidebar Navigation (Desktop & Mobile View) Starts Here -->
+        <div class="sidenav" id="mySidenav">
+
+            <!-- Click on x in mobile view to close the sidenav -->
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+            <div class="sidenav-links" id="accordion">
+
+                <div class="sidenav-link first">
+                    <a href="admin-overview.html"><p class="link"><img src="images/overview-side-img.png">Overview</p></a>
+                </div>
+
+                <div class="sidenav-link">
+                    <button class="collapsed btn btn-link link chevron active" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                        <img src="images/order-side-img.png">Orders & Attendees
+                    </button>
+
+                    <div id="collapseTwo" class="collapse show" aria-labelledby="headingTwo" data-parent="#accordion">
+                      <div class="card-body">
+                        <p class="card-body-link"><a href="admin-orders.html" class="active">Orders</a></p>
+                        <p class="card-body-link"><a href="admin-attendees.html">Attendees</a></p>
+                        <p><a href="admin-waitlist.html">Waitlist</a></p>
+                      </div>
+                    </div>
+                </div>
+
+                <div class="sidenav-link">
+                    <a href="admin-events.html"><p class="link"><img src="images/check-in-side-img.png">Events</p></a>
+                </div>
+
+                <div class="sidenav-link">
+                    <a href="admin-crm.html"><p class="link"><img src="images/info-side-img.png">CRM</p></a>
+                </div>
+
+                <div class="sidenav-link">
+                    <button class="collapsed btn btn-link link chevron" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        <img src="images/promote-side-img.png">Promote
+                    </button>
+
+                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                        <div class="card-body">
+                            <p class="card-body-link"><a href="admin-email-campaigns.html">Email Campaigns</a></p>
+                            <p><a href="admin-tracking-links.html">Tracking Links</a></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sidenav-link">
+                    <a href="admin-add-ons.html"><p class="link"><img src="images/add-ons-side-img.png">Add-ons</p></a>
+                </div>
+
+                <div class="sidenav-link">
+                    <a href="admin-settings.html"><p class="link"><img src="images/settings-side-img.png">Settings</p></a>
+                </div>
+
+            </div>
+            
+        </div>  
+        <!-- Sidebar Navigation Ends Here -->
+
+        <!-- Main Page Content Starts Here -->
+        <div class="main" id="main">
+            
+            <div id="overlay"></div>
+
+            <!-- Use fa-bar on mobile view to open the sidenav -->
+            <span onclick="openNav()" class="open-sidenav"><img src="images/menu.png"></span>
+            
+            <div class="main-page-content">
+                
+                <p class="orders-text"><a href="admin-orders.html"><img src="images/go-back-img.png"></a>Order Information</p>
+
+                <div class="row-one">
+                    <div class="left">
+                        <div class="amount">
+                            <h3>₦10,000</h3>
+                            <p class="status success">SUCCESS</p>
+                        </div>
+                        <p class="payment-text">Payment from <strong><span>emekamykael45@gmail.com</span></strong></p>
+                    </div>
+                    <div class="right">
+                        <p><span>Sep 29, 2019</span> <span>10:30AM</span></p>
+                    </div>
+                </div>
+
+                <div class="row-two">
+                    <div class="column">
+                        <p>Order No.</p>
+                        <p class="text">110012</p>
+                    </div>
+                    <div class="column">
+                        <p>Transaction ID</p>
+                        <p class="text">PGTH1930TDFN</p>
+                    </div>
+                    <div class="column">
+                        <p>Fees</p>
+                        <p class="text">₦250.00</p>
+                    </div>
+                    <div class="column">
+                        <p>Amount Due</p>
+                        <p class="text">₦9,750</p>
+                    </div>
+                    <div class="column">
+                        <p>Event Name</p>
+                        <p class="text">Davido 30 Billion Concert Tour</p>
+                    </div>
+                </div>
+
+                <div class="last-row">
+                    <div class="left">
+                        <p class="info-head-text">Buyer Information</p>
+                        <div class="info-box">
+                            <div class="column">
+                                <p>Name</p>
+                                <h5>Azonobi Michael</h5>
+                            </div>
+                            <div class="column">
+                                <p>Email</p>
+                                <h5>emekamykael45@gmail.com</h5>
+                            </div>
+                            <div class="column">
+                                <p>Phone</p>
+                                <h5>09065582156</h5>
+                            </div>
+                            <div class="column">
+                                <p>Quantity</p>
+                                <h5>3</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <p class="info-head-text">Purchased For</p>
+                        <div class="info-box">
+                            <p>Gbenga Adeyinka - <span>(General Admission)</span></p>
+                            <p>Michael Miles - <span>(VVIP)</span></p>
+                            <p>Justin Tochi - <span>(Platinum)</span></p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+
+
+        <!--Datatable-->
+        <script>
+            $(document).ready(function() {
+                var table = $('#example').DataTable( {
+                    ordering: false,
+                    buttons: [ 'copy', 'excel', 'pdf', 'print' ]
+                } );
+
+                table.buttons().container()
+                    .appendTo( '#example_wrapper .col-md-6:eq(0)' );
+            } );
+        </script>
+
+        <!-- Side Navigation JS -->
+        <script>
+            /* Set the width of the side navigation to 250px */
+            function openNav() {
+                document.getElementById("mySidenav").style.width = "250px";
+                document.getElementById("main").style.marginLeft = "250px";
+                document.getElementById("overlay").style.display = "block";
+            }
+            /* Set the width of the side navigation to 0 */
+            function closeNav() {
+                document.getElementById("mySidenav").style.width = "0";
+                document.getElementById("main").style.marginLeft = "0";
+                document.getElementById("overlay").style.display = "none";
+            }
+        </script>
+
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+    </body>
+
+</html>

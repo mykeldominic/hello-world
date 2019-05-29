@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>EventsFleek | Email Template</title>
+        <link rel="icon" href="favicon.ico" />
+        
+        <!-- Bootstrap CSS CDN -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+        <!-- Font-Awesome CSS CDN -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+
+        <!-- Font -->
+        <link href="https://fonts.googleapis.com/css?family=Lato:400,700,900" rel="stylesheet">
+
+        <!-- JS -->
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    </head>
+    
+    <style>
+        
+        *{
+            box-sizing: border-box;
+        }
+
+        *:focus {
+            outline:none !important;
+        }
+
+        a {
+            color: #9A6BF2;
+            padding-bottom: 1px;
+            border-bottom: 1px solid #9A6BF2;
+        }
+        a:hover {
+            color: #E173E9;
+            text-decoration: none;
+            border-bottom: 1px solid #E173E9;
+        }
+
+        body {
+            font-family: 'Lato', sans-serif;
+            font-size: 1em;
+            letter-spacing: 0.02em;
+        }
+
+        /*Section 1 Starts Here*/
+        .main{
+            margin: 0 auto;
+            padding: 20px 10px;
+            background: rgb(225, 115, 233, 0.05);
+            width: 600px;
+        }
+
+        .main .logo {
+            text-align: center;
+            margin-top: -5px;
+            margin-bottom: 18px;
+        }
+
+        .main .logo img {
+            width: 45px;
+        }
+
+        .main .email-content{
+            position: relative;
+            background: url('images/email-back-img.png') no-repeat center center fixed;
+            background-color: rgba(255, 255, 255, 0.5);
+            background-blend-mode: lighten;
+            -webkit-background-size: contain;
+            -moz-background-size: contain;
+            -o-background-size: contain;
+            background-size: contain;
+            border-radius: 5px;
+            margin: 0;
+            padding: 0;
+        }
+
+        .email-content .main-content {
+            padding: 15px;
+            padding-bottom: 0px;
+        }
+
+        h2 {
+            font-size: 1.8em;
+            padding: 0px 10px;
+            margin: 0;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .info-div {
+            margin-top: 35px;
+            margin-bottom: 30px;
+            border-radius: 5px;
+        }
+
+        .info-div h4 {
+            font-size: 1.1em;
+            margin: 0;
+            margin-top: 25px;
+            text-align: center;
+        }
+
+        .info-div hr {
+            margin-top: 30px;
+            margin-bottom: 30px;
+            height: 7px;
+            background: #fafafa;
+            border: none;
+        }
+
+        .info-div .message {
+            margin-bottom: 40px;
+        }
+
+        .info-div .view {
+            text-align: center;
+            margin: 0;
+            margin-bottom: 15px;
+        }
+
+
+        .get-started {
+            margin: 0;
+            margin-top: 60px;
+            text-align: center;
+        }
+
+        .get-started-btn {
+            padding: 12px 40px;
+            color: #fff;
+            font-size: 1em;
+            font-weight: bold;
+            text-transform: capitalize;
+            border-radius: 5px;
+            border: none;
+            background: linear-gradient(115.29deg, #9A6BF2 22.36%, #E173E9 90.45%);
+            cursor: pointer;
+        }
+        .get-started-btn:hover {
+            background: linear-gradient(115.29deg, #E173E9 22.36%, #9A6BF2 90.45%);
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .if-you-have {
+            font-size: 0.85em;
+            color: #555;
+            margin: 0;
+            margin-top: 80px;
+        }
+
+        .cheers {
+            font-weight: bold;
+            margin: 0;
+            margin-top: 20px;
+            padding-bottom: 40px;
+        }
+
+
+        .main .footer{
+            margin-top: 10px;
+            padding: 20px 0px;
+            padding-bottom: 0px;
+            background: #FDF8FE;
+            text-align: center;
+        }
+
+        .main .footer .icons{
+            margin-bottom: 15px;
+        }
+
+        .main .footer .icons a{
+            margin-right: 20px;
+            border: none;
+        }
+        .main .footer .icons a.last-link{
+            margin-right: 0px;
+        }
+
+        .main .footer .icons a img {
+            width: 18px;
+            height: 18px;
+        }
+
+        .main .footer .copyright, .address{
+            background: none;
+            font-size: 0.75em;
+            margin-bottom: 10px;
+        }
+        .main .footer .address{
+            margin-bottom: 0px;
+        }
+
+
+
+        /* Responsive Starts Here */
+
+        @media screen and (max-width: 600px){
+            .main{
+                width: 99%;
+            }
+        }
+
+        @media screen and (max-width: 350px){
+            .email-content .main-content {
+                padding: 15px 10px;
+                padding-bottom: 0px;
+            }
+        }
+
+    </style>
+    
+    <body>
+        
+        <div class="main">
+
+            <div class="logo">
+                <a href="https://eventsfleek.com"><img src="images/logo.png"></a>
+            </div>
+
+            <div class="email-content">
+
+                <div class="main-content">
+
+                    <h2>Hi <strong>Chukwuemeka</strong>!,</h2>
+
+                    <div class="info-div">
+
+                        <h4>Here's a message from <strong>Techpoint Build Inspired 2019</strong></h4>
+                        <hr>
+
+                        <div class="message">
+                            As we countdown to Saturday May 25th, 2019 we will like you to meet another speaker who will be facilitating a session on Improving Operational Efficiency and Productions with digital at The Reispar conference 2019 on Industry 4.0.
+                            <br><br>
+                            PS: We are live on LinkedIN- join the conversation there too!
+                            <br><br>
+                            Order your shirts for the event-
+                            <br><br>
+                            Meet Toluwani Alao- Operations Excellence Specialist at Flour Mills of Nigeria PLC
+                            <br>
+                            Toluwani Alao
+                            <br><br>
+                            Tolu Alao is an author and speaker with work experience in Manufacturing of FMCG and Business Consulting. He is passionate about continuous improvement and operational excellence in business processes. Previously, Associate, Energy and Natural Resources Division at KPMG.
+                            <br><br>
+                            In his current role as Operations Excellence Specialist at Flour Mills of Nigeria PLC, he drives process improvements across manufacturing lines to reduce variation and waste. He enjoys watching movies and swimming.
+                            <br><br>
+                            Tolu Alao is looking forward to meeting you.
+                            <br><br>
+                            Event Time: 9am
+                            <br><br>
+                            Venue: Facebook NG Hub, Yaba Lagos.
+                            <br><br>
+                            T-shirts will be available for purchase at a fair price, kindly forward an email to reisparconference@gmail.com to order yours today.                          
+                            <br><br>
+                            Limited seats available at the venue, first come basis.
+                            <br><br>
+                            We look forward to welcoming you all.
+                        </div>
+
+                        <p class="view"><a href="event-page-preview.html">View event details</a></p>
+
+                    </div>
+
+                    <hr>
+
+                    <p class="get-started"><a href="" class="get-started-btn">Explore events</a></p>
+
+                    <p class="if-you-have">If you have any question please contact our customer care on 0906-558-2156 or Reply this mail.</p>
+
+                    <p class="cheers">Cheers.</p>
+                </div>
+
+            </div>
+
+            <div class="footer">
+                <div class="icons">
+                    <a href="https://facebook.com"><img src="images/facebook.png"></a>
+                    <a href="https://instagram.com"><img src="images/instagram.png"></a>
+                    <a href="https://twitter.com"><img src="images/twitter.png"></a>
+                    <a href="https://linkedin.com" class="last-link"><img src="images/linkedin.png"></a>
+                </div>
+                <p class="copyright">© 2018 Eventsfleek. All right reserved</p>
+                <p class="address">H3H, Victor Ikuemesi Street, Idado Town, Igbo - Efon Lekki,<br>Lagos State, Nigeria.</p>
+            </div>
+            
+        </div>
+
+            
+        
+    
+        <!-- Bootstrap core JavaScript
+        ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+         
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    </body>
+
+</html>

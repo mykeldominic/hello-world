@@ -1,0 +1,1403 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>EventsFleek | Blog</title>
+        <link rel="icon" href="favicon.ico" />
+        
+        <!-- Bootstrap CSS CDN -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+        <!--Semantics CSS CDN -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+        <link rel="stylesheet" href="https://cdn.rawgit.com/mdehoog/Semantic-UI/6e6d051d47b598ebab05857545f242caf2b4b48c/dist/semantic.min.css" />
+
+        <!-- Font-Awesome CSS CDN -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/font-awesome.min.css"/>
+
+        <!-- Froala Editor CSS CDN -->
+        <link href='https://cdn.jsdelivr.net/npm/froala-editor@2.9.4/css/froala_editor.min.css' rel='stylesheet' type='text/css' />
+        <link href='https://cdn.jsdelivr.net/npm/froala-editor@2.9.4/css/froala_style.min.css' rel='stylesheet' type='text/css' />
+
+        <!-- Our Custom CSS -->
+        <link rel="stylesheet" href="css/add-event-details.css"/>
+        
+        <!-- JS -->
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+        <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.18/datatables.min.js"></script>
+        <script type='text/javascript' src='https://cdn.jsdelivr.net/npm/froala-editor@2.9.4/js/froala_editor.min.js'></script>
+        <script type="text/javascript" src="https://cdn.rawgit.com/mdehoog/Semantic-UI/6e6d051d47b598ebab05857545f242caf2b4b48c/dist/semantic.min.js"></script>
+        <script type="text/javascript" src="js/jpreview.js"></script>
+    </head>
+
+    <body>
+        <header>
+            <nav class="navbar navbar-expand-md navbar-light">
+                <a class="navbar-brand logo" href="index.html">
+                    <img src="images/logo.png" />
+                    <p>Eventsfleek</p>
+                </a>
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarDropdown" aria-controls="navbarDropdown" aria-expanded="false" aria-label="toggle navigation"><span class="navbar-toggler-icon"></span></button>
+
+                <div class="collapse navbar-collapse" id="navbarDropdown">
+                    <ul class="navbar-nav mr-auto">
+                    </ul>
+
+                    <ul class="navbar-nav mr-right">
+                        <li class="nav-item dropdown">
+                            <div class="ui dropdown top left pointing">
+                                Help <i class="small chevron down icon"></i>
+                                <div class="menu">
+                                    <a class="item" href="#link1">About Us</a>
+                                    <a class="item" href="#link2">Click Here</a>
+                                    <a class="item" href="#link3">Now See Us</a>
+                                </div>
+                            </div>      
+                        </li>
+                        <li class="nav-item">
+                            <a href="sign-in.html" class="ui button">
+                                Login
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+        <div class="main">
+
+            <div class="page-navigation">
+                <nav>
+                    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                        <a class="nav-item nav-link active" id="nav-edit-tab" data-toggle="tab" href="#nav-edit" role="tab" aria-controls="nav-edit" aria-selected="true">EDIT</a>
+                        <a class="nav-item nav-link" id="nav-page-builder-tab" data-toggle="tab" href="#nav-page-builder" role="tab" aria-controls="nav-page-builder" aria-selected="false">PAGE BUILDER</a>
+                    </div>
+                </nav>
+                <div class="tab-content" id="nav-tabContent">
+                    <div class="tab-pane fade show active" id="nav-edit" role="tabpanel" aria-labelledby="nav-edit-tab">
+
+                        <p class="add-event-details-text">ADD EVENT DETAILS</p>
+                        <hr class="add-event-hr"/>
+
+                        <form class="ui form">
+                            <div class="field segment">
+                                <label>Event Title</label>
+                                <input type="text" name="event-title" placeholder="Use a precise and captivating title" required>
+                                <!--Add text counter here-->
+                            </div>
+
+                            <div class="field segment">
+                                <label>Event Image</label>
+                                <div class="image-container">
+                                    <div class="upload-btn-wrapper">
+                                        <button class="upload-btn">Upload Banner Image</button>
+                                        <input type="file" class="demo input-label" data-jpreview-container="#preview-container">
+                                    </div>
+                                    <div id="preview-container" class="jpreview-container"></div>
+                                </div>
+                                <ul class="img-note-text">
+                                    <li class="tips">Tips:</li>
+                                    <li>- Try not to have any text on your image.</li>
+                                    <li>- Your image should be 600 x 300.</li>
+                                </ul>
+                            </div>
+
+                            <div class="fields segment">
+                                <div class="field range">
+                                    <label>Event Starts</label>
+                                    <!--Add Date & Time Picker Here-->
+                                    <div class="ui calendar" id="rangestart">
+                                        <div class="ui input left icon">
+                                            <i class="calendar alternate icon"></i>
+                                            <input type="text" placeholder="Start">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="field">
+                                    <label>Event Ends</label>
+                                    <!--Add Date & Time Picker Here-->
+                                    <div class="ui calendar" id="rangeend">
+                                        <div class="ui input left icon">
+                                            <i class="calendar alternate icon"></i>
+                                            <input type="text" placeholder="End">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="field segment">
+                                <label>Event Description</label>
+                                <div id="froala-editor">
+
+                                </div>
+                            </div>
+
+                            <p class="form-head-text">Add Event Schedule</p>
+                            <div class="segment timeline-segment">
+                                <div class="timeline-row">
+                                    <div class="fields">
+                                        <div class="field">
+                                            <label>From</label>
+                                            <!--Add Time Picker Here-->
+                                            <div class="ui calendar" id="timelinerangestart">
+                                                <div class="ui input left icon">
+                                                    <i class="clock outline icon"></i>
+                                                    <input type="text" placeholder="Start">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="field">
+                                            <label>To</label>
+                                            <!--Add Time Picker Here-->
+                                            <div class="ui calendar" id="timelinerangeend">
+                                                <div class="ui input left icon">
+                                                    <i class="clock outline icon"></i>
+                                                    <input type="text" placeholder="End">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="field">
+                                        <input type="text" placeholder="Schedule Short Detail">
+                                        <!--Add text counter here-->
+                                    </div>
+                                    <a class="remove-btn"><i class="minus circle icon"></i>Remove</a>
+                                    <hr class="button-hr"/>
+                                </div>
+                                <div class="timeline-new-row"></div>
+                                <a class="add-btn"><i class="plus circle icon"></i>Add another schedule</a>
+                            </div>
+
+                            <p class="form-head-text">Add Event Speaker/Artiste</p>
+                            <div class="segment speaker-segment">
+                                <div id="SpeakerRowOne" class="speaker-row">
+                                    <div class="speaker-inner-row">
+                                        <div class="speaker-img-div">
+                                            <div class="upload-btn-wrapper">
+                                                <button class="upload-btn">Upload Image</button>
+                                                <input type="file" class="demo input-label" data-jpreview-container="#speaker-preview-container-one">
+                                            </div>
+                                            <div id="speaker-preview-container-one" class="jpreview-speaker-container"></div>
+                                        </div>
+                                        <div class="ui form">
+                                            <div class="field">
+                                                <input type="text" placeholder="Speaker/Artiste Name">
+                                            </div>
+                                            <div class="field">
+                                                <input type="text" placeholder="Speaker/Artiste Short Info">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a class="hide-add-speaker-one remove-btn speaker-remove-btn"><i class="minus circle icon"></i>Remove</a>
+                                    <hr class="button-hr"/>
+                                    <a class="show-add-speaker-one add-btn"><i class="plus circle icon"></i>Add another speaker/artiste</a>
+                                </div>
+
+                                <div id="SpeakerRowTwo" class="speaker-row">
+                                    <div class="speaker-inner-row">
+                                        <div class="speaker-img-div">
+                                            <div class="upload-btn-wrapper">
+                                                <button class="upload-btn">Upload Image</button>
+                                                <input type="file" class="demo input-label" data-jpreview-container="#speaker-preview-container-two">
+                                            </div>
+                                            <div id="speaker-preview-container-two" class="jpreview-speaker-container"></div>
+                                        </div>
+                                        <div class="ui form">
+                                            <div class="field">
+                                                <input type="text" placeholder="Speaker/Artiste Name">
+                                            </div>
+                                            <div class="field">
+                                                <input type="text" placeholder="Speaker/Artiste Short Info">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a class="hide-add-speaker-two remove-btn speaker-remove-btn"><i class="minus circle icon"></i>Remove</a>
+                                    <hr class="button-hr"/>
+                                    <a class="show-add-speaker-two add-btn"><i class="plus circle icon"></i>Add another speaker/artiste</a>
+                                </div>
+
+                                <div id="SpeakerRowThree" class="speaker-row">
+                                    <div class="speaker-inner-row">
+                                        <div class="speaker-img-div">
+                                            <div class="upload-btn-wrapper">
+                                                <button class="upload-btn">Upload Image</button>
+                                                <input type="file" class="demo input-label" data-jpreview-container="#speaker-preview-container-three">
+                                            </div>
+                                            <div id="speaker-preview-container-three" class="jpreview-speaker-container"></div>
+                                        </div>
+                                        <div class="ui form">
+                                            <div class="field">
+                                                <input type="text" placeholder="Speaker/Artiste Name">
+                                            </div>
+                                            <div class="field">
+                                                <input type="text" placeholder="Speaker/Artiste Short Info">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a class="hide-add-speaker-three remove-btn speaker-remove-btn"><i class="minus circle icon"></i>Remove</a>
+                                    <hr class="button-hr"/>
+                                    <a class="show-add-speaker-three add-btn"><i class="plus circle icon"></i>Add another speaker/artiste</a>
+                                </div>
+
+                                <div id="SpeakerRowFour" class="speaker-row">
+                                    <div class="speaker-inner-row">
+                                        <div class="speaker-img-div">
+                                            <div class="upload-btn-wrapper">
+                                                <button class="upload-btn">Upload Image</button>
+                                                <input type="file" class="demo input-label" data-jpreview-container="#speaker-preview-container-four">
+                                            </div>
+                                            <div id="speaker-preview-container-four" class="jpreview-speaker-container"></div>
+                                        </div>
+                                        <div class="ui form">
+                                            <div class="field">
+                                                <input type="text" placeholder="Speaker/Artiste Name">
+                                            </div>
+                                            <div class="field">
+                                                <input type="text" placeholder="Speaker/Artiste Short Info">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a class="hide-add-speaker-four remove-btn speaker-remove-btn"><i class="minus circle icon"></i>Remove</a>
+                                    <hr class="button-hr"/>
+                                    <a class="show-add-speaker-four add-btn"><i class="plus circle icon"></i>Add another speaker/artiste</a>
+                                </div>
+
+                                <div id="SpeakerRowFive" class="speaker-row">
+                                    <div class="speaker-inner-row">
+                                        <div class="speaker-img-div">
+                                            <div class="upload-btn-wrapper">
+                                                <button class="upload-btn">Upload Image</button>
+                                                <input type="file" class="demo input-label" data-jpreview-container="#speaker-preview-container-five">
+                                            </div>
+                                            <div id="speaker-preview-container-five" class="jpreview-speaker-container"></div>
+                                        </div>
+                                        <div class="ui form">
+                                            <div class="field">
+                                                <input type="text" placeholder="Speaker/Artiste Name">
+                                            </div>
+                                            <div class="field">
+                                                <input type="text" placeholder="Speaker/Artiste Short Info">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a class="hide-add-speaker-five remove-btn speaker-remove-btn"><i class="minus circle icon"></i>Remove</a>
+                                    <hr class="button-hr"/>
+                                    <a class="show-add-speaker-five add-btn"><i class="plus circle icon"></i>Add another speaker/artiste</a>
+                                </div>
+
+                                <div id="SpeakerRowSix" class="speaker-row">
+                                    <div class="speaker-inner-row">
+                                        <div class="speaker-img-div">
+                                            <div class="upload-btn-wrapper">
+                                                <button class="upload-btn">Upload Image</button>
+                                                <input type="file" class="demo input-label" data-jpreview-container="#speaker-preview-container-six">
+                                            </div>
+                                            <div id="speaker-preview-container-six" class="jpreview-speaker-container"></div>
+                                        </div>
+                                        <div class="ui form">
+                                            <div class="field">
+                                                <input type="text" placeholder="Speaker/Artiste Name">
+                                            </div>
+                                            <div class="field">
+                                                <input type="text" placeholder="Speaker/Artiste Short Info">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a class="hide-add-speaker-six remove-btn speaker-remove-btn"><i class="minus circle icon"></i>Remove</a>
+                                    <hr class="button-hr"/>
+                                    <a class="show-add-speaker-six add-btn"><i class="plus circle icon"></i>Add another speaker/artiste</a>
+                                </div>
+
+                                <div id="SpeakerRowSeven" class="speaker-row">
+                                    <div class="speaker-inner-row">
+                                        <div class="speaker-img-div">
+                                            <div class="upload-btn-wrapper">
+                                                <button class="upload-btn">Upload Image</button>
+                                                <input type="file" class="demo input-label" data-jpreview-container="#speaker-preview-container-seven">
+                                            </div>
+                                            <div id="speaker-preview-container-seven" class="jpreview-speaker-container"></div>
+                                        </div>
+                                        <div class="ui form">
+                                            <div class="field">
+                                                <input type="text" placeholder="Speaker/Artiste Name">
+                                            </div>
+                                            <div class="field">
+                                                <input type="text" placeholder="Speaker/Artiste Short Info">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a class="hide-add-speaker-seven remove-btn speaker-remove-btn"><i class="minus circle icon"></i>Remove</a>
+                                    <hr class="button-hr"/>
+                                    <a class="show-add-speaker-seven add-btn"><i class="plus circle icon"></i>Add another speaker/artiste</a>
+                                </div>
+
+                                <div id="SpeakerRowEight" class="speaker-row">
+                                    <div class="speaker-inner-row">
+                                        <div class="speaker-img-div">
+                                            <div class="upload-btn-wrapper">
+                                                <button class="upload-btn">Upload Image</button>
+                                                <input type="file" class="demo input-label" data-jpreview-container="#speaker-preview-container-eight">
+                                            </div>
+                                            <div id="speaker-preview-container-eight" class="jpreview-speaker-container"></div>
+                                        </div>
+                                        <div class="ui form">
+                                            <div class="field">
+                                                <input type="text" placeholder="Speaker/Artiste Name">
+                                            </div>
+                                            <div class="field">
+                                                <input type="text" placeholder="Speaker/Artiste Short Info">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a class="hide-add-speaker-eight remove-btn speaker-remove-btn"><i class="minus circle icon"></i>Remove</a>
+                                    <hr class="button-hr"/>
+                                    <a class="show-add-speaker-eight add-btn"><i class="plus circle icon"></i>Add another speaker/artiste</a>
+                                </div>
+
+                                <div id="SpeakerRowNine" class="speaker-row">
+                                    <div class="speaker-inner-row">
+                                        <div class="speaker-img-div">
+                                            <div class="upload-btn-wrapper">
+                                                <button class="upload-btn">Upload Image</button>
+                                                <input type="file" class="demo input-label" data-jpreview-container="#speaker-preview-container-nine">
+                                            </div>
+                                            <div id="speaker-preview-container-nine" class="jpreview-speaker-container"></div>
+                                        </div>
+                                        <div class="ui form">
+                                            <div class="field">
+                                                <input type="text" placeholder="Speaker/Artiste Name">
+                                            </div>
+                                            <div class="field">
+                                                <input type="text" placeholder="Speaker/Artiste Short Info">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a class="hide-add-speaker-nine remove-btn speaker-remove-btn"><i class="minus circle icon"></i>Remove</a>
+                                    <hr class="button-hr"/>
+                                    <a class="show-add-speaker-nine add-btn"><i class="plus circle icon"></i>Add another speaker/artiste</a>
+                                </div>
+
+                                <div id="SpeakerRowTen" class="speaker-row">
+                                    <div class="speaker-inner-row">
+                                        <div class="speaker-img-div">
+                                            <div class="upload-btn-wrapper">
+                                                <button class="upload-btn">Upload Image</button>
+                                                <input type="file" class="demo input-label" data-jpreview-container="#speaker-preview-container-ten">
+                                            </div>
+                                            <div id="speaker-preview-container-ten" class="jpreview-speaker-container"></div>
+                                        </div>
+                                        <div class="ui form">
+                                            <div class="field">
+                                                <input type="text" placeholder="Speaker/Artiste Name">
+                                            </div>
+                                            <div class="field">
+                                                <input type="text" placeholder="Speaker/Artiste Short Info">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a class="hide-add-speaker-ten remove-btn speaker-remove-btn"><i class="minus circle icon"></i>Remove</a>
+                                    <hr class="button-hr"/>
+                                    <a class="show-add-speaker-ten add-btn"><i class="plus circle icon"></i>Add another speaker/artiste</a>
+                                </div>
+
+                                <div id="SpeakerRowEleven" class="speaker-row">
+                                    <div class="speaker-inner-row">
+                                        <div class="speaker-img-div">
+                                            <div class="upload-btn-wrapper">
+                                                <button class="upload-btn">Upload Image</button>
+                                                <input type="file" class="demo input-label" data-jpreview-container="#speaker-preview-container-eleven">
+                                            </div>
+                                            <div id="speaker-preview-container-eleven" class="jpreview-speaker-container"></div>
+                                        </div>
+                                        <div class="ui form">
+                                            <div class="field">
+                                                <input type="text" placeholder="Speaker/Artiste Name">
+                                            </div>
+                                            <div class="field">
+                                                <input type="text" placeholder="Speaker/Artiste Short Info">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a class="hide-add-speaker-eleven remove-btn speaker-remove-btn"><i class="minus circle icon"></i>Remove</a>
+                                    <hr class="button-hr"/>
+                                    <a class="show-add-speaker-eleven add-btn"><i class="plus circle icon"></i>Add another speaker/artiste</a>
+                                </div>
+
+                                <div id="SpeakerRowTwelve" class="speaker-row">
+                                    <div class="speaker-inner-row">
+                                        <div class="speaker-img-div">
+                                            <div class="upload-btn-wrapper">
+                                                <button class="upload-btn">Upload Image</button>
+                                                <input type="file" class="demo input-label" data-jpreview-container="#speaker-preview-container-twelve">
+                                            </div>
+                                            <div id="speaker-preview-container-twelve" class="jpreview-speaker-container"></div>
+                                        </div>
+                                        <div class="ui form">
+                                            <div class="field">
+                                                <input type="text" placeholder="Speaker/Artiste Name">
+                                            </div>
+                                            <div class="field">
+                                                <input type="text" placeholder="Speaker/Artiste Short Info">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a class="hide-add-speaker-twelve remove-btn speaker-remove-btn"><i class="minus circle icon"></i>Remove</a>
+                                    <hr class="button-hr"/>
+                                    <a class="show-add-speaker-twelve add-btn"><i class="plus circle icon"></i>Add another speaker/artiste</a>
+                                </div>
+
+                                <div id="SpeakerRowThirteen" class="speaker-row">
+                                    <div class="speaker-inner-row">
+                                        <div class="speaker-img-div">
+                                            <div class="upload-btn-wrapper">
+                                                <button class="upload-btn">Upload Image</button>
+                                                <input type="file" class="demo input-label" data-jpreview-container="#speaker-preview-container-thirteen">
+                                            </div>
+                                            <div id="speaker-preview-container-thirteen" class="jpreview-speaker-container"></div>
+                                        </div>
+                                        <div class="ui form">
+                                            <div class="field">
+                                                <input type="text" placeholder="Speaker/Artiste Name">
+                                            </div>
+                                            <div class="field">
+                                                <input type="text" placeholder="Speaker/Artiste Short Info">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a class="hide-add-speaker-thirteen remove-btn speaker-remove-btn"><i class="minus circle icon"></i>Remove</a>
+                                    <hr class="button-hr"/>
+                                    <a class="show-add-speaker-thirteen add-btn"><i class="plus circle icon"></i>Add another speaker/artiste</a>
+                                </div>
+
+                                <div id="SpeakerRowFourteen" class="speaker-row">
+                                    <div class="speaker-inner-row">
+                                        <div class="speaker-img-div">
+                                            <div class="upload-btn-wrapper">
+                                                <button class="upload-btn">Upload Image</button>
+                                                <input type="file" class="demo input-label" data-jpreview-container="#speaker-preview-container-fourteen">
+                                            </div>
+                                            <div id="speaker-preview-container-fourteen" class="jpreview-speaker-container"></div>
+                                        </div>
+                                        <div class="ui form">
+                                            <div class="field">
+                                                <input type="text" placeholder="Speaker/Artiste Name">
+                                            </div>
+                                            <div class="field">
+                                                <input type="text" placeholder="Speaker/Artiste Short Info">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a class="hide-add-speaker-fourteen remove-btn speaker-remove-btn"><i class="minus circle icon"></i>Remove</a>
+                                    <hr class="button-hr"/>
+                                    <a class="show-add-speaker-fourteen add-btn"><i class="plus circle icon"></i>Add another speaker/artiste</a>
+                                </div>
+
+                                <div id="SpeakerRowFifteen" class="speaker-row">
+                                    <div class="speaker-inner-row">
+                                        <div class="speaker-img-div">
+                                            <div class="upload-btn-wrapper">
+                                                <button class="upload-btn">Upload Image</button>
+                                                <input type="file" class="demo input-label" data-jpreview-container="#speaker-preview-container-fifteen">
+                                            </div>
+                                            <div id="speaker-preview-container-fifteen" class="jpreview-speaker-container"></div>
+                                        </div>
+                                        <div class="ui form">
+                                            <div class="field">
+                                                <input type="text" placeholder="Speaker/Artiste Name">
+                                            </div>
+                                            <div class="field">
+                                                <input type="text" placeholder="Speaker/Artiste Short Info">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a class="hide-add-speaker-fifteen remove-btn speaker-remove-btn"><i class="minus circle icon"></i>Remove</a>
+                                    <hr class="button-hr"/>
+                                    <a class="show-add-speaker-fifteen add-btn"><i class="plus circle icon"></i>Add another speaker/artiste</a>
+                                </div>
+
+                                <div id="SpeakerRowSixteen" class="speaker-row">
+                                    <div class="speaker-inner-row">
+                                        <div class="speaker-img-div">
+                                            <div class="upload-btn-wrapper">
+                                                <button class="upload-btn">Upload Image</button>
+                                                <input type="file" class="demo input-label" data-jpreview-container="#speaker-preview-container-sixteen">
+                                            </div>
+                                            <div id="speaker-preview-container-sixteen" class="jpreview-speaker-container"></div>
+                                        </div>
+                                        <div class="ui form">
+                                            <div class="field">
+                                                <input type="text" placeholder="Speaker/Artiste Name">
+                                            </div>
+                                            <div class="field">
+                                                <input type="text" placeholder="Speaker/Artiste Short Info">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a class="hide-add-speaker-sixteen remove-btn speaker-remove-btn"><i class="minus circle icon"></i>Remove</a>
+                                    <hr class="button-hr"/>
+                                    <a class="show-add-speaker-sixteen add-btn"><i class="plus circle icon"></i>Add another speaker/artiste</a>
+                                </div>
+
+                                <div id="SpeakerRowSeventeen" class="speaker-row">
+                                    <div class="speaker-inner-row">
+                                        <div class="speaker-img-div">
+                                            <div class="upload-btn-wrapper">
+                                                <button class="upload-btn">Upload Image</button>
+                                                <input type="file" class="demo input-label" data-jpreview-container="#speaker-preview-container-seventeen">
+                                            </div>
+                                            <div id="speaker-preview-container-seventeen" class="jpreview-speaker-container"></div>
+                                        </div>
+                                        <div class="ui form">
+                                            <div class="field">
+                                                <input type="text" placeholder="Speaker/Artiste Name">
+                                            </div>
+                                            <div class="field">
+                                                <input type="text" placeholder="Speaker/Artiste Short Info">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a class="hide-add-speaker-seventeen remove-btn speaker-remove-btn"><i class="minus circle icon"></i>Remove</a>
+                                    <hr class="button-hr"/>
+                                    <a class="show-add-speaker-seventeen add-btn"><i class="plus circle icon"></i>Add another speaker/artiste</a>
+                                </div>
+
+                                <div id="SpeakerRowEighteen" class="speaker-row">
+                                    <div class="speaker-inner-row">
+                                        <div class="speaker-img-div">
+                                            <div class="upload-btn-wrapper">
+                                                <button class="upload-btn">Upload Image</button>
+                                                <input type="file" class="demo input-label" data-jpreview-container="#speaker-preview-container-eighteen">
+                                            </div>
+                                            <div id="speaker-preview-container-eighteen" class="jpreview-speaker-container"></div>
+                                        </div>
+                                        <div class="ui form">
+                                            <div class="field">
+                                                <input type="text" placeholder="Speaker/Artiste Name">
+                                            </div>
+                                            <div class="field">
+                                                <input type="text" placeholder="Speaker/Artiste Short Info">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a class="hide-add-speaker-eighteen remove-btn speaker-remove-btn"><i class="minus circle icon"></i>Remove</a>
+                                    <hr class="button-hr"/>
+                                    <a class="show-add-speaker-eighteen add-btn"><i class="plus circle icon"></i>Add another speaker/artiste</a>
+                                </div>
+
+                                <div id="SpeakerRowNineteen" class="speaker-row">
+                                    <div class="speaker-inner-row">
+                                        <div class="speaker-img-div">
+                                            <div class="upload-btn-wrapper">
+                                                <button class="upload-btn">Upload Image</button>
+                                                <input type="file" class="demo input-label" data-jpreview-container="#speaker-preview-container-nineteen">
+                                            </div>
+                                            <div id="speaker-preview-container-nineteen" class="jpreview-speaker-container"></div>
+                                        </div>
+                                        <div class="ui form">
+                                            <div class="field">
+                                                <input type="text" placeholder="Speaker/Artiste Name">
+                                            </div>
+                                            <div class="field">
+                                                <input type="text" placeholder="Speaker/Artiste Short Info">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a class="hide-add-speaker-nineteen remove-btn speaker-remove-btn"><i class="minus circle icon"></i>Remove</a>
+                                    <hr class="button-hr"/>
+                                    <a class="show-add-speaker-nineteen add-btn"><i class="plus circle icon"></i>Add another speaker/artiste</a>
+                                </div>
+
+                                <div id="SpeakerRowTwenty" class="speaker-row">
+                                    <div class="speaker-inner-row">
+                                        <div class="speaker-img-div">
+                                            <div class="upload-btn-wrapper">
+                                                <button class="upload-btn">Upload Image</button>
+                                                <input type="file" class="demo input-label" data-jpreview-container="#speaker-preview-container-twenty">
+                                            </div>
+                                            <div id="speaker-preview-container-twenty" class="jpreview-speaker-container"></div>
+                                        </div>
+                                        <div class="ui form">
+                                            <div class="field">
+                                                <input type="text" placeholder="Speaker/Artiste Name">
+                                            </div>
+                                            <div class="field">
+                                                <input type="text" placeholder="Speaker/Artiste Short Info">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a class="hide-add-speaker-twenty remove-btn speaker-remove-btn"><i class="minus circle icon"></i>Remove</a>
+                                    <hr class="button-hr"/>
+                                    <a class="show-add-speaker-twenty add-btn"><i class="plus circle icon"></i>Add another speaker/artiste</a>
+                                </div>
+                            </div>
+
+                            <p class="form-head-text">Add Sponsors</p>
+                            <div class="segment sponsor-segment">
+                                <div class="sponsor-grid">
+                                    <div id="sponsorRow" class="sponsor-item">
+                                        <div class="speaker-inner-row">
+                                            <div class="speaker-img-div">
+                                                <div class="upload-btn-wrapper">
+                                                    <button class="upload-btn">Upload Image</button>
+                                                    <input type="file" class="demo input-label" data-jpreview-container="#sponsor-preview-container-1">
+                                                </div>
+                                                <div id="sponsor-preview-container-1" class="jpreview-speaker-container"></div>
+                                            </div>
+                                        </div>
+                                        <a class="remove-btn sponsor-remove-btn"><i class="minus circle icon"></i>Remove</a>
+                                    </div>
+                                </div>
+                                <hr class="button-hr"/>
+                                <a id="sponsor-add-btn" class="sponsor-add-btn"><i class="plus circle icon"></i>Add another sponsor</a>
+                            </div>
+
+                            <p class="form-head-text">Add Media</p>
+                            <div class="segment media-segment">
+                                <div class="media-row-div">
+                                    <fieldset class="form-group">
+                                        <a href="javascript:void(0)" onclick="$('#pro-image').click()"><i class="upload icon"></i> Upload Images</a>
+                                        <input type="file" id="pro-image" name="pro-image" style="display: none;" class="form-control" multiple>
+                                    </fieldset>
+                                    <div class="preview-images-zone">
+                                        <div class="preview-image preview-show-1">
+                                            <div class="image-cancel" data-no="1"><i class="close icon"></i></div>
+                                            <div class="image-zone"><img id="pro-img-1" src="images/Art-X-Lagos.jpg"></div>
+                                        </div>
+                                        <div class="preview-image preview-show-2">
+                                            <div class="image-cancel" data-no="2"><i class="close icon"></i></div>
+                                            <div class="image-zone"><img id="pro-img-2" src="images/polular-1-100x100.jpg"></div>
+                                        </div>
+                                        <div class="preview-image preview-show-3">
+                                            <div class="image-cancel" data-no="3"><i class="close icon"></i></div>
+                                            <div class="image-zone"><img id="pro-img-3" src="images/person-2.jpg"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <ul class="img-note-text">
+                                    <li class="tips">Tips:</li>
+                                    <li>- Try not to have any text on your image.</li>
+                                    <li>- Your image should be 600 x 300.</li>
+                                </ul>
+                            </div>
+
+                            <div class="segment">
+                                <label>Event Location</label>
+                                <div class="map-field">
+                                    <div class="field">
+                                        <input id="pac-input" class="controls" type="text" placeholder="Enter event's address">
+                                    </div>
+                                    <div class="map" id="map"></div>
+                                </div>
+                                <div class="this-is-an">This is an online event.</div>
+                                <br>
+                                <a class="online-event">Online event?</a>
+                            </div>
+
+                            <div class="segment">
+                                <label>Host</label>
+                                <div class="two fields">
+                                    <div class="field">
+                                        <select class="ui fluid dropdown">
+                                            <option value="">Select from list</option>
+                                            <option value="AL">Morning Rose</option>
+                                            <option value="AK">Gbenga Junior</option>
+                                            <option value="AZ">Rapheal Glory</option>
+                                            <option value="AR">Michael Micah</option>
+                                        </select>
+                                    </div>
+                                    <div class="field or-add-field">OR 
+                                        <a class="add-host-btn"><i class="plus circle icon"></i>Add a new host</a>
+                                    </div>
+                                </div>
+
+                                <div class="host-row" id="host-row">
+                                    <div class="host-img-div">
+                                        <div class="upload-btn-wrapper">
+                                            <button class="upload-btn">Upload Image</button>
+                                            <input type="file" class="demo input-label" data-jpreview-container="#host-preview-container-one">
+                                        </div>
+                                        <div id="host-preview-container-one" class="jpreview-host-container"></div>
+                                    </div>
+                                    <div class="ui form">
+                                        <div class="field">
+                                            <input type="text" placeholder="Host Name">
+                                        </div>
+                                        <div class="field">
+                                            <textarea rows="3" placeholder="Host Info"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="field segment">
+                                <label>Contact Details</label>
+                                <p class="sub-label-text">Your contact information is kept private and shown only to attendees who registers for your event.</p>
+                                <input type="text" name="event-title" placeholder="Enter an email address or phone number" required>
+                            </div>
+
+                            <div class="field segment">
+                                <label>Tags/Categories</label>
+                                <select multiple="" class="ui dropdown">
+                                    <option value="">Select Tags/Categories</option>
+                                    <option value="AF">Fun</option>
+                                    <option value="AX">Sports</option>
+                                    <option value="AL">Family</option>
+                                    <option value="DZ">Algeria</option>
+                                    <option value="AS">Music</option>
+                                    <option value="AD">Things to do</option>
+                                    <option value="AO">Angola</option>
+                                    <option value="AI">Anguilla</option>
+                                </select>
+                            </div>
+                            
+                            <h3 class="">What type of ticket will you like to offer?</h3>
+                            <div class="tickets-row segment">
+
+                                <div class="ticket-types-row">
+                                    <a class="ticket-btn" id="paid-ticket-btn"><i class="plus circle icon"></i>Paid Ticket</a>
+                                    <a class="ticket-btn" id="free-ticket-btn"><i class="plus circle icon"></i>Free Ticket</a>
+                                </div>
+
+                                <div class="table-responsive">
+                                    <div class="table">
+
+                                        <div class="row table-head">
+                                            <div class="col-md-6">
+                                                <span class="head">Ticket Name</span>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <span class="head">Max Quantity</span>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <span class="head">Price</span>
+                                            </div>
+                                            <div class="col-md-1">
+                                                <span class="head"></span>
+                                            </div>
+                                        </div>
+                                        <div class="table-body">
+                                            <div class="table-rows">
+                                                <div class="row">
+                                                    <div class="first-col col-md-6">
+                                                        <input type="text" name="ticket-name" placeholder="e.g General Admission" required>
+                                                    </div>
+                                                    <div class="second-col col-md-2">
+                                                        <input type="number" name="ticket-quantity" placeholder="e.g 400" required>
+                                                    </div>
+                                                    <div class="third-col col-md-3">
+                                                        <input type="number" name="ticket-price" placeholder="e.g 5000" required>
+                                                    </div>
+                                                    <div class="fourth-col col-md-1">
+                                                        <i class="trash alternate icon delete-btn"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="ui accordion">
+                                                    <div class="title">
+                                                        <i class="cog icon"></i><span>Additional Settings</span>
+                                                    </div>
+                                                    <div class="content">
+                                                        <p class="form-head-text">Settings</p>
+                                                        <div class="ui form">
+                                                            <label>Ticket Description</label>
+                                                            <div class="field">
+                                                                <textarea rows="2" placeholder="Additional ticket information"></textarea>
+                                                            </div>
+                                                        </div>
+
+                                                        <br/>
+                                                        <label>Ticket Status</label>
+                                                        <div class="accordion status-div">
+                                                            <div class="title status-links">
+                                                                <div class="ui toggle checkbox">
+                                                                    <input type="checkbox" tabindex="0" class="hidden">
+                                                                    <label>Locked</label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="content locked-ticket-form">
+                                                                <div class="ui form">
+                                                                    <div class="field">
+                                                                        <label>Access Key</label>
+                                                                        <input type="text" placeholder="Enter access key">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <br/>
+                                                        <div class="ui form do-you-form">
+                                                            <div class="inline field">
+                                                                <label>Do you wish to pass fees on to attendees? (By default fees are being absorbed by you).</label>
+                                                                <div class="ui toggle checkbox">
+                                                                    <input type="checkbox" tabindex="0" class="hidden">
+                                                                    <label>Yes, pass to attendees.</label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="table-rows">
+                                                <div class="row">
+                                                    <div class="first-col col-md-6">
+                                                        <input type="text" name="ticket-name" placeholder="e.g General Admission" required>
+                                                    </div>
+                                                    <div class="second-col col-md-2">
+                                                        <input type="number" name="ticket-quantity" placeholder="e.g 400" required>
+                                                    </div>
+                                                    <div class="third-col col-md-3">
+                                                        <p class="free-text">Free</p>
+                                                    </div>
+                                                    <div class="fourth-col col-md-1">
+                                                        <i class="trash alternate icon delete-btn"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="ui accordion">
+                                                    <div class="title">
+                                                        <i class="cog icon"></i><span>Additional Settings</span>
+                                                    </div>
+                                                    <div class="content">
+                                                        <p class="form-head-text">Settings</p>
+                                                        <div class="ui form">
+                                                            <label>Ticket Description</label>
+                                                            <div class="field">
+                                                                <textarea rows="2" placeholder="Additional ticket information"></textarea>
+                                                            </div>
+                                                        </div>
+
+                                                        <br/>
+                                                        <label>Ticket Status</label>
+                                                        <div class="accordion status-div">
+                                                            <div class="title status-links">
+                                                                <div class="ui toggle checkbox">
+                                                                    <input type="checkbox" tabindex="0" class="hidden">
+                                                                    <label>Locked</label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="content locked-ticket-form">
+                                                                <div class="ui form">
+                                                                    <div class="field">
+                                                                        <label>Access Key</label>
+                                                                        <input type="text" placeholder="Enter access key">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class=" segment">
+                                <label>Additional Order Message</label>
+                                <p class="sub-label-text">The message will appear on the ticket confirmation email and on the ticket itself.</p>
+                                <textarea rows="3" placeholder="Add additional order message here (Optional)"></textarea>
+                            </div>
+
+                            <div class="field segment">
+                                <label>Refund Policy</label>
+                                <select class="ui fluid dropdown">
+                                    <option value="AL">Refunds available anytime</option>
+                                    <option value="AK">Refunds available 1 day before event</option>
+                                    <option value="AZ">Refunds available 7 days before event</option>
+                                    <option value="AZ">Refunds available 15 days before event</option>
+                                    <option value="AZ">Refunds available 30 days before event</option>
+                                    <option value="AK">Refunds available 1 day after event</option>
+                                    <option value="AZ">Refunds available 7 days after event</option>
+                                    <option value="AZ">Refunds available 15 days after event</option>
+                                    <option value="AR">No Refunds</option>
+                                </select>
+                            </div>
+
+                        </form>
+
+                    </div>
+                    <div class="tab-pane fade" id="nav-page-builde" role="tabpanel" aria-labelledby="nav-page-builder-tab">
+
+                        Hello<!--type the ID in as "nav-page-builder", I omitted the "r" so it wont work-->
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <footer>
+
+            <div class="footer-nav">
+                <p class="copyright-text">DRAFT</p>
+                <div class="right-navs">
+                    <a href="" class="right-nav-link">Save</a>
+                    <a href="" class="right-nav-link">Preview</a>
+                    <a href="" class="right-nav-link right-nav-link-end">Publish</a>
+                </div>
+            </div>
+
+        </footer>
+
+
+        
+        <!-- Bootstrap core JavaScript
+        ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+
+        <!--Dropdown-->
+        <script>
+            $('.ui.dropdown')
+                .dropdown()
+            ;
+
+            $('.ui.accordion')
+                .accordion()
+            ;
+        </script>
+
+        <!--Add Event Speaker-->
+        <script>
+            $('.show-add-speaker-one').click(function() {
+                $('#SpeakerRowTwo').show(0);
+                $('.show-add-speaker-one').hide(0);
+                $('.hide-add-speaker-one').show(0);
+            });
+            $('.hide-add-speaker-one').click(function() {
+                $('#SpeakerRowOne').hide(0);
+            });
+            
+            $('.show-add-speaker-two').click(function() {
+                $('#SpeakerRowThree').show(0);
+                $('.show-add-speaker-two').hide(0);
+                $('.hide-add-speaker-two').show(0);
+            });
+            $('.hide-add-speaker-two').click(function() {
+                $('#SpeakerRowTwo').hide(0);
+            });
+
+            $('.show-add-speaker-three').click(function() {
+                $('#SpeakerRowFour').show(0);
+                $('.show-add-speaker-three').hide(0);
+                $('.hide-add-speaker-three').show(0);
+            });
+            $('.hide-add-speaker-three').click(function() {
+                $('#SpeakerRowThree').hide(0);
+            });
+
+            $('.show-add-speaker-four').click(function() {
+                $('#SpeakerRowFive').show(0);
+                $('.show-add-speaker-four').hide(0);
+                $('.hide-add-speaker-four').show(0);
+            });
+            $('.hide-add-speaker-four').click(function() {
+                $('#SpeakerRowFour').hide(0);
+            });
+
+            $('.show-add-speaker-five').click(function() {
+                $('#SpeakerRowSix').show(0);
+                $('.show-add-speaker-five').hide(0);
+                $('.hide-add-speaker-five').show(0);
+            });
+            $('.hide-add-speaker-five').click(function() {
+                $('#SpeakerRowFive').hide(0);
+            });
+
+            $('.show-add-speaker-six').click(function() {
+                $('#SpeakerRowSeven').show(0);
+                $('.show-add-speaker-six').hide(0);
+                $('.hide-add-speaker-six').show(0);
+            });
+            $('.hide-add-speaker-six').click(function() {
+                $('#SpeakerRowSix').hide(0);
+            });
+
+            $('.show-add-speaker-seven').click(function() {
+                $('#SpeakerRowEight').show(0);
+                $('.show-add-speaker-seven').hide(0);
+                $('.hide-add-speaker-seven').show(0);
+            });
+            $('.hide-add-speaker-seven').click(function() {
+                $('#SpeakerRowSeven').hide(0);
+            });
+
+            $('.show-add-speaker-eight').click(function() {
+                $('#SpeakerRowNine').show(0);
+                $('.show-add-speaker-eight').hide(0);
+                $('.hide-add-speaker-eight').show(0);
+            });
+            $('.hide-add-speaker-eight').click(function() {
+                $('#SpeakerRowEight').hide(0);
+            });
+
+            $('.show-add-speaker-nine').click(function() {
+                $('#SpeakerRowTen').show(0);
+                $('.show-add-speaker-nine').hide(0);
+                $('.hide-add-speaker-nine').show(0);
+            });
+            $('.hide-add-speaker-nine').click(function() {
+                $('#SpeakerRowNine').hide(0);
+            });
+
+            $('.show-add-speaker-ten').click(function() {
+                $('#SpeakerRowEleven').show(0);
+                $('.show-add-speaker-ten').hide(0);
+                $('.hide-add-speaker-ten').show(0);
+            });
+            $('.hide-add-speaker-ten').click(function() {
+                $('#SpeakerRowTen').hide(0);
+            });
+
+            $('.show-add-speaker-eleven').click(function() {
+                $('#SpeakerRowTwelve').show(0);
+                $('.show-add-speaker-eleven').hide(0);
+                $('.hide-add-speaker-eleven').show(0);
+            });
+            $('.hide-add-speaker-eleven').click(function() {
+                $('#SpeakerRowEleven').hide(0);
+            });
+
+            $('.show-add-speaker-twelve').click(function() {
+                $('#SpeakerRowThirteen').show(0);
+                $('.show-add-speaker-twelve').hide(0);
+                $('.hide-add-speaker-twelve').show(0);
+            });
+            $('.hide-add-speaker-twelve').click(function() {
+                $('#SpeakerRowTwelve').hide(0);
+            });
+
+            $('.show-add-speaker-thirteen').click(function() {
+                $('#SpeakerRowFourteen').show(0);
+                $('.show-add-speaker-thirteen').hide(0);
+                $('.hide-add-speaker-thirteen').show(0);
+            });
+            $('.hide-add-speaker-thirteen').click(function() {
+                $('#SpeakerRowThirteen').hide(0);
+            });
+
+            $('.show-add-speaker-fourteen').click(function() {
+                $('#SpeakerRowFifteen').show(0);
+                $('.show-add-speaker-fourteen').hide(0);
+                $('.hide-add-speaker-fourteen').show(0);
+            });
+            $('.hide-add-speaker-fourteen').click(function() {
+                $('#SpeakerRowFourteen').hide(0);
+            });
+
+            $('.show-add-speaker-fifteen').click(function() {
+                $('#SpeakerRowSixteen').show(0);
+                $('.show-add-speaker-fifteen').hide(0);
+                $('.hide-add-speaker-fifteen').show(0);
+            });
+            $('.hide-add-speaker-fifteen').click(function() {
+                $('#SpeakerRowFifteen').hide(0);
+            });
+
+            $('.show-add-speaker-sixteen').click(function() {
+                $('#SpeakerRowSeventeen').show(0);
+                $('.show-add-speaker-sixteen').hide(0);
+                $('.hide-add-speaker-sixteen').show(0);
+            });
+            $('.hide-add-speaker-sixteen').click(function() {
+                $('#SpeakerRowSixteen').hide(0);
+            });
+
+            $('.show-add-speaker-seventeen').click(function() {
+                $('#SpeakerRowEighteen').show(0);
+                $('.show-add-speaker-seventeen').hide(0);
+                $('.hide-add-speaker-seventeen').show(0);
+            });
+            $('.hide-add-speaker-seventeen').click(function() {
+                $('#SpeakerRowSeventeen').hide(0);
+            });
+
+            $('.show-add-speaker-eighteen').click(function() {
+                $('#SpeakerRowNineteen').show(0);
+                $('.show-add-speaker-eighteen').hide(0);
+                $('.hide-add-speaker-eighteen').show(0);
+            });
+            $('.hide-add-speaker-eighteen').click(function() {
+                $('#SpeakerRowEighteen').hide(0);
+            });
+
+            $('.show-add-speaker-nineteen').click(function() {
+                $('#SpeakerRowTwenty').show(0);
+                $('.show-add-speaker-nineteen').hide(0);
+                $('.hide-add-speaker-nineteen').show(0);
+            });
+            $('.hide-add-speaker-nineteen').click(function() {
+                $('#SpeakerRowNineteen').hide(0);
+            });
+
+            $('.show-add-speaker-twenty').click(function() {
+                $('#SpeakerRowOne').show(0);
+                $('.show-add-speaker-twenty').hide(0);
+                $('.hide-add-speaker-twenty').show(0);
+            });
+            $('.hide-add-speaker-twenty').click(function() {
+                $('#SpeakerRowTwenty').hide(0);
+            });
+        </script>
+
+        <!--Event Image Upload-->
+        <script>
+            $('.demo').jPreview();
+        </script>
+
+        <!--Form Checkbox Toggler-->
+        <script>
+            $('.ui.checkbox')
+                .checkbox()
+            ;
+        </script>
+
+        <!--Froala Editor-->
+        <script>
+            $('#froala-editor').froalaEditor({
+                fileAllowedTypes:  ['application/pdf','application/msword']
+            });
+        </script>
+
+        <!--Semantics Date Picker Script-->
+        <script>
+            $('#rangestart').calendar({
+                endCalendar: $('#rangeend')
+            });
+            $('#rangeend').calendar({
+                startCalendar: $('#rangestart')
+            });
+
+            $('#timelinerangestart').calendar({
+                type: 'time',
+                endCalendar: $('#timelinerangeend')
+            });
+            $('#timelinerangeend').calendar({
+                type: 'time',
+                startCalendar: $('#timelinerangestart')
+            });
+        </script>
+
+        <!--TimeLine Add Row Script-->
+        <script>
+            $('.timeline-segment').on('click', '.remove-btn', function() {
+                var rowCount = $('.timeline-segment .timeline-row').length;
+                if(rowCount > 1){
+                    $(this).closest('.timeline-row').remove();
+                }
+                rowCount--;
+            });
+
+            $('.timeline-segment').on('click', '.add-btn', function() {  
+                $('.timeline-new-row').append($('.timeline-segment').find('.timeline-row:last').clone().find("input").val("").end());
+            });
+        </script>
+
+        <!--Add Sponsor Script-->
+        <script>
+            var nextId = 1;
+            $(document).on('click', '.sponsor-add-btn', function() {
+                nextId++;
+                var content = '<div id="sponsorRow" class="sponsor-item"><div class="speaker-inner-row"><div class="speaker-img-div"><div class="upload-btn-wrapper"><button class="upload-btn">Upload Image</button><input type="file" class="demo input-label" data-jpreview-container="#sponsor-preview-container-' + nextId + '"></div><div id="sponsor-preview-container-' + nextId + '" class="jpreview-speaker-container"></div></div></div><a class="remove-btn sponsor-remove-btn"><i class="minus circle icon"></i>Remove</a></div>';
+                
+                $('.sponsor-grid').append(content);
+            });
+
+            // Remove criterion
+            $(document).on("click", ".sponsor-remove-btn", function () {
+                $(this).closest('.sponsor-item').remove();
+            });
+        </script>
+
+        <script>
+            $(document).ready(function() {
+                document.getElementById('pro-image').addEventListener('change', readImage, false);
+                
+                $( ".preview-image" ).sortable();
+            });
+
+            $(document).on("click", ".image-cancel", function () {
+                let no = $(this).data('no');
+                $(".preview-image.preview-show-"+no).remove();
+            });
+
+
+
+            var num = 4;
+            function readImage() {
+                if (window.File && window.FileList && window.FileReader) {
+                    var files = event.target.files; //FileList object
+                    var output = $(".preview-images-zone");
+
+                    for (let i = 0; i < files.length; i++) {
+                        var file = files[i];
+                        if (!file.type.match('image')) continue;
+                        
+                        var picReader = new FileReader();
+                        
+                        picReader.addEventListener('load', function (event) {
+                            var picFile = event.target;
+                            var html =  '<div class="preview-image preview-show-' + num + '">' +
+                                        '<div class="image-cancel" data-no="' + num + '"><i class="close icon"></i></div>' +
+                                        '<div class="image-zone"><img id="pro-img-' + num + '" src="' + picFile.result + '"></div>' +
+                                        '</div>';
+
+                            output.append(html);
+                            num = num + 1;
+                        });
+
+                        picReader.readAsDataURL(file);
+                    }
+                    $("#pro-image").val('');
+                } else {
+                    console.log('Browser not supported');
+                }
+            }
+        </script>
+
+        <!--Toggle Add new Host-->
+        <script>
+            $('.add-host-btn').click(function() {
+                $('#host-row').toggle('slow');
+            });
+        </script>
+
+        <!--Add Tickets Row-->
+        <script>
+            // Add row
+            var row=1;
+            $(document).on("click", "#paid-ticket-btn", function () {
+                var new_row = '<div class="table-rows"><div class="row"><div class="first-col col-md-6"><input type="text" name="ticket-name" placeholder="e.g General Admission" required></div><div class="second-col col-md-2"><input type="number" name="ticket-quantity" placeholder="e.g 400" required></div><div class="third-col col-md-3"><input type="number" name="ticket-price" placeholder="e.g 5000" required></div><div class="fourth-col col-md-1"><i class="trash alternate icon delete-btn"></i></div><div class="ui accordion"><div class="title"><i class="cog icon"></i><span>Additional Settings</span></div><div class="content"><p class="form-head-text">Settings</p><div class="ui form"><label>Ticket Description</label><div class="field"><textarea rows="2" placeholder="Additional ticket information"></textarea></div></div><br/><label>Ticket Status</label><div class="accordion status-div"><div class="title status-links"><div class="ui toggle checkbox"><input type="checkbox" tabindex="0" class="hidden"><label>Locked</label></div></div><div class="ui form"><div class="field"><label>Access Key</label><input type="text" placeholder="Enter access key"></div></div></div></div><br/><div class="ui form do-you-form"><div class="inline field"><label>Do you wish to pass fees on to attendees? (By default fees are being absorbed by you).</label><div class="ui toggle checkbox"><input type="checkbox" tabindex="0" class="hidden"><label>Yes, pass to attendees.</label></div></div></div></div></div></div>';
+                
+                $('.table-body').append(new_row);
+                row++;
+                return false;
+
+            });
+
+            $(document).on("click", "#free-ticket-btn", function () {
+                var new_row = '<div class="table-rows"><div class="row"><div class="first-col col-md-6"><input type="text" name="ticket-name" placeholder="e.g General Admission" required></div><div class="second-col col-md-2"><input type="number" name="ticket-quantity" placeholder="e.g 400" required></div><div class="third-col col-md-3"><p class="free-text">Free</p></div><div class="fourth-col col-md-1"><i class="trash alternate icon delete-btn"></i></div><div class="ui accordion"><div class="title"><i class="cog icon"></i><span>Additional Settings</span></div><div class="content"><p class="form-head-text">Settings</p><div class="ui form"><label>Ticket Description</label><div class="field"><textarea rows="2" placeholder="Additional ticket information"></textarea></div></div><br/><label>Ticket Status</label><div class="accordion status-div"><div class="title status-links"><div class="ui toggle checkbox"><input type="checkbox" tabindex="0" class="hidden"><label>Locked</label></div></div><div class="ui form"><div class="field"><label>Access Key</label><input type="text" placeholder="Enter access key"></div></div></div></div></div></div></div>';
+                
+                $('.table-body').append(new_row);
+                row++;
+                return false;
+
+            });
+            
+            // Remove criterion
+            $(document).on("click", ".delete-btn", function () {
+                //  alert("deleting row#"+row);
+                if(row>0) {
+                    $(this).closest('.table-rows').remove();
+                    row--;
+                }
+                return false;
+            });
+        </script>
+
+        <!--Toggle Map and Online Event-->
+        <script>
+            $(".online-event").on('click', function(){
+                if($(this).text()=="Online event?")
+                {
+                    $(this).text("Use an address?");
+                } else {
+                    $(this).text("Online event?");
+                }
+
+                $('.map-field, .this-is-an').toggle(); 
+                    
+                return false;
+            });
+        </script>
+
+        <!--Google Map Search & View-->
+        <script>
+            // This example adds a search box to a map, using the Google Place Autocomplete
+            // feature. People can enter geographical searches. The search box will return a
+            // pick list containing a mix of places and predicted search terms.
+
+            // This example requires the Places library. Include the libraries=places
+            // parameter when you first load the API. For example:
+            // <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places">
+
+            function initAutocomplete() {
+                var map = new google.maps.Map(document.getElementById('map'), {
+                center: {lat: -33.8688, lng: 151.2195},
+                zoom: 13,
+                mapTypeId: 'roadmap'
+                });
+
+                // Create the search box and link it to the UI element.
+                var input = document.getElementById('pac-input');
+                var searchBox = new google.maps.places.SearchBox(input);
+
+                // Bias the SearchBox results towards current map's viewport.
+                map.addListener('bounds_changed', function() {
+                searchBox.setBounds(map.getBounds());
+                });
+
+                var markers = [];
+                // Listen for the event fired when the user selects a prediction and retrieve
+                // more details for that place.
+                searchBox.addListener('places_changed', function() {
+                var places = searchBox.getPlaces();
+
+                if (places.length == 0) {
+                    return;
+                }
+
+                // Clear out the old markers.
+                markers.forEach(function(marker) {
+                    marker.setMap(null);
+                });
+                markers = [];
+
+                // For each place, get the icon, name and location.
+                var bounds = new google.maps.LatLngBounds();
+                places.forEach(function(place) {
+                    if (!place.geometry) {
+                    console.log("Returned place contains no geometry");
+                    return;
+                    }
+                    var icon = {
+                    url: place.icon,
+                    size: new google.maps.Size(71, 71),
+                    origin: new google.maps.Point(0, 0),
+                    anchor: new google.maps.Point(17, 34),
+                    scaledSize: new google.maps.Size(25, 25)
+                    };
+
+                    // Create a marker for each place.
+                    markers.push(new google.maps.Marker({
+                    map: map,
+                    icon: icon,
+                    title: place.name,
+                    position: place.geometry.location
+                    }));
+
+                    if (place.geometry.viewport) {
+                    // Only geocodes have viewport.
+                    bounds.union(place.geometry.viewport);
+                    } else {
+                    bounds.extend(place.geometry.location);
+                    }
+                });
+                map.fitBounds(bounds);
+                });
+            }
+        </script>
+
+        <!--Google Map Search API KEY-->
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDyz9DDYgS07A6Rkc7x1Th8D7Jhc2BTEUM&libraries=places&callback=initAutocomplete" async defer></script>
+
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    </body>
+
+</html>

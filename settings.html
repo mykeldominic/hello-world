@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>EventsFleek | Settings</title>
+        <link rel="icon" href="favicon.ico" />
+        
+        <!-- Bootstrap CSS CDN -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+        <!-- Font-Awesome CSS CDN -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/font-awesome.min.css"/>
+
+        <!-- Font -->
+        <link href="https://fonts.googleapis.com/css?family=Lato:400,700,900" rel="stylesheet">
+
+        <!-- Our Custom CSS -->
+        <link rel="stylesheet" href="css/settings.css"/>
+
+        <!-- JS -->
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    </head>
+
+    <body>
+
+        <!-- Navbar Starts Here -->
+        <nav class="navbar navbar-expand-lg sticky-top">
+            <a class="navbar-brand logo" href="index.html">
+                <img src="images/logo.png" />
+                <p>Eventsfleek</p>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample08" aria-controls="navbarsExample08" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarsExample08">
+                <ul class="navbar-nav mr-auto">
+                    <div class="input-group flex-nowrap">
+                        <input type="text" class="form-control" placeholder="Search events" aria-describedby="addon-wrapping">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="addon-wrapping"><i class="fas fa-search"></i></span>
+                        </div>
+                    </div>
+                </ul>
+
+                <ul class="navbar-nav mr-right">
+                    <li class="nav-item">
+                        <a href="browse-events" class="links">Browse Events</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="create-event" class="links">Create Event</a>
+                    </li>
+                    <li class="nav-item dropdown help">
+                        <a class="nav-link" href="#" id="dropdown07" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <p class="help">Help<i class="fas fa-chevron-down"></i></p>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="dropdown07">
+                            <a class="dropdown-item" href="how-overview.html">How it works</a>
+                            <a class="dropdown-item" href="tickets.html">Another Link</a>
+                            <a class="dropdown-item" href="profile.html">Here too</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="#" id="dropdown08" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <p class="username"><img src="images/account-img-circle.png">Michael Miles<i class="fas fa-chevron-down"></i></p>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="dropdown08">
+                            <a class="dropdown-item" href="overview.html">Dashboard</a>
+                            <a class="dropdown-item" href="tickets.html">My Tickets</a>
+                            <a class="dropdown-item" href="profile.html">Profile</a>
+                            <a class="dropdown-item" href="settings.html">Settings</a>
+                            <a class="dropdown-item" href="help.html">FAQs</a>
+                            <hr>
+                            <a class="dropdown-item" href="sign-in.html">Logout</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!-- Navbar Ends Here -->
+
+        <!-- Main Page Content Starts Here -->
+        <div class="main" id="main">
+            
+            <div class="main-page-content">
+                
+                <p class="main-head-text">Account Settings</p>
+
+                <form>
+                    <div class="form-box">
+
+                        <div class="form-row">
+                            <p class="sub-header">Profile</p>
+                            <div class="form-group">
+                                <div class="groups">
+                                    <label>First Name</label>
+                                    <input type="name" class="form-control" placeholder="First Name">
+                                </div>
+                                <div class="groups">
+                                    <label>Last Name</label>
+                                    <input type="name" class="form-control" placeholder="Last Name">
+                                </div>
+                                <div class="groups">
+                                    <label>Email</label>
+                                    <input type="email" class="form-control" placeholder="Email address">
+                                </div>
+                                <div class="groups">
+                                    <label>Phone</label>
+                                    <input type="number" class="form-control" placeholder="Phone number">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <p class="sub-header">Change Password</p>
+                            <div class="form-group">
+                                <div class="groups">
+                                    <label>Current Password</label>
+                                    <input type="password" class="form-control">
+                                </div>
+                                <p class="none"></p>
+                                <div class="groups">
+                                    <label>New Password</label>
+                                    <input type="password" class="form-control">
+                                </div>
+                                <div class="groups">
+                                    <label>Confirm New Password</label>
+                                    <input type="password" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                            
+                        <div class="form-row social">
+                            <p class="sub-header">Social Accounts</p>
+                            <div class="social-group">
+                                <img src="images/facebook.png">
+                                <p>Facebook</p>
+                                <label class="switch" for="checkbox1">
+                                    <input type="checkbox" id="checkbox1" />
+                                    <div class="slider round"></div>
+                                </label>
+                            </div>
+                            <div class="social-group">
+                                <img src="images/twitter-b.png">
+                                <p>Twitter</p>
+                                <label class="switch" for="checkbox2">
+                                    <input type="checkbox" id="checkbox2" />
+                                    <div class="slider round"></div>
+                                </label>
+                            </div>
+                            <div class="social-group">
+                                <img src="images/instagram-b.png">
+                                <p>Instagram</p>
+                                <label class="switch" for="checkbox3">
+                                    <input type="checkbox" id="checkbox3" />
+                                    <div class="slider round"></div>
+                                </label>
+                            </div>
+                            <div class="social-group last">
+                                <img src="images/linkedin.png">
+                                <p>LinkedIn</p>
+                                <label class="switch" for="checkbox4">
+                                    <input type="checkbox" id="checkbox4" />
+                                    <div class="slider round"></div>
+                                </label>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <button class="save-btn">Save changes</button>
+
+                </form>
+
+                <div class="deactivate-div">
+                    <p class="sub-header">Deactivate Account</p>
+                    <p class="note">Please be aware that if you deactivate your account you will lose all of your saved data and will not be able to retrieve it.</p>
+
+                    <button class="deactivate-acc-btn" data-toggle="modal" data-target="#deactivateAccountModal">Deactivate my account</button>
+                </div>
+
+                <!-- Deactivate Modal -->
+                <div class="modal fade question new-user" id="deactivateAccountModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <span>Deactivate Account</span>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <p>Are you sure you want to deactivate this account?</p>
+                                <form class="form">
+                                    <div class="form-group">
+                                        <label>Please kindly tell us why</label>
+                                        <textarea rows="2" placeholder="Enter reason here" required></textarea>
+                                    </div>
+                                    <div class="form-group last">
+                                        <label>Password</label>
+                                        <input type="password" placeholder="Enter your password" required>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary cancel-btn" data-dismiss="modal">CANCEL</button>
+                                <button type="button" class="btn btn-primary deactivate-btn" data-dismiss="modal" data-toggle="modal" data-target="#deactivateAccountModal2">DEACTIVATE</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal fade success" id="deactivateAccountModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="images/check-gre-img.png">
+                                <p>Account deactivated successfully.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+                
+        </div>
+
+        <footer>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="newsletter-header">Want to get our newsletter.</p>
+                    <p class="newsletter-text">You know that if you start now, you'll be eligible to all stuffs.</p>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="footer-right-column">
+                        <input type="email" class="email-input" placeholder="Enter email here">
+                        <button class="btn subscribe-btn">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="columns-row">
+                <div class="columns">
+                    <p class="footer-link-header-text">Use EventsFleek</p>
+                    <div class="footer-links">
+                        <p><a href="how-it-works.html" class="link">How it works</a></p>
+                        <p><a href="pricing.html" class="link">Pricing</a></p>
+                        <p><a href="blog.html" class="link">Blog</a></p>
+                    </div>
+                </div>
+
+                <div class="columns">
+                    <p class="footer-link-header-text">Organize Events</p>
+                    <div class="footer-links">
+                        <p><a href="org-overview.html" class="link">Become an Organizer</a></p>
+                        <p><a href="sell-tickets.html" class="link">Sell Tickets</a></p>
+                    </div>
+                </div>
+
+                <div class="columns">
+                    <p class="footer-link-header-text">Connect with Us</p>
+                    <div class="links-icon-row">
+                        <a href="" class="link"><i class="twitter icon"></i></a>
+                        <a href="" class="link"><i class="instagram icon"></i></a>
+                        <a href="" class="link"><i class="facebook square icon"></i></a>
+                        <a href="" class="link"><i class="youtube icon"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="footer-nav">
+                <p class="copyright-text">c 2019 EventsFleek</p>
+                <div class="right-navs">
+                    <a href="about.html" class="right-nav-link">About</a>
+                    <a href="help.html" class="right-nav-link footer-link-remove">Help</a>
+                    <a href="terms.html" class="right-nav-link footer-link-remove">Terms</a>
+                    <a href="cookies.html" class="right-nav-link footer-link-remove">Cookies</a>
+                    <a href="privacy.html" class="right-nav-link footer-link-remove">Privacy</a>
+                    <a href="contact.html" class="right-nav-link right-nav-link-end">Contact Us</a>
+                </div>
+            </div>
+
+        </footer>
+
+        <!-- Main Page Content Ends Here -->
+
+            
+        
+    
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    </body>
+
+</html>

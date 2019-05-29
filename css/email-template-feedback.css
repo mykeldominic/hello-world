@@ -1,0 +1,156 @@
+*{
+    box-sizing: border-box;
+}
+
+*:focus {
+    outline:none !important;
+}
+
+a:focus {
+    background: #fff !important;
+    color: rgb(133,88,192) !important;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    font-size: 1em;
+    letter-spacing: 0.02em;
+}
+
+/*Section 1 Starts Here*/
+.main{
+    margin: 0 auto;
+    padding: 20px 10px;
+    background: rgb(225, 115, 233, 0.05);
+    width: 600px;
+}
+
+.main .logo {
+    text-align: center;
+    margin-top: -5px;
+    margin-bottom: 18px;
+}
+
+.main .logo img {
+    width: 45px;
+}
+
+.main .email-content{
+    position: relative;
+    background: url('../images/email-back-img.png') no-repeat center center fixed;
+    background-color: rgba(255, 255, 255, 0.4);
+    background-blend-mode: lighten;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+    border-radius: 5px;
+    margin: 0;
+    padding: 0;
+}
+
+.email-content .main-content {
+    padding: 15px;
+    padding-bottom: 0px;
+}
+
+h3 {
+    font-size: 1.7em;
+    margin: 0;
+    margin-top: 40px;
+}
+
+.thank-you-for {
+    font-size: 1em;
+    margin: 0;
+    margin-top: 20px;
+    line-height: 28px;
+}
+
+.get-started {
+    margin: 0;
+    margin-top: 50px;
+    text-align: center;
+}
+
+.get-started-btn {
+    padding: 12px 40px;
+    color: #fff;
+    font-size: 1em;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 5px;
+    border: none;
+    background: linear-gradient(115.29deg, #9A6BF2 22.36%, #E173E9 90.45%);
+    cursor: pointer;
+}
+.get-started-btn:hover {
+    background: linear-gradient(115.29deg, #E173E9 22.36%, #9A6BF2 90.45%);
+    color: #fff;
+    text-decoration: none;
+}
+
+.if-you-have {
+    font-size: 0.85em;
+    color: #555;
+    margin: 0;
+    margin-top: 80px;
+}
+
+.cheers {
+    font-weight: bold;
+    margin: 0;
+    margin-top: 20px;
+    padding-bottom: 40px;
+}
+
+
+.main .footer{
+    margin-top: 10px;
+    padding: 20px 0px;
+    padding-bottom: 0px;
+    background: #FDF8FE;
+    text-align: center;
+}
+
+.main .footer .icons{
+    margin-bottom: 15px;
+}
+
+.main .footer .icons a{
+    margin-right: 20px;
+}
+.main .footer .icons a.last-link{
+    margin-right: 0px;
+}
+
+.main .footer .icons a img {
+    width: 18px;
+    height: 18px;
+}
+
+.main .footer .copyright, .address{
+    background: none;
+    font-size: 0.75em;
+    margin-bottom: 10px;
+}
+.main .footer .address{
+    margin-bottom: 0px;
+}
+
+
+
+/* Responsive Starts Here */
+
+@media screen and (max-width: 600px){
+    .main{
+        width: 99%;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .email-content .main-content {
+        padding: 15px 10px;
+        padding-bottom: 0px;
+    }
+}

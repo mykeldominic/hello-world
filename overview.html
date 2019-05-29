@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>EventsFleek | Organizer Overview</title>
+        <link rel="icon" href="favicon.ico" />
+        
+        <!-- Bootstrap CSS CDN -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+        <!--Semantics CSS CDN -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+
+        <!-- Font-Awesome CSS CDN -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/font-awesome.min.css"/>
+
+        <!-- Font -->
+        <link href="https://fonts.googleapis.com/css?family=Lato:400,700,900" rel="stylesheet">
+
+        <!-- Our Custom CSS -->
+        <link rel="stylesheet" href="css/overview.css"/>
+        
+        <!-- JS -->
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.6/Chart.js"></script>
+    </head>
+
+    <body>
+
+        <!-- Navbar Starts Here -->
+        <nav class="navbar navbar-expand-md sticky-top">
+            <a class="navbar-brand logo" href="index.html">
+                <img src="images/logo.png" />
+                <p>Eventsfleek</p>
+            </a>
+
+            <div class="navbar-collapse" id="navbarDropdown">
+                <ul class="navbar-nav mr-auto">
+                </ul>
+
+                <ul class="navbar-nav mr-right">
+                    <li class="nav-item responsive-nav-link">
+                        <a href="browse-events" class="links">Browse Events</a>
+                    </li>
+                    <li class="nav-item responsive-nav-link">
+                        <a href="create-event" class="links">Create Event</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="#" id="dropdown08" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span class="username"><img src="images/account-img-circle.png">Michael Miles<i class="fas fa-chevron-down"></i></span>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="dropdown08">
+                            <a class="dropdown-item" href="overview.html">Dashboard</a>
+                            <a class="dropdown-item" href="tickets.html">My Tickets</a>
+                            <a class="dropdown-item" href="profile.html">Profile</a>
+                            <a class="dropdown-item" href="settings.html">Settings</a>
+                            <a class="dropdown-item" href="help.html">Help</a>
+                            <hr>
+                            <a class="dropdown-item" href="sign-in.html">Logout</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!-- Navbar Ends Here -->
+
+
+        <!-- Sidebar Navigation (Desktop & Mobile View) Starts Here -->
+        <div class="sidenav" id="mySidenav">
+
+            <!-- Click on x in mobile view to close the sidenav -->
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+            <div class="sidenav-links" id="accordion">
+
+                <div class="event-selection">
+                    <label>Select from events</label>
+                    <div class="ui fluid selection dropdown">
+                        <div class="text" data-value="jenny">
+                            <img class="ui big avatar image" src="images/techfest.jpg">
+                            <p>Techpoint Build 20...</p><!--Backend 19Characters Preview then ...-->
+                        </div>
+                        <i class="dropdown icon"></i>
+                        <div class="menu">
+                            <div class="item" data-value="jenny">
+                                <img class="ui big avatar image" src="images/techfest.jpg">
+                                <p>Techpoint Build 20...</p>
+                            </div>
+                            <div class="item" data-value="elliot">
+                                <img class="ui big avatar image" src="images/teemu-paananen-376238-unsplash.jpg">
+                                <p>Techfest Innovatio...</p>
+                            </div>
+                            <div class="item" data-value="stevie">
+                                <img class="ui big avatar image" src="images/davido.jpg">
+                                <p>Davido 30Billion C...</p>
+                            </div>
+                            <div class="item" data-value="christian">
+                                <img class="ui big avatar image" src="images/polular-1-100x100.jpg">
+                                <p>Christian</p>
+                            </div>
+                            <div class="item" data-value="matt">
+                                <img class="ui big avatar image" src="images/polular-2-100x100.jpg">
+                                <p>Matt</p>
+                            </div>
+                            <div class="item" data-value="justen">
+                                <img class="ui big avatar image" src="images/polular-3-100x100.jpg">
+                                <p>Justen Kitsune</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sidenav-link first">
+                    <a href="overview.html"><p class="link active"><img src="images/overview-side-img.png">Overview</p></a>
+                </div>
+
+                <div class="sidenav-link">
+                    <button class="collapsed btn btn-link link chevron" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                        <img src="images/order-side-img.png">Orders & Attendees
+                    </button>
+
+                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                      <div class="card-body">
+                        <p class="card-body-link"><a href="orders.html">Orders</a></p>
+                        <p class="card-body-link"><a href="attendees.html">Attendees</a></p>
+                        <p><a href="waitlist.html">Waitlist</a></p>
+                      </div>
+                    </div>
+                </div>
+
+                <div class="sidenav-link">
+                    <a href="check-in-attendees.html"><p class="link"><img src="images/check-in-side-img.png">Check-In Attendees</p></a>
+                </div>
+
+                <div class="sidenav-link">
+                    <a href="add-event-details.html"><p class="link"><img src="images/info-side-img.png">Event Information</p></a>
+                </div>
+
+                <div class="sidenav-link">
+                    <button class="collapsed btn btn-link link chevron" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        <img src="images/promote-side-img.png">Promote
+                    </button>
+
+                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                      <div class="card-body">
+                        <p class="card-body-link"><a href="email-campaigns.html">Email Campaigns</a></p>
+                        <p class="card-body-link"><a href="tracking-links.html">Tracking Links</a></p>
+                        <p><a href="discounts.html">Discounts</a></p>
+                      </div>
+                    </div>
+                </div>
+
+                <div class="sidenav-link">
+                    <a href="add-ons.html"><p class="link"><img src="images/add-ons-side-img.png">Add-ons</p></a>
+                </div>
+
+                <div class="sidenav-link">
+                    <a href="website-widgets.html"><p class="link"><img src="images/widgets-side-img.png">Website Widgets</p></a>
+                </div>
+
+                <div class="sidenav-link">
+                    <button class="collapsed btn btn-link link chevron" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                        <img src="images/transactions-side-img.png">Transactions
+                    </button>
+
+                    <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+                      <div class="card-body">
+                        <p class="card-body-link"><a href="transactions.html">Transaction History</a></p>
+                        <p><a href="withdraw.html">Withdraw</a></p>
+                      </div>
+                    </div>
+                </div>
+
+                <div class="sidenav-link">
+                    <a href="org-settings.html"><p class="link"><img src="images/settings-side-img.png">Settings</p></a>
+                </div>
+
+                <div class="responsive-sidelinks">
+                    <br>
+                    <hr>
+
+                    <div class="sidenav-link">
+                        <a href="browse-events.html"><p class="link">Browse Events</p></a>
+                    </div>
+
+                    <div class="sidenav-link">
+                        <a href="create-event.html"><p class="link">Create Event</p></a>
+                    </div>
+                </div>
+
+            </div>
+            
+        </div>  
+        <!-- Sidebar Navigation Ends Here -->
+
+        <!-- Main Page Content Starts Here -->
+        <div class="main" id="main">
+            
+            <div id="overlay"></div>
+
+            <!-- Use fa-bar on mobile view to open the sidenav -->
+            <span onclick="openNav()" class="open-sidenav"><img src="images/menu.png"></span>
+            
+            <div class="main-page-content">
+                
+                <div class="event-info-section">
+                    <p class="event-status-text live">LIVE</p>
+                    <p class="event-name">Techpoint Build 2019 Innovation Show</p>
+                    <p><i class="map marker alternate icon"></i>Landmark Event Center, Victoria Island, Lagos.</p>
+                    <p class="event-date-time"><i class="calendar alternate outline icon"></i><span class="event-date">Monday, April 21, 2019</span> | <span class="event-time">10:30AM - 05:00PM</span></p>
+
+                    <a href="event-page-preview.html" class="view-link">View Event</a>
+
+                    <div class="section-one-links">
+                        <p class="first">
+                            <a href="" class="link">End Ticket Sales</a> <span class="hor-line">|</span> <a href="" class="link">Unpublish</a> <span class="hor-line">|</span>
+                        </p>
+                        <p class="second">
+                            <a href="" class="link">Duplicate</a> <span class="hor-line">|</span> <a href="" class="link">Delete</a>
+                        </p>
+                    </div>
+                </div>
+
+                <hr>
+
+                <div class="section-one">
+                    
+                    <div class="info-box">
+                        <p class="info-box-head-text revenue">Revenue<img src="images/revenue-box-img.png"></p>
+                        
+                        <div class="info">
+                            <p class="fig">
+                                <img src="images/down-arrow-box-img.png">
+                                ₦<span>113,690,000</span>
+                            </p>
+                        </div>
+
+                        <div class="compared">Compared to last week<p class="percent red">-10%</p></div>
+                    </div>
+
+                    <div class="info-box">
+                        <p class="info-box-head-text balance">Balance<img src="images/wallet-box-img.png"></p>
+                        
+                        <div class="info">
+                            <p class="fig">
+                                ₦<span>9,150,000</span>
+                            </p>
+                        </div>
+
+                        <div class="compared"><a href="withdraw.html" class="withdraw-link">Withdraw</a></div>
+                    </div>
+
+                    <div class="info-box">
+                        <p class="info-box-head-text tickets">Tickets Sold<img src="images/tickets-box-img.png"></p>
+                        
+                        <div class="info">
+                            <p class="fig">
+                                <img src="images/up-arrow-box-img.png">
+                                <span>23/40</span>
+                            </p>
+                        </div>
+
+                        <div class="compared">Compared to last week<p class="percent green">23%</p></div>
+                    </div>
+
+                    <div class="info-box">
+                        <p class="info-box-head-text page">Total Page Views<img src="images/page-box-img.png"></p>
+                        <!--Insert Graph Here-->
+                        <div class="graph" id="chartViews">
+                            
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="section-two section">
+                    <div class="left column chart-container">
+
+                        <canvas id="myChart"></canvas>
+
+                    </div>
+
+                    <div class="right column">
+
+                        <div class="top">
+                            <p class="section-head-text">Quick Links</p>
+                            <hr>
+                            <div class="quicklinks-div">
+                                <p><a href="attendees.html">Attendees</a></p>
+                                <hr>
+                                <p><a href="account-details.html">Team Management</a></p>
+                                <hr>
+                                <p><a href="discounts.html">Discounts</a></p>
+                            </div>
+                        </div>
+
+                        <div class="bottom">
+
+                            <div class="bd-example">
+                              <div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-ride="carousel">
+                                <ol class="carousel-indicators">
+                                  <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+                                  <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+                                  <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+                                  <li data-target="#carouselExampleCaptions" data-slide-to="3"></li>
+                                </ol>
+                                <div class="carousel-inner">
+                                    <div class="carousel-item first active">
+                                        <img src="images/Art-X-Lagos.jpg">
+                                        <div class="text">
+                                            <h5>Boost Ticket Sales</h5>
+                                            <p>Praesent commodo cursus magna, vel scel erisq ue nisl consectetur. Praesent commodo cursus magna, vel consectetur...</p>
+                                            <p class="link"><a href="">Continue reading<i class="fas fa-arrow-right"></i></a></p>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item second">
+                                        <img src="images/davido.jpg">
+                                        <div class="text">
+                                            <h5>The Power Of Social Invite</h5>
+                                            <p>Praesent commodo cursus magna, vel scel erisq ue nisl consectetur. Praesent commodo cursus magna, vel consectetur...</p>
+                                            <p class="link"><a href="">Continue reading<i class="fas fa-arrow-right"></i></a></p>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item third">
+                                        <img src="images/crypto-news-3-600x450.jpg">
+                                        <div class="text">
+                                            <h5>Third slide label</h5>
+                                            <p>Praesent commodo cursus magna, vel scel erisq ue nisl consectetur. Praesent commodo cursus magna, vel consectetur...</p>
+                                            <p class="link"><a href="">Continue reading<i class="fas fa-arrow-right"></i></a></p>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item fourth">
+                                        <img src="images/google-logo-text.png">
+                                        <div class="text">
+                                            <h5>Fourth slide label</h5>
+                                            <p>Praesent commodo cursus magna, vel scel erisq ue nisl consectetur. Praesent commodo cursus magna, vel consectetur...</p>
+                                            <p class="link"><a href="">Continue reading<i class="fas fa-arrow-right"></i></a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+                                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                  <span class="sr-only">Previous</span>
+                                </a>
+                                <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+                                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                  <span class="sr-only">Next</span>
+                                </a>
+                              </div>
+                            </div>
+
+                        </div>
+                        
+                    </div>
+                </div>
+
+                <div class="section-three">
+
+                    <nav>
+                        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                            <a class="nav-item nav-link active" id="nav-one" data-toggle="tab" href="#nav-first" role="tab" aria-controls="nav-one" aria-selected="true"><i class="fas fa-clipboard-list"></i>Orders</a>
+                            <a class="nav-item nav-link" id="nav-two" data-toggle="tab" href="#nav-second" role="tab" aria-controls="nav-two" aria-selected="false"><i class="fas fa-file-alt"></i>Sales</a>
+                            <a class="nav-item nav-link last" id="nav-three" data-toggle="tab" href="#nav-third" role="tab" aria-controls="nav-three" aria-selected="false"><i class="fas fa-chart-line"></i>Traffic</a>
+                        </div>
+                    </nav>
+                    <div class="tab-content" id="nav-tabContent">
+                        <div class="tab-pane fade show active" id="nav-first" role="tabpanel" aria-labelledby="nav-one">
+
+                            <div class="table-responsive">
+                                <table class="table table-borderless order-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Order No.</th>
+                                            <th>Ticket Buyer</th>
+                                            <th>Quantity</th>
+                                            <th>Price (₦)</th>
+                                            <th>Date</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>110011</td>
+                                            <td>Michael Gbenga</td>
+                                            <td>1</td>
+                                            <td>Free</td>
+                                            <td>April 8, 2019</td>
+                                        </tr>
+                                        <tr>
+                                            <td>110012</td>
+                                            <td>Tochi Micah</td>
+                                            <td>2</td>
+                                            <td>20,000</td>
+                                            <td>April 9, 2019</td>
+                                        </tr>
+                                        <tr>
+                                            <td>110013</td>
+                                            <td>Peter Brenada</td>
+                                            <td>1</td>
+                                            <td>10,000</td>
+                                            <td>April 9, 2019</td>
+                                        </tr>
+                                        <tr>
+                                            <td>110014</td>
+                                            <td>Manny Chukwuemeka</td>
+                                            <td>3</td>
+                                            <td>Free</td>
+                                            <td>April 11, 2019</td>
+                                        </tr>
+                                        <tr>
+                                            <td>110015</td>
+                                            <td>Onuchukwu Adeyinka</td>
+                                            <td>2</td>
+                                            <td>20,000</td>
+                                            <td>April 12, 2019</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <p class="view-all"><a href="orders.html">VIEW ALL</a></p>
+
+                        </div>
+                        <div class="tab-pane fade" id="nav-second" role="tabpanel" aria-labelledby="nav-two">
+
+                            <div class="table-responsive">
+                                <table class="table table-borderless ticket-type-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Ticket Type</th>
+                                            <th>Price (₦)</th>
+                                            <th>Sold</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>General Admission</td>
+                                            <td>Free</td>
+                                            <td>1/20</td>
+                                        </tr>
+                                        <tr>
+                                            <td>VIP</td>
+                                            <td>20,000</td>
+                                            <td>3/20</td>
+                                        </tr>
+                                        <tr>
+                                            <td>VVIP</td>
+                                            <td>50,000</td>
+                                            <td>6/20</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                        </div>
+                        <div class="tab-pane fade" id="nav-third" role="tabpanel" aria-labelledby="nav-three">
+
+                            <div class="table-responsive">
+                                <table class="table table-borderless traffic-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Channel Name</th>
+                                            <th>Page Views</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Eventsfleek Discovery Platform</td>
+                                            <td>120</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Invitees from Facebook</td>
+                                            <td>30</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Invitees from  Instagram</td>
+                                            <td>50</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Invitees from  Twitter</td>
+                                            <td>20</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Twitter Tracking Link</td>
+                                            <td>5</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+                
+        </div>
+        <!-- Main Page Content Ends Here -->
+
+            
+        
+    
+
+        <!--Dropdown-->
+        <script>
+            $('.ui.dropdown')
+                .dropdown()
+            ;
+        </script>
+
+        <!-- Trips Graph-->
+        <script>
+            var spark3 = {
+              chart: {
+                type: 'area',
+                height: 120,
+                sparkline: {
+                  enabled: true
+                },
+              },
+              stroke: {
+                curve: 'smooth'
+              },
+              fill: {
+                opacity: 1,
+              },
+              series: [{
+                name: 'Page Views',
+                data: [47, 45, 54, 38, 56, 24, 65]
+              }],
+              labels: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
+              yaxis: {
+                min: 0
+              },
+              colors: ['#008FFB'],
+              //colors: ['#5564BE'],
+              title: {
+                text: '890',
+                offsetX: 0,
+                style: {
+                  fontSize: '24px',
+                  cssClass: 'apexcharts-yaxis-title'
+                }
+              }
+            }
+
+            new ApexCharts(document.querySelector("#chartViews"), spark3).render();
+        </script>
+
+        <script>
+            var ctx = document.getElementById("myChart").getContext('2d');
+              var myChart = new Chart(ctx, {
+                type: 'line',
+                data: {
+                  labels: ["Dec", "Jan", "Feb", "Mar", "Apr", "May", "Jun"],
+                  datasets: [{
+                    label: 'Sales value',
+                    data: [0, 4, 32, 85, 42, 22, 104],
+                    backgroundColor : "rgb(94, 114, 228, 0.1)",
+                    borderColor : "#5E72E4",
+                    borderWidth: 3
+                  }]
+                },
+                options: {
+                  legend: {
+                    display: true,
+                    position: 'top',
+                    labels: {
+                      boxWidth: 30,
+                      fontColor: '#333',
+                      fontSize: 15
+                    }
+                  },
+                  scales: {
+                    yAxes: [{
+                      ticks: {
+                        beginAtZero: true
+                      }
+                    }]
+                  }
+                }
+              });
+        </script>
+
+        <!-- Side Navigation JS -->
+        <script>
+            /* Set the width of the side navigation to 250px */
+            function openNav() {
+                document.getElementById("mySidenav").style.width = "250px";
+                document.getElementById("main").style.marginLeft = "250px";
+                document.getElementById("overlay").style.display = "block";
+            }
+            /* Set the width of the side navigation to 0 */
+            function closeNav() {
+                document.getElementById("mySidenav").style.width = "0";
+                document.getElementById("main").style.marginLeft = "0";
+                document.getElementById("overlay").style.display = "none";
+            }
+        </script>
+
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+    </body>
+
+</html>

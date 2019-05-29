@@ -1,0 +1,368 @@
+@font-face{
+    font-family: 'CircularStd-Book';
+    font-style: normal;
+    font-weight: normal;
+    src: url("../fonts/CircularStd-Book.woff") format("opentype");
+}
+
+*{
+    box-sizing: border-box;
+}
+
+*:focus {
+    outline:none !important;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active{
+    -webkit-box-shadow: 0 0 0 30px white inset !important;
+}
+
+a:focus,
+button:focus,
+input:focus,
+input:active,
+textarea:focus,
+.form-control:focus {
+    box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+}
+
+body {
+    font-family: "CircularStd-Book", Arial, sans-serif;
+    font-size: .875rem;
+    background-color: rgb(240, 249, 242);
+    transition: background-color .5s;
+}
+
+
+/* Navbar Starts Here */
+
+.navbar{
+    padding: 12px 20px;
+    background: #FFFFFF;
+    box-shadow: 0px 2px 7px rgba(79, 79, 79, 0.07);
+}
+
+.navbar .logo{
+    display: none;
+}
+
+.navbar .mr-auto{
+    padding-left: 20px;
+}
+
+.navbar .mr-right{
+    margin-right: -14px;
+}
+
+.navbar .mr-right li{
+    margin-right: 20px;
+    margin-top: 10px;
+    font-size: 1.15em !important;
+}
+
+.navbar .mr-right li a:hover{
+    border-bottom: 2px solid rgb(133,88,192);
+    transition: all .3s ease-in-out;
+}
+
+.navbar .mr-right li .button{
+    position: relative;
+    margin-top: -12px;
+    padding: 12px 35px;
+    font-size: 1.05em;
+    background: rgb(133,88,192);
+    background: linear-gradient(90deg, rgba(133,88,192,1) 0%, rgba(208,123,198,1) 100%);
+    color: #fff;
+}
+
+.navbar .mr-right li .button:hover{
+    border-bottom: none;
+    background: rgb(133,88,192);
+    background: linear-gradient(90deg, rgba(208,123,198,1) 0%, rgba(133,88,192,1) 100%);
+    transition: all .3s ease-in-out;
+}
+
+.navbar .mr-right li .dropdown{
+    margin-top: -15px;
+    color: #909090;
+    margin-right: 20px;
+    font-weight: 400 !important;
+}
+
+.navbar .mr-right li .dropdown i{
+    margin-left: 2px !important;
+    color: #909090;
+}
+
+.navbar .mr-right li .dropdown .menu{
+    margin-top: 10px !important;
+    width: 150px !important;
+}
+
+.navbar .mr-right li .dropdown .menu a{
+    color: #555;
+}
+
+.navbar .mr-right li .dropdown .menu a:hover{
+    border-bottom: none;
+    color: #333;
+}
+
+
+/* Main Page Starts Here */
+
+/* Overlay */
+#overlay {
+    position: fixed; /* Sit on top of the page content */
+    display: none; /* Hidden by default */
+    width: 100%; /* Full width (cover the whole page) */
+    height: 100%; /* Full height (cover the whole page) */
+    top: 0; 
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.55); /* Black background with opacity */
+    z-index: 3; /* Specify a stack order in case you're using a different order for other elements */
+    cursor: pointer; /* Add a pointer on hover */
+}
+
+
+/*Side Menu Starts Here*/
+
+
+.sidenav::-webkit-scrollbar {
+    width: 3px;
+}
+
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(197, 197, 197, 0.8);
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: rgba(197, 197, 197, 0.8); 
+    -webkit-box-shadow: inset 0 0 6px rgba(197, 197, 197, 0.8); 
+}
+::-webkit-scrollbar-thumb:window-inactive {
+	background: rgba(197, 197, 197, 0.8); 
+}
+
+
+.sidenav {
+    height: 100%;
+    width: 250px;
+    padding: 0;
+    margin: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    background: #ffffff;
+    border-right: 1px solid #eee;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn{
+    position: absolute;
+    top: 0;
+    right: 10px;
+    margin: 0;
+    padding: 0;
+    font-size: 36px;
+    display: none;
+}
+
+.open-sidenav{
+    display: none;
+}
+
+.sidenav-links{
+    margin: 0;
+    padding: 10px;
+}
+
+.logo{
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.logo img{
+    width: 40px;
+    height: 40px;
+    margin-right: 5px;
+}
+
+.logo p{
+    margin: 0;
+    padding-top: 10px;
+    font-size: 1em;
+}
+
+.sidenav-links .event-selection{
+    margin-top: 40px;
+    margin-bottom: 50px;
+}
+
+.sidenav-links .event-selection label{
+    font-size: 1.05em;
+}
+
+.event-selection .selection .menu .item{
+    font-size: 1em;
+}
+
+.event-selection .selection i{
+    margin-top: 0px !important;
+}
+
+.event-selection .selection .avatar{
+    margin-top: -5px !important;
+    margin-bottom: -5px !important;
+    width: 36px !important;
+    height: 50px !important;
+}
+
+.sidenav-link{
+    margin: 15px 0px;
+    font-size: 1.1em;
+}
+
+.sidenav-link a, .sidenav-link p{
+    color: #333;
+}
+
+.sidenav-link a:hover{
+    color: rgb(133,88,192);
+}
+
+.sidenav-link .link{
+    padding: 12px !important;
+    font-weight: 400 !important;
+}
+
+.ui.accordion .title:not(.ui) {
+    font-family: "CircularStd-Book", Arial, sans-serif;
+}
+
+.sidenav-link .link:hover{
+    background: rgba(133, 88, 192, 0.2);
+}
+
+.sidenav-link .link.active{
+    background: rgba(133, 88, 192, 0.2);
+}
+
+.sidenav-link .content{
+    padding: 12px !important;
+    padding-bottom: 10px !important;
+}
+
+.sidenav-link .title i{
+    float: right !important;
+    font-size: 1.5em !important;
+    color: #555;
+    margin-top: -2px !important;
+}
+
+
+/*Side Menu Ends Here*/
+
+
+/*Main Page Starts Here*/
+
+.main{
+    margin: 0;
+    margin-left: 250px; /* Same as the width of the sidenav */
+    padding: 0px;
+}
+
+.main-page-content{
+    margin: 0 auto;
+    width: 90%;
+    margin-top: 34px;
+}
+
+
+/*Main Page Ends Here*/
+
+
+
+/*Responsive Page Starts Here*/
+
+@media screen and (max-width: 768px){
+    
+    .navbar-toggler{
+        display: none;
+    }
+    
+    .navbar .logo{
+        display: flex;
+        margin-left: 20px;
+    }
+    
+    .sidenav{
+        width: 0px;
+        padding-top: 75px;
+        z-index: 2001;
+    }
+    .sidenav a:hover{
+        padding: 10px 0px 10px 15px;
+    }
+    
+    /* Position and style the close button (top right corner) */
+    .sidenav .closebtn{
+        display: block;
+        padding-top: 0px;
+    }
+    .sidenav .closebtn:hover{
+        margin: 33px 6px 0px 30px;
+    }
+
+    .open-sidenav{
+        position: sticky;
+        color: #8D948F;
+        font-size: 28px;
+        z-index: 2;
+        top: 9px !important;
+        left: 12px;
+        display: block;
+    }
+
+    .sidenav-links .logo{
+        display: none;
+    }
+
+    .sidenav-links .event-selection{
+        margin-top: -30px;
+    }
+    
+    .main{
+        margin-left: 0px;
+        margin-top: -17px !important;
+        width: 100%;
+    }
+
+    .main-page-content{
+        margin-left: 0px;
+        width: 100%;
+    }
+}
+
+
+@media screen and (max-width: 662px){
+
+    
+
+}
+
+
+/* Responsive Page Ends Here*/

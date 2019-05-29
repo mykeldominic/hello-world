@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>EventsFleek | Blog</title>
+        <link rel="icon" href="favicon.ico" />
+        
+        <!-- Bootstrap CSS CDN -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+        <!--Semantics CSS CDN -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+
+        <!-- Font-Awesome CSS CDN -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/font-awesome.min.css"/>
+
+        <!-- Froala Editor CSS CDN -->
+        <link href='https://cdn.jsdelivr.net/npm/froala-editor@2.9.4/css/froala_editor.min.css' rel='stylesheet' type='text/css' />
+        <link href='https://cdn.jsdelivr.net/npm/froala-editor@2.9.4/css/froala_style.min.css' rel='stylesheet' type='text/css' />
+
+        <!-- Our Custom CSS -->
+        <link rel="stylesheet" href="css/organizer-dashboard.css"/>
+        
+        <!-- JS -->
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+        <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.18/datatables.min.js"></script>
+        <script type='text/javascript' src='https://cdn.jsdelivr.net/npm/froala-editor@2.9.4/js/froala_editor.min.js'></script>
+        <script type="text/javascript" src="js/jpreview.js"></script>
+    </head>
+
+    <body>
+        <!-- Sidebar Navigation (Desktop & Mobile View) Starts Here -->
+        <div class="sidenav" id="mySidenav">
+
+            <!-- Click on x in mobile view to close the sidenav -->
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+            <div class="ui accordion sidenav-links">
+
+                <a class="navbar-brand logo" href="index.html">
+                    <img src="images/logo.png" />
+                    <p>Eventsfleek</p>
+                </a>
+
+                <div class="event-selection">
+                    <label>Select from events</label>
+                    <div class="ui fluid selection dropdown">
+                        <div class="text" data-value="jenny">
+                            <img class="ui big avatar image" src="images/techfest.jpg">
+                            Techpoint Build 2019...<!--Backend 20Characters Preview then ...-->
+                        </div>
+                        <i class="dropdown icon"></i>
+                        <div class="menu">
+                            <div class="item" data-value="jenny">
+                                <img class="ui big avatar image" src="images/techfest.jpg">
+                                Techpoint Build 2019...
+                            </div>
+                            <div class="item" data-value="elliot">
+                                <img class="ui big avatar image" src="images/teemu-paananen-376238-unsplash.jpg">
+                                Techfest Innovation ...
+                            </div>
+                            <div class="item" data-value="stevie">
+                                <img class="ui big avatar image" src="images/davido.jpg">
+                                Davido 30Billion Gan...
+                            </div>
+                            <div class="item" data-value="christian">
+                                <img class="ui big avatar image" src="images/polular-1-100x100.jpg">
+                                Christian
+                            </div>
+                            <div class="item" data-value="matt">
+                                <img class="ui big avatar image" src="images/polular-2-100x100.jpg">
+                                Matt
+                            </div>
+                            <div class="item" data-value="justen">
+                                <img class="ui big avatar image" src="images/polular-3-100x100.jpg">
+                                Justen Kitsune
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sidenav-link">
+                    <a href="organizer-dashboard.html"><p class="link active">Home</p></a>
+                </div>
+
+                <div class="sidenav-link">
+                    <div class="title link">
+                        About us
+                        <i class="dropdown icon"></i>
+                    </div>
+                    <div class="content">
+                        <p><a href="#">Lorem ipsum</a></p>
+                        <p><a href="#">ipsum dolor</a></p>
+                        <p><a href="#">dolor ipsum</a></p>
+                        <p><a href="#">amet consectetur</a></p>
+                        <p><a href="#">ipsum dolor sit</a></p>
+                    </div>
+                </div>
+
+                <div class="sidenav-link active">
+                    <div class="title link">
+                        Hello Thre
+                        <i class="dropdown icon"></i>
+                    </div>
+                    <div class="content">
+                        <p><a href="#">Lorem ipsum</a></p>
+                        <p><a href="#">ipsum dolor</a></p>
+                        <p><a href="#">dolor ipsum</a></p>
+                        <p><a href="#">amet consectetur</a></p>
+                        <p><a href="#">ipsum dolor sit</a></p>
+                    </div>
+                </div>
+
+                <div class="sidenav-link">
+                    <a href="organizer-dashboard.html"><p class="link">I am here</p></a>
+                </div>
+
+                <div class="sidenav-link">
+                    <a href="organizer-dashboard.html"><p class="link">Its not so</p></a>
+                </div>
+
+                <div class="sidenav-link">
+                    <a href="organizer-dashboard.html"><p class="link">Hello Friend</p></a>
+                </div>
+
+              <div class="panel-group snj-panel" id="accordion" role="tablist" aria-multiselectable="true">
+                  <div class="panel panel-default">
+                    <div class="panel-heading active" role="tab" id="headingOne">
+                      <h4 class="panel-title">
+                        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                          Collapsible Group Item #1
+                        </a>
+                      </h4>
+                    </div>
+                    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                      <div class="panel-body">
+                        Anim pariatur cliche reprehenderit, enim eiusmod.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingTwo">
+                      <h4 class="panel-title">
+                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                          Collapsible Group Item #2
+                        </a>
+                      </h4>
+                    </div>
+                    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                      <div class="panel-body">
+                        Anim pariatur cliche reprehenderit, enim.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingThree">
+                      <h4 class="panel-title">
+                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                          Collapsible Group Item #3
+                        </a>
+                      </h4>
+                    </div>
+                    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                      <div class="panel-body">
+                        Anim pariatur cliche reprehenderit.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+            </div>
+            
+        </div>  
+        <!-- Sidebar Navigation Ends Here -->
+
+        <!-- Main Page Content Starts Here -->
+        <div class="main" id="main">
+                
+            <!-- Use fa-bar on mobile view to open the sidenav -->
+            <span onclick="openNav()" class="open-sidenav">O</span>
+            
+            <div onclick="closeOverlay()"><!-- Click anywhere in body to close the sidenav -->
+                <div id="overlay"></div>
+
+                    <!-- Navbar Starts Here -->
+                    <nav class="navbar navbar-expand-md">
+                        <a class="navbar-brand logo" href="index.html">
+                            <img src="images/logo.png" />
+                            <p>Eventsfleek</p>
+                        </a>
+
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarDropdown" aria-controls="navbarDropdown" aria-expanded="false" aria-label="toggle navigation"><span class="navbar-toggler-icon"></span></button>
+        
+                        <div class="collapse navbar-collapse" id="navbarDropdown">
+                            <ul class="navbar-nav mr-auto">
+                            </ul>
+        
+                            <ul class="navbar-nav mr-right">
+                                <li class="nav-item dropdown">
+                                    <div class="ui dropdown top left pointing">
+                                        <i class="bell outline icon"></i><i class="small chevron down icon"></i>
+                                        <div class="menu">
+                                            <a class="item" href="#link1">About Us</a>
+                                            <a class="item" href="#link2">Click Here</a>
+                                            <a class="item" href="#link3">Now See Us</a>
+                                        </div>
+                                    </div>      
+                                </li>
+                                <li class="nav-item">
+                                    <a href="sign-in.html" class="ui button">
+                                        Login
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                    <!-- Navbar Ends Here -->
+                    
+                    <div class="main-page-content">
+                        
+
+
+                    </div>
+                
+                </div>
+            </div>
+                
+        </div>
+        <!-- Main Page Content Ends Here -->
+
+            
+        
+    
+    
+        <!-- JS -->
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+
+        <!--Dropdown-->
+        <script>
+            $('.ui.dropdown')
+                .dropdown()
+            ;
+
+            $('.ui.accordion')
+                .accordion()
+            ;
+        </script>
+
+        <!-- Side Navigation JS -->
+        <script>
+            /* Set the width of the side navigation to 212px */
+            function openNav() {
+                document.getElementById("mySidenav").style.width = "250px";
+                document.getElementById("main").style.marginLeft = "250px";
+                document.getElementById("overlay").style.display = "block";
+            }
+            /* Set the width of the side navigation to 0 */
+            function closeNav() {
+                document.getElementById("mySidenav").style.width = "0";
+                document.getElementById("main").style.marginLeft = "0";
+                document.getElementById("overlay").style.display = "none";
+            }
+            /* Set the width of the side navigation to 0 & removes Overlay*/
+            function closeOverlay() {
+                if (window.innerWidth < 769) {
+                    document.getElementById("mySidenav").style.width = "0";
+                    document.getElementById("main").style.marginLeft = "0";
+                    document.getElementById("overlay").style.display = "none";
+                }   
+            }
+        </script>
+
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+    </body>
+
+</html>

@@ -1,0 +1,499 @@
+*{
+    box-sizing: border-box;
+}
+
+*:focus {
+    outline:none !important;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active{
+    -webkit-box-shadow: 0 0 0 30px white inset !important;
+}
+
+a:focus,
+button:focus,
+input:focus,
+input:active,
+textarea:focus,
+.form-control:focus {
+    box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+}
+
+input:focus,
+input:active {
+    border-bottom: 0.5px solid #6CB525 !important;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    font-size: 1em;
+    background: #F3F9EC;
+    transition: .5s;
+}
+
+.navbar {
+    margin: 0;
+    padding: 0 40px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04);
+}
+
+.navbar-nav {
+    padding: 0;
+    margin-top: -2px;
+}
+
+.navbar .mx-auto .nav-item {
+    padding: 0;
+    margin: 0;
+    margin-right: 5px;
+    margin-bottom: -1px;
+}
+
+.navbar .mx-auto .nav-item .nav-link {
+    letter-spacing: 0.02em;
+    color: #6CB525;
+    padding: 15px 25px;
+}
+
+.navbar .mx-auto .nav-item .nav-link img {
+    width: 18px;
+    height: 18px;
+    margin-top: -3px;
+    margin-right: 8px;
+}
+
+.navbar .mx-auto .nav-item .nav-link.overview img {
+    content: url('../images/over-icon-gre.png');
+}
+.navbar .mx-auto .nav-item .nav-link.overview:hover img {
+    content: url('../images/over-icon-whi.png');
+}
+
+.navbar .mx-auto .nav-item .nav-link.reports img {
+    content: url('../images/repo-icon-gre.png');
+}
+.navbar .mx-auto .nav-item .nav-link.reports:hover img {
+    content: url('../images/repo-icon-whi.png');
+}
+
+.navbar .mx-auto .nav-item .nav-link.riders img {
+    content: url('../images/ride-icon-gre.png');
+    margin-top: -1px;
+}
+.navbar .mx-auto .nav-item .nav-link.riders:hover img {
+    content: url('../images/ride-icon-whi.png');
+}
+
+.navbar .mx-auto .nav-item .nav-link.users img {
+    content: url('../images/user-icon-gre.png');
+}
+.navbar .mx-auto .nav-item .nav-link.users:hover img {
+    content: url('../images/user-icon-whi.png');
+}
+
+.navbar .mx-auto .nav-item .nav-link.active.tracker img {
+    content: url('../images/trac-icon-whi.png');
+}
+
+.navbar .mx-auto .nav-item .nav-link.crm img {
+    content: url('../images/crm-icon-gre.png');
+}
+.navbar .mx-auto .nav-item .nav-link.crm:hover img {
+    content: url('../images/crm-icon-whi.png');
+}
+
+.navbar .mx-auto .nav-item .nav-link:hover {
+    background: #6CB525;
+    color: #FFFFFF;
+    opacity: .6;
+}
+
+.navbar .mx-auto .nav-item .nav-link.active {
+    background: #6CB525;
+    color: #FFFFFF;
+    font-weight: bold;
+}
+
+.navbar .mx-auto .nav-item .nav-link.active:hover {
+    background: #6CB525;
+    color: #FFFFFF;
+    opacity: 1;
+}
+
+.navbar .mr-right .nav-item.dropdown .username {
+    color: #4B575C;
+    font-weight: 400;
+}
+
+.navbar .mr-right .nav-item.dropdown img {
+    width: 36px;
+    margin-top: 0px;
+    margin-right: 10px;
+}
+
+.navbar .mr-right .nav-item.dropdown i {
+    color: #CCCFD4;
+}
+
+.nav-item.dropdown .dropdown-menu {
+    padding: 0;
+}
+
+.nav-item.dropdown .dropdown-menu hr {
+    margin-top: 20px;
+    margin-bottom: 0px;
+}
+
+.nav-item.dropdown .dropdown-menu .dropdown-item {
+    padding: 8px 15px;
+    padding-bottom: 10px;
+}
+
+.nav-item.dropdown .dropdown-menu .dropdown-item:focus {
+    background: transparent;
+    color: #6CB525;
+}
+
+
+/* Main Page Starts Here */
+
+/* Overlay */
+#overlay {
+    position: fixed; /* Sit on top of the page content */
+    display: none; /* Hidden by default */
+    width: 100%; /* Full width (cover the whole page) */
+    height: 100%; /* Full height (cover the whole page) */
+    top: 0; 
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.55); /* Black background with opacity */
+    z-index: 3; /* Specify a stack order in case you're using a different order for other elements */
+    cursor: pointer; /* Add a pointer on hover */
+}
+
+
+/*Side Menu Starts Here*/
+
+.sidenav::-webkit-scrollbar {
+    width: 3px;
+}
+
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(197, 197, 197, 0.8);
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: rgba(197, 197, 197, 0.8); 
+    -webkit-box-shadow: inset 0 0 6px rgba(197, 197, 197, 0.8); 
+}
+::-webkit-scrollbar-thumb:window-inactive {
+    background: rgba(197, 197, 197, 0.8); 
+}
+
+.sidenav {
+    height: 100%;
+    width: 270px;
+    padding: 0;
+    margin: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    background: #ffffff;
+    border-right: 1px solid #eee;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn{
+    position: absolute;
+    top: 0;
+    right: 10px;
+    margin: 0;
+    padding: 0;
+    font-size: 36px;
+    display: none;
+}
+
+.open-sidenav{
+    display: none;
+}
+
+.sidenav .sticky-row {
+    background: #FFFFFF;
+    position: sticky;
+    top: 48px;
+    margin-top: 48px;
+    padding: 15px 0px;
+    padding-bottom: 8px;
+    border-top: 0.75px solid #E0E0E0;
+    border-bottom: 0.75px solid #E0E0E0;
+    box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.04);
+}
+
+.sticky-row .head {
+    position: relative;
+    display: flex;
+    width: 100%;
+    padding: 0px 20px;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+    border-bottom: 0.75px solid #E0E0E0;
+}
+
+.sticky-row .head h3 {
+    color: #4B575C;
+    padding-top: 10px;
+    margin-bottom: 0;
+    margin-right: 105px;
+}
+
+.sticky-row .head .right p {
+    color: #9C9595;
+    font-size: 0.9em;
+    margin-bottom: -22px;
+}
+
+.sticky-row .head .right h2 {
+    color: #6CB525;
+    margin-bottom: 0px;
+}
+
+.sticky-row .search-div {
+    display: flex;
+    width: 100%;
+    padding: 0 18px;
+    padding-right: 23px;
+    padding-bottom: 3px;
+}
+
+.sticky-row .search-div img {
+    width: 14px;
+    height: 14px;
+    margin-top: 3px;
+    margin-right: 5px;
+}
+
+.sticky-row .search-div input {
+    width: 100%;
+    border: none;
+    border-bottom: 0.5px solid #787878;
+    font-size: 1.05em;
+}
+
+.sidenav .rider-row {
+    padding: 25px 15px;
+    padding-top: 21px;
+    display: flex;
+    width: 100%;
+    border-bottom: 0.5px solid #E0E0E0;
+}
+
+.sidenav .rider-row .rider-img {
+    width: 35px;
+    height: 35px;
+    margin-top: 15px;
+}
+
+.rider-row .info {
+    width: 100%;
+    margin-left: 10px;
+    margin-right: 5px;
+}
+
+.rider-row .info h5 {
+    margin-bottom: 6px;
+}
+
+.rider-row .info .pickup {
+    display: flex;
+}
+.rider-row .info .pickup.top {
+    margin-bottom: 12px;
+}
+
+.rider-row .info .pickup img {
+    width: 15px;
+    height: 15px;
+    margin-top: 2.5px;
+    margin-right: 5px;
+}
+
+.rider-row .info .pickup .text p {
+    font-size: 0.8em;
+    margin-bottom: 5px;
+    color: #A59D9D;
+}
+
+.rider-row .info .pickup .text h6 {
+    font-size: 1em;
+    font-weight: bold;
+    margin-bottom: 0px;
+    letter-spacing: 0.02em;
+    color: #4B575C;
+}
+
+.rider-row .track {
+    text-align: center;
+}
+
+.rider-row .track button {
+    padding: 0;
+    background: none;
+    border: none;
+    margin-bottom: 20px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.rider-row .track button i {
+    font-size: 1.4em;
+    padding: 6.5px 8px;
+    color: #81BE45;
+    background: rgba(129, 190, 69, 0.1);
+    border-radius: 50%;
+}
+
+.rider-row .track button:hover {
+    background: #81BE45;
+    opacity: .8;
+}
+.rider-row .track button:hover i {
+    color: #FFFFFF;
+}
+
+.rider-row .track button.marker-active:hover {
+    opacity: 1;
+}
+
+.marker-active {
+    background: #81BE45 !important;
+}
+
+.marker-active i {
+    color: #FFFFFF !important;
+}
+
+.rider-row .track a {
+    font-size: 0.8em;
+    font-weight: bold;
+    padding: 6px 13px;
+    color: #6CB525;
+    border: 2px solid #6CB525;
+    border-radius: 20px;
+}
+
+
+
+
+/*Main Page Starts Here*/
+
+.main{
+    margin: 0;
+    margin-left: 269px; /* Same as the width of the sidenav */
+    padding: 0px;
+}
+
+.main-page-content{
+    margin: 0;
+    padding: 0;
+}
+
+.main-page-content #map {
+    width: 100%;
+    height: 92.5vh;
+}
+
+
+
+/* Responsive Starts Here */
+
+@media screen and (max-width: 1199px){
+    .navbar {
+        padding: 10px 40px;
+    }
+
+    .navbar-toggler span img {
+        width: 30px;
+        margin-top: -3px;
+    }
+
+    .navbar .mr-right .dropdown {
+        margin-top: 10px;
+        margin-bottom: 5px;
+    }
+
+    .navbar .mr-right .dropdown-menu {
+        width: 200px;
+    }
+}
+
+@media screen and (max-width: 922px){
+    .navbar .mx-auto .nav-item {
+        margin-right: 5px;
+        margin-bottom: 10px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .navbar {
+        z-index: 1;
+    }
+
+    .sidenav{
+        width: 0px;
+        padding-top: 75px;
+        z-index: 5;
+    }
+    
+    /* Position and style the close button (top right corner) */
+    .sidenav .closebtn{
+        display: block;
+        padding: 0px;
+        margin-top: 20px;
+        color: #333;
+    }
+
+    .open-sidenav{
+        display: block;
+        position: absolute;
+        top: 0px;
+        z-index: 10000;
+        padding: 0px;
+        margin-left: 13px;
+    }
+
+    .open-sidenav img {
+        position: absolute;
+        width: 40px;
+        top: 7px;
+        transform: rotate(180deg);
+    }
+
+    .sidenav .sticky-row {
+        top: 0px;
+        margin-top: 0px;
+    }
+
+    .main{
+        margin-left: 0px;
+        margin-top: -17px !important;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 500px){
+    .navbar {
+        padding: 10px 10px;
+    }
+}
