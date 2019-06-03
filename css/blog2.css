@@ -298,6 +298,18 @@ body {
     transition: all .3s ease-in-out;
 }
 
+.main .hello {
+    height: 500px;
+    background: linear-gradient(90deg, rgba(183,20,81,1) 0%, rgba(138,79,138,1) 85%);
+    color: #fdfdfd;
+    clip-path: polygon(
+        0 12%,
+        100% 0,
+        100% 86%,
+        0% 100%
+    );
+}
+
 .main .section{
     padding: 10px !important;
     margin-top: -20px;

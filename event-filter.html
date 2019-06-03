@@ -15,6 +15,9 @@
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
         <link rel="stylesheet" href="css/font-awesome.min.css"/>
 
+        <!-- Semantics Dropdown -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css"/>
+
         <!-- Font -->
         <link href="https://fonts.googleapis.com/css?family=Lato:400,700,900" rel="stylesheet">
 
@@ -22,7 +25,8 @@
         <link rel="stylesheet" href="css/event-filter.css"/>
 
         <!-- JS -->
-        <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
     </head>
 
     <body>
@@ -49,10 +53,10 @@
 
                 <ul class="navbar-nav mr-right">
                     <li class="nav-item">
-                        <a href="browse-events" class="links">Browse Events</a>
+                        <a href="browse-events.html" class="links">Browse Events</a>
                     </li>
                     <li class="nav-item">
-                        <a href="create-event" class="links">Create Event</a>
+                        <a href="create-event.html" class="links">Create Event</a>
                     </li>
                     <li class="nav-item dropdown help">
                         <a class="nav-link" href="#" id="dropdown07" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -64,9 +68,14 @@
                             <a class="dropdown-item" href="profile.html">Here too</a>
                         </div>
                     </li>
-                    <li class="nav-item dropdown">
+                    <!--
+                    <li class="nav-item login">
+                        <a href="sign-in.html" class="links log-in">Log In</a>
+                    </li>
+                    -->
+                    <li class="nav-item dropdown user">
                         <a class="nav-link" href="#" id="dropdown08" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <p class="username"><img src="images/account-img-circle.png">Michael Miles<i class="fas fa-chevron-down"></i></p>
+                            <p class="username"><img src="images/account-img-circle.png">Justin<i class="fas fa-chevron-down"></i></p>
                         </a>
                         <div class="dropdown-menu" aria-labelledby="dropdown08">
                             <a class="dropdown-item" href="overview.html">Dashboard</a>
@@ -88,225 +97,106 @@
 
         <!-- Main Page Content Starts Here -->
         <div class="main" id="main">
-
-            <!-- Sidebar Navigation (Desktop & Mobile View) Starts Here -->
-            <div class="sidenav" id="mySidenav">
-
-                <!-- Click on x in mobile view to close the sidenav -->
-                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-
-                <div class="sidenav-links" id="accordion">
-
-                    <div class="head">
-                        <h4>Filters</h4>
-                        <button class="reset-btn">Reset All</button>
-                    </div>
-
-                    <div class="sidenav-link">
-                        <button class="collapsed btn btn-link link chevron" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseTwo">
-                            Tags/Categories
-                        </button>
-
-                        <div id="collapseOne" class="collapse show" aria-labelledby="headingTwo" data-parent="#accordion">
-                            <div class="card-body">
-                                <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="one">
-                                    <label class="custom-control-label" for="one">All<span>2310</span></label>
-                                </div>
-                                <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="two">
-                                    <label class="custom-control-label" for="two">Fashion<span>310</span></label>
-                                </div>
-                                <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="three">
-                                    <label class="custom-control-label" for="three">Business<span>51</span></label>
-                                </div>
-                                <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="four">
-                                    <label class="custom-control-label" for="four">Things to do<span>710</span></label>
-                                </div>
-                                <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="five">
-                                    <label class="custom-control-label" for="five">Networking<span>120</span></label>
-                                </div>
-                                <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="six">
-                                    <label class="custom-control-label" for="six">Meetup<span>180</span></label>
-                                </div>
-                                <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="seven">
-                                    <label class="custom-control-label" for="seven">Fun<span>50</span></label>
-                                </div>
-                                <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="eight">
-                                    <label class="custom-control-label" for="eight">Beach<span>20</span></label>
-                                </div>
-                                <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="nine">
-                                    <label class="custom-control-label" for="nine">Conference<span>310</span></label>
-                                </div>
-                                <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="ten">
-                                    <label class="custom-control-label" for="ten">Party<span>310</span></label>
-                                </div>
-                                <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="eleven">
-                                    <label class="custom-control-label" for="eleven">Sport & Fitness<span>80</span></label>
-                                </div>
-                                <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="twelve">
-                                    <label class="custom-control-label" for="twelve">Class<span>43</span></label>
-                                </div>
-                                <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="thirteen">
-                                    <label class="custom-control-label" for="thirteen">Exhibition<span>172</span></label>
-                                </div>
-                                <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="fourteen">
-                                    <label class="custom-control-label" for="fourteen">Music<span>72</span></label>
-                                </div>
-                                <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="fifteen">
-                                    <label class="custom-control-label" for="fifteen">Food & Drink<span>72</span></label>
-                                </div>
-                                <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="sixteen">
-                                    <label class="custom-control-label" for="sixteen">Community<span>72</span></label>
-                                </div>
-                                <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="seventeen">
-                                    <label class="custom-control-label" for="seventeen">Arts<span>72</span></label>
-                                </div>
-                                <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="eighteen">
-                                    <label class="custom-control-label" for="eighteen">Film & Media<span>72</span></label>
-                                </div>
-                                <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="nineteen">
-                                    <label class="custom-control-label" for="nineteen">Health<span>72</span></label>
-                                </div>
-                                <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="twenty">
-                                    <label class="custom-control-label" for="twenty">Science & Tech<span>72</span></label>
-                                </div>
-                                <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="twentyone">
-                                    <label class="custom-control-label" for="twentyone">Travel & Outdoor<span>72</span></label>
-                                </div>
-                                <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="twentytwo">
-                                    <label class="custom-control-label" for="twentytwo">Charity & Causes<span>72</span></label>
-                                </div>
-                                <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="twentythree">
-                                    <label class="custom-control-label" for="twentythree">Spirituality<span>72</span></label>
-                                </div>
-                                <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="twentyfour">
-                                    <label class="custom-control-label" for="twentyfour">Family<span>72</span></label>
-                                </div>
-                                <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="twentyfive">
-                                    <label class="custom-control-label" for="twentyfive">Education<span>72</span></label>
-                                </div>
-                                <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="twentysix">
-                                    <label class="custom-control-label" for="twentysix">Holiday<span>72</span></label>
-                                </div>
-                                <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="twentyseven">
-                                    <label class="custom-control-label" for="twentyseven">Government<span>72</span></label>
-                                </div>
-                                <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="twentyeight">
-                                    <label class="custom-control-label" for="twentyeight">Home & Lifestyle<span>72</span></label>
-                                </div>
-                                <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="twentynine">
-                                    <label class="custom-control-label" for="twentynine">Auto, Boat & Air<span>72</span></label>
-                                </div>
-                                <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="thirty">
-                                    <label class="custom-control-label" for="thirty">Hobbies<span>72</span></label>
-                                </div>
-                                <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="thirtyone">
-                                    <label class="custom-control-label" for="thirtyone">School<span>72</span></label>
-                                </div>
-                                <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="thirtytwo">
-                                    <label class="custom-control-label" for="thirtytwo">Career<span>72</span></label>
-                                </div>
-                                <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="thirtythree">
-                                    <label class="custom-control-label" for="thirtythree">Outing<span>72</span></label>
-                                </div>
-                                <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="thirtyfour">
-                                    <label class="custom-control-label" for="thirtyfour">Others<span>1010</span></label>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="sidenav-link">
-                        <button class="collapsed btn btn-link link chevron" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-                            Date
-                        </button>
-
-                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
-                            <div class="card-body">
-                                <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="date-one">
-                                    <label class="custom-control-label" for="date-one">All Dates</label>
-                                </div>
-                                <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="date-two">
-                                    <label class="custom-control-label" for="date-two">Today</label>
-                                </div>
-                                <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="date-three">
-                                    <label class="custom-control-label" for="date-three">Tomorrow</label>
-                                </div>
-                                <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="date-four">
-                                    <label class="custom-control-label" for="date-four">This week</label>
-                                </div>
-                                <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="date-five">
-                                    <label class="custom-control-label" for="date-five">This weekend</label>
-                                </div>
-                                <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="date-six">
-                                    <label class="custom-control-label" for="date-six">Next week</label>
-                                </div>
-                                <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="date-seven">
-                                    <label class="custom-control-label" for="date-seven">Next month</label>
-                                </div>
-                                <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="date-eight">
-                                    <label class="custom-control-label" for="date-eight">This year</label>
-                                </div>
-                                <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="date-nine">
-                                    <label class="custom-control-label" for="date-nine">Next Year</label>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-                
-            </div>
-            <!-- Sidebar Navigation Ends Here -->
             
             <div class="main-page-content" id="mainPageContent">
 
-                <!-- Use fa-bar on mobile view to open the sidenav -->
-                <span onclick="openNav()" class="open-sidenav">FILTER</span>
+                <div class="filter-row">
+                    <h4>FILTERS</h4>
+                    <div class="filters">
+                        <select class="ui search dropdown">
+                            <option value="">Tags/Categories</option>
+                            <option value="All">All</option>
+                            <option value="Auto, Boat & Air">Auto, Boat & Air</option>
+                            <option value="Beach">Beach</option>
+                            <option value="Business">Business</option>
+                            <option value="Career">Career</option>
+                            <option value="Charity & Causes">Charity & Causes</option>
+                            <option value="Class">Class</option>
+                            <option value="Community">Community</option>
+                            <option value="Conference">Conference</option>
+                            <option value="Education">Education</option>
+                            <option value="Exhibition">Exhibition</option>
+                            <option value="Family">Family</option>
+                            <option value="Fashion">Fashion</option>
+                            <option value="Film & Media">Film & Media</option>
+                            <option value="Food & Drink">Food & Drink</option>
+                            <option value="Fun">Fun</option>
+                            <option value="Government">Government</option>
+                            <option value="Health">Health</option>
+                            <option value="Hobbies">Hobbies</option>
+                            <option value="Holiday">Holiday</option>
+                            <option value="Home & Lifestyle">Home & Lifestyle</option>
+                            <option value="Meetup">Meetup</option>
+                            <option value="Music">Music</option>
+                            <option value="Networking">Networking</option>
+                            <option value="Others">Others</option>
+                            <option value="Outing">Outing</option>
+                            <option value="Party">Party</option>
+                            <option value="School">School</option>
+                            <option value="Science & Tech">Science & Tech</option>
+                            <option value="Spirituality">Spirituality</option>
+                            <option value="Sport & Fitness">Sport & Fitness</option>
+                            <option value="Things to do">Things to do</option>
+                            <option value="Travel & Outdoor">Travel & Outdoor</option>
+                        </select>
+                        <select class="ui dropdown">
+                            <option value="">Date</option>
+                            <option value="All">All</option>
+                            <option value="Today">Today</option>
+                            <option value="Tomorrow">Tomorrow</option>
+                            <option value="This Week">This Week</option>
+                            <option value="This Weekend">This Weekend</option>
+                            <option value="Next Week">Next Week</option>
+                            <option value="Next Weekend">Next Weekend</option>
+                            <option value="Next Month">Next Month</option>
+                            <option value="This Year">This Year</option>
+                            <option value="Next Year">Next Year</option>
+                        </select>
+                        <select class="ui dropdown">
+                            <option value="">Price</option>
+                            <option value="All">All</option>
+                            <option value="Free">Free</option>
+                            <option value="Paid">Paid</option>
+                        </select>
+                        <select class="ui search dropdown">
+                            <option value="Enugu">Enugu</option>
+                            <option value="Lagos">Lagos</option>
+                            <option value="Abuja">Abuja</option>
+                            <option value="Ogun">Ogun</option>
+                            <option value="Kano">Kano</option>
+                            <option value="Calabar">Calabar</option>
+                        </select>
+                    </div>
+                </div>
 
-                <p class="orders-text">Showing <span class="figure">100</span> Events in "<span>Lagos</span>"</p>
+                <div class="filtered-row">
+                    <div class="alert alert-dismissible fade show" role="alert">
+                        Business
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="alert alert-dismissible fade show" role="alert">
+                        Conference
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="alert alert-dismissible fade show" role="alert">
+                        Today
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="alert alert-dismissible fade show" role="alert">
+                        Free
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                </div>
+
+                <p class="showing-text">Showing <span class="figure">100</span> Events in "<span>Lagos</span>"</p>
 
                 <div class="events-row">
                     
@@ -324,7 +214,7 @@
                                     <a href="" class="tag-item">Business</a>
                                 </div>
                                 <div class="share-div">
-                                    <a href=""><i class="fas fa-bookmark"></i></a>
+                                    <a href=""><i class="fas fa-bookmark bookmarked"></i></a>
                                     <a href="" class="last"><i class="fas fa-share-square"></i></a>
                                 </div>
                             </div>
@@ -354,7 +244,7 @@
 
                     <div class="event">
                         <img src="images/getahead.jpg">
-                        <p class="price">₦10,000-₦1,000,000</p>
+                        <p class="price">₦10,000 - ₦1,000,000</p>
                         <div class="details">
                             <p class="name"><a href="event-page-preview.html">Art X Lagos Exhibition to the World 2019</a></p>
                             <p class="organizer-name">- DMW Records</p>
@@ -438,7 +328,7 @@
 
                     <div class="event">
                         <img src="images/breakfast.jpg">
-                        <p class="price">₦10,000-₦100,000</p>
+                        <p class="price">₦10,000 - ₦100,000</p>
                         <div class="details">
                             <p class="name"><a href="event-page-preview.html">Art X Lagos Exhibition to the World 2019</a></p>
                             <p class="organizer-name">- DMW Records</p>
@@ -552,9 +442,11 @@
                 </div>
 
                 <div class="col-md-6">
-                    <div class="footer-right-column">
-                        <input type="email" class="email-input" placeholder="Enter email here">
-                        <button class="btn subscribe-btn">Subscribe</button>
+                    <div class="input-group mb-3 footer-right-column">
+                        <input type="email" class="form-control email-input" placeholder="Enter email here" required>
+                        <div class="input-group-append">
+                            <button class="btn subscribe-btn" type="button" id="button-addon2">Subscribe</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -593,12 +485,11 @@
             <hr>
 
             <div class="footer-nav">
-                <p class="copyright-text">c 2019 EventsFleek</p>
+                <p class="copyright-text">© 2019 Eventsfleek</p>
                 <div class="right-navs">
                     <a href="about.html" class="right-nav-link">About</a>
                     <a href="help.html" class="right-nav-link footer-link-remove">Help</a>
                     <a href="terms.html" class="right-nav-link footer-link-remove">Terms</a>
-                    <a href="cookies.html" class="right-nav-link footer-link-remove">Cookies</a>
                     <a href="privacy.html" class="right-nav-link footer-link-remove">Privacy</a>
                     <a href="contact.html" class="right-nav-link right-nav-link-end">Contact Us</a>
                 </div>
@@ -609,19 +500,10 @@
         <!-- Main Page Content Ends Here -->
 
 
-
-        <!-- Side Navigation JS -->
         <script>
-            /* Set the width of the side navigation to 250px */
-            function openNav() {
-                document.getElementById("mySidenav").style.width = "280px";
-                document.getElementById("mainPageContent").style.display = "280px";
-            }
-            /* Set the width of the side navigation to 0 */
-            function closeNav() {
-                document.getElementById("mySidenav").style.width = "0";
-                document.getElementById("mainPageContent").style.display = "0";
-            }
+            $('.ui.dropdown')
+                .dropdown()
+            ;
         </script>
 
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

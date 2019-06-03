@@ -30,7 +30,7 @@
     <body>
 
         <!-- Navbar Starts Here -->
-        <nav class="navbar navbar-expand-md">
+        <nav class="navbar navbar-expand-lg">
             <a class="navbar-brand logo" href="index.html">
                 <img src="images/logo.png" />
                 <p>Eventsfleek</p>
@@ -41,6 +41,12 @@
 
             <div class="collapse navbar-collapse" id="navbarsExample08">
                 <ul class="navbar-nav mr-auto">
+                    <div class="input-group flex-nowrap">
+                        <input type="text" class="form-control" placeholder="Search events" aria-describedby="addon-wrapping">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="addon-wrapping"><i class="fas fa-search"></i></span>
+                        </div>
+                    </div>
                 </ul>
 
                 <ul class="navbar-nav mr-right">
@@ -50,7 +56,7 @@
                     <li class="nav-item">
                         <a href="create-event" class="links">Create Event</a>
                     </li>
-                    <li class="nav-item dropdown">
+                    <li class="nav-item dropdown help">
                         <a class="nav-link" href="#" id="dropdown07" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <p class="help">Help<i class="fas fa-chevron-down"></i></p>
                         </a>
@@ -60,9 +66,14 @@
                             <a class="dropdown-item" href="profile.html">Here too</a>
                         </div>
                     </li>
-                    <li class="nav-item dropdown">
+                    <!--
+                    <li class="nav-item login">
+                        <a href="sign-in.html" class="links log-in">Log In</a>
+                    </li>
+                    -->
+                    <li class="nav-item dropdown user">
                         <a class="nav-link" href="#" id="dropdown08" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <p class="username"><img src="images/account-img-circle.png">Michael Miles<i class="fas fa-chevron-down"></i></p>
+                            <p class="username"><img src="images/account-img-circle.png">Chukwuemeka<i class="fas fa-chevron-down"></i></p>
                         </a>
                         <div class="dropdown-menu" aria-labelledby="dropdown08">
                             <a class="dropdown-item" href="overview.html">Dashboard</a>
@@ -456,154 +467,124 @@
                     <div class="swiper-container">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide card">
-                                <a href="">
-                                    <div class="badge">Free</div>
-                                    <img src="images/davido.jpg" class="card-img-top" alt="...">
-                                    <div class="card-body">
-                                        <p class="card-organizer"><span>- </span>DMW Records</p>
-                                        <p class="card-event-title">Davido 30 Billion Gang Tour Concert</p>
-                                        <div class="card-date-time-div">
-                                            <i class="fas fa-calendar-alt"></i>
-                                            <div class="card-date-time">
-                                                <p class="card-date">Sat, Sep 07, 2019 | 07:00AM - 04:00PM</p>
-                                            </div>
-                                        </div>
-                                        <div class="card-venue-div">
-                                            <i class="fas fa-map-marker-alt"></i>
-                                            <p class="card-venue">Plot 2B, Eko Hotel & Suites, VI, Lagos, Nigeria.</p>
-                                        </div>
-                                        <hr>
-                                        <div class="card-tags-row">
-                                            <a href="event-filter.html" class="tag-item">Things to do in lagos</a>
-                                            <a href="event-filter.html" class="tag-item">Business</a>
-                                        </div>
+                                <a href="event-page-preview.html"><img src="images/arts.jpg" class="event-img"></a>
+                                <p class="price">₦10,000 - ₦1,000,000</p>
+                                <a href="event-page-preview.html" class="link"><p class="event-name">Art X Lagos - The Revelation and Manifestation</p></a>
+                                <p class="organizer-name">- DMW Records</p>
+                                <div class="flex-info">
+                                    <i class="fas fa-calendar-alt"></i>
+                                    <p>Tue 20 May, 2019 | 08:00AM - 04:00PM</p>
+                                </div>
+                                <div class="flex-info">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <p>Eko Hotel & Suites, Plot 8 Adefarasin Street, VI, Lagos, Nigeria.</p>
+                                </div>
+                                <div class="foot-row">
+                                    <div class="tags-row">
+                                        <a href="" class="tag-item">Things to do in lagos</a>
+                                        <a href="" class="tag-item">Business</a>
                                     </div>
-                                </a>
+                                </div>
                             </div>
                             <div class="swiper-slide card">
-                                <a href="">
-                                    <div class="badge">₦20,000 - ₦1,000,000</div>
-                                    <img src="images/TECHPOINT-BUILD-DRONE-IMAGES-2-of-7.jpg" class="card-img-top" alt="...">
-                                    <div class="card-body">
-                                        <p class="card-organizer"><span>- </span>Techpoint</p>
-                                        <p class="card-event-title">Techpoint Build 2019</p>
-                                        <div class="card-date-time-div">
-                                            <i class="fas fa-calendar-alt"></i>
-                                            <div class="card-date-time">
-                                                <p class="card-date">Sat, Sep 07, 2019 | 07:00AM - 04:00PM</p>
-                                            </div>
-                                        </div>
-                                        <div class="card-venue-div">
-                                            <i class="fas fa-map-marker-alt"></i>
-                                            <p class="card-venue">Plot 2B, Eko Hotel & Suites, VI, Lagos, Nigeria.</p>
-                                        </div>
-                                        <hr>
-                                        <div class="card-tags-row">
-                                            <a href="event-filter.html" class="tag-item">Tech</a>
-                                            <a href="event-filter.html" class="tag-item">Innovation</a>
-                                        </div>
+                                <a href="event-page-preview.html"><img src="images/arts.jpg" class="event-img"></a>
+                                <p class="price">₦10,000 - ₦1,000,000</p>
+                                <a href="event-page-preview.html" class="link"><p class="event-name">Art X Lagos - The Revelation</p></a>
+                                <p class="organizer-name">- DMW Records</p>
+                                <div class="flex-info">
+                                    <i class="fas fa-calendar-alt"></i>
+                                    <p>Tue 20 May, 2019 | 08:00AM - 04:00PM</p>
+                                </div>
+                                <div class="flex-info">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <p>Eko Hotel & Suites, Plot 8 Adefarasin Street, VI, Lagos, Nigeria.</p>
+                                </div>
+                                <div class="foot-row">
+                                    <div class="tags-row">
+                                        <a href="" class="tag-item">Things to do in lagos</a>
+                                        <a href="" class="tag-item">Business</a>
                                     </div>
-                                </a>
+                                </div>
                             </div>
                             <div class="swiper-slide card">
-                                <a href="">
-                                    <div class="badge">Free</div>
-                                    <img src="images/davido.jpg" class="card-img-top" alt="...">
-                                    <div class="card-body">
-                                        <p class="card-organizer"><span>- </span>DMW Records</p>
-                                        <p class="card-event-title">Davido 30 Billion Gang Tour Concert</p>
-                                        <div class="card-date-time-div">
-                                            <i class="fas fa-calendar-alt"></i>
-                                            <div class="card-date-time">
-                                                <p class="card-date">Sat, Sep 07, 2019 | 07:00AM - 04:00PM</p>
-                                            </div>
-                                        </div>
-                                        <div class="card-venue-div">
-                                            <i class="fas fa-map-marker-alt"></i>
-                                            <p class="card-venue">Plot 2B, Eko Hotel & Suites, VI, Lagos, Nigeria.</p>
-                                        </div>
-                                        <hr>
-                                        <div class="card-tags-row">
-                                            <a href="event-filter.html" class="tag-item">Things to do in lagos</a>
-                                            <a href="event-filter.html" class="tag-item">Business</a>
-                                        </div>
+                                <a href="event-page-preview.html"><img src="images/arts.jpg" class="event-img"></a>
+                                <p class="price">₦10,000 - ₦1,000,000</p>
+                                <a href="event-page-preview.html" class="link"><p class="event-name">Art X Lagos - The Revelation</p></a>
+                                <p class="organizer-name">- DMW Records</p>
+                                <div class="flex-info">
+                                    <i class="fas fa-calendar-alt"></i>
+                                    <p>Tue 20 May, 2019 | 08:00AM - 04:00PM</p>
+                                </div>
+                                <div class="flex-info">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <p>Eko Hotel & Suites, Plot 8 Adefarasin Street, VI, Lagos, Nigeria.</p>
+                                </div>
+                                <div class="foot-row">
+                                    <div class="tags-row">
+                                        <a href="" class="tag-item">Things to do in lagos</a>
+                                        <a href="" class="tag-item">Business</a>
                                     </div>
-                                </a>
+                                </div>
                             </div>
                             <div class="swiper-slide card">
-                                <a href="">
-                                    <div class="badge">₦5,000</div>
-                                    <img src="images/yvette-de-wit-118721-unsplash.jpg" class="card-img-top" alt="...">
-                                    <div class="card-body">
-                                        <p class="card-organizer"><span>- </span>Loud Africa</p>
-                                        <p class="card-event-title">Easter Beach Party</p>
-                                        <div class="card-date-time-div">
-                                            <i class="fas fa-calendar-alt"></i>
-                                            <div class="card-date-time">
-                                                <p class="card-date">Sat, Sep 07, 2019 | 07:00AM - 04:00PM</p>
-                                            </div>
-                                        </div>
-                                        <div class="card-venue-div">
-                                            <i class="fas fa-map-marker-alt"></i>
-                                            <p class="card-venue">Landmark Beach, VI, Lagos, Nigeria.</p>
-                                        </div>
-                                        <hr>
-                                        <div class="card-tags-row">
-                                            <a href="event-filter.html" class="tag-item">Fun</a>
-                                            <a href="event-filter.html" class="tag-item">Party</a>
-                                        </div>
+                                <a href="event-page-preview.html"><img src="images/arts.jpg" class="event-img"></a>
+                                <p class="price">₦10,000 - ₦1,000,000</p>
+                                <a href="event-page-preview.html" class="link"><p class="event-name">Art X Lagos - The Revelation</p></a>
+                                <p class="organizer-name">- DMW Records</p>
+                                <div class="flex-info">
+                                    <i class="fas fa-calendar-alt"></i>
+                                    <p>Tue 20 May, 2019 | 08:00AM - 04:00PM</p>
+                                </div>
+                                <div class="flex-info">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <p>Eko Hotel & Suites, Plot 8 Adefarasin Street, VI, Lagos, Nigeria.</p>
+                                </div>
+                                <div class="foot-row">
+                                    <div class="tags-row">
+                                        <a href="" class="tag-item">Things to do in lagos</a>
+                                        <a href="" class="tag-item">Business</a>
                                     </div>
-                                </a>
+                                </div>
                             </div>
                             <div class="swiper-slide card">
-                                <a href="">
-                                    <div class="badge">₦20,000 - ₦1,000,000</div>
-                                    <img src="images/TECHPOINT-BUILD-DRONE-IMAGES-2-of-7.jpg" class="card-img-top" alt="...">
-                                    <div class="card-body">
-                                        <p class="card-organizer"><span>- </span>Techpoint</p>
-                                        <p class="card-event-title">Techpoint Build 2019</p>
-                                        <div class="card-date-time-div">
-                                            <i class="fas fa-calendar-alt"></i>
-                                            <div class="card-date-time">
-                                                <p class="card-date">Sat, Sep 07, 2019 | 07:00AM - 04:00PM</p>
-                                            </div>
-                                        </div>
-                                        <div class="card-venue-div">
-                                            <i class="fas fa-map-marker-alt"></i>
-                                            <p class="card-venue">Plot 2B, Eko Hotel & Suites, VI, Lagos, Nigeria.</p>
-                                        </div>
-                                        <hr>
-                                        <div class="card-tags-row">
-                                            <a href="event-filter.html" class="tag-item">Tech</a>
-                                            <a href="event-filter.html" class="tag-item">Innovation</a>
-                                        </div>
+                                <a href="event-page-preview.html"><img src="images/arts.jpg" class="event-img"></a>
+                                <p class="price">₦10,000 - ₦1,000,000</p>
+                                <a href="event-page-preview.html" class="link"><p class="event-name">Art X Lagos - The Revelation</p></a>
+                                <p class="organizer-name">- DMW Records</p>
+                                <div class="flex-info">
+                                    <i class="fas fa-calendar-alt"></i>
+                                    <p>Tue 20 May, 2019 | 08:00AM - 04:00PM</p>
+                                </div>
+                                <div class="flex-info">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <p>Eko Hotel & Suites, Plot 8 Adefarasin Street, VI, Lagos, Nigeria.</p>
+                                </div>
+                                <div class="foot-row">
+                                    <div class="tags-row">
+                                        <a href="" class="tag-item">Things to do in lagos</a>
+                                        <a href="" class="tag-item">Business</a>
                                     </div>
-                                </a>
+                                </div>
                             </div>
                             <div class="swiper-slide card">
-                                <a href="">
-                                    <div class="badge">₦5,000</div>
-                                    <img src="images/yvette-de-wit-118721-unsplash.jpg" class="card-img-top" alt="...">
-                                    <div class="card-body">
-                                        <p class="card-organizer"><span>- </span>Loud Africa</p>
-                                        <p class="card-event-title">Easter Beach Party</p>
-                                        <div class="card-date-time-div">
-                                            <i class="fas fa-calendar-alt"></i>
-                                            <div class="card-date-time">
-                                                <p class="card-date">Sat, Sep 07, 2019 | 07:00AM - 04:00PM</p>
-                                            </div>
-                                        </div>
-                                        <div class="card-venue-div">
-                                            <i class="fas fa-map-marker-alt"></i>
-                                            <p class="card-venue">Landmark Beach, VI, Lagos, Nigeria.</p>
-                                        </div>
-                                        <hr>
-                                        <div class="card-tags-row">
-                                            <a href="event-filter.html" class="tag-item">Fun</a>
-                                            <a href="event-filter.html" class="tag-item">Party</a>
-                                        </div>
+                                <a href="event-page-preview.html"><img src="images/arts.jpg" class="event-img"></a>
+                                <p class="price">₦10,000 - ₦1,000,000</p>
+                                <a href="event-page-preview.html" class="link"><p class="event-name">Art X Lagos - The Revelation</p></a>
+                                <p class="organizer-name">- DMW Records</p>
+                                <div class="flex-info">
+                                    <i class="fas fa-calendar-alt"></i>
+                                    <p>Tue 20 May, 2019 | 08:00AM - 04:00PM</p>
+                                </div>
+                                <div class="flex-info">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <p>Eko Hotel & Suites, Plot 8 Adefarasin Street, VI, Lagos, Nigeria.</p>
+                                </div>
+                                <div class="foot-row">
+                                    <div class="tags-row">
+                                        <a href="" class="tag-item">Things to do in lagos</a>
+                                        <a href="" class="tag-item">Business</a>
                                     </div>
-                                </a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -627,9 +608,11 @@
                 </div>
 
                 <div class="col-md-6">
-                    <div class="footer-right-column">
-                        <input type="email" class="email-input" placeholder="Enter email here">
-                        <button class="btn subscribe-btn">Subscribe</button>
+                    <div class="input-group mb-3 footer-right-column">
+                        <input type="email" class="form-control email-input" placeholder="Enter email here" required>
+                        <div class="input-group-append">
+                            <button class="btn subscribe-btn" type="button" id="button-addon2">Subscribe</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -668,12 +651,11 @@
             <hr>
 
             <div class="footer-nav">
-                <p class="copyright-text">c 2019 EventsFleek</p>
+                <p class="copyright-text">© 2019 Eventsfleek</p>
                 <div class="right-navs">
                     <a href="about.html" class="right-nav-link">About</a>
                     <a href="help.html" class="right-nav-link footer-link-remove">Help</a>
                     <a href="terms.html" class="right-nav-link footer-link-remove">Terms</a>
-                    <a href="cookies.html" class="right-nav-link footer-link-remove">Cookies</a>
                     <a href="privacy.html" class="right-nav-link footer-link-remove">Privacy</a>
                     <a href="contact.html" class="right-nav-link right-nav-link-end">Contact Us</a>
                 </div>
