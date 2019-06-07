@@ -246,7 +246,7 @@ body {
 }
 
 .section h1 {
-    margin-top: 80px;
+    margin-top: 60px;
     margin-bottom: 50px;
 }
 .section h1.first {
@@ -304,7 +304,7 @@ body {
     margin-bottom: 15px;
     padding-left: 10px;
     padding-right: 10px;
-    font-size: 1.29em;
+    font-size: 1.15em;
     font-weight: bold;
 }
 
@@ -408,7 +408,7 @@ footer .columns-row {
 }
 
 footer .col-md-6 .newsletter-header{
-    font-size: 1.2em;
+    font-size: 1.25em;
     letter-spacing: 0.02em;
     font-weight: bold;
     margin-bottom: 8px;
@@ -422,8 +422,8 @@ footer .footer-right-column{
 
 footer .footer-right-column input{
     font-family: 'Lato', sans-serif;
-    padding: 12px 10px;
-    padding-bottom: 13px;
+    padding: 18px 10px;
+    padding-bottom: 18px;
     border-radius: 3px 0px 0px 3px;
     border: 1px solid #bbbbbb;
     border-right: none;
@@ -449,7 +449,7 @@ footer hr{
 }
 
 footer .columns .footer-link-header-text{
-    font-size: 1em;
+    font-size: 1.05em;
     letter-spacing: 0.02em;
     margin-bottom: 15px;
 }
@@ -460,7 +460,7 @@ footer .columns .footer-links p {
 
 footer .columns .footer-links .link{
     color: #dadada;
-    font-size: 0.9em;
+    font-size: 0.95em;
     letter-spacing: 0.02em;
 }
 

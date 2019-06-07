@@ -113,22 +113,19 @@
                                     <img src="images/dot-line.png" class="dot-line">
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                    <a data-toggle="modal" data-target="#exampleModalCenterMessage" class="dropdown-item" href="#">Resend to mail</a>
+                                    <a data-toggle="modal" data-target="#updateTransferModal" class="dropdown-item" href="#">Update/Transfer Ticket</a>
+                                    <a data-toggle="modal" data-target="#resendModal" class="dropdown-item" href="#">Resend to mail</a>
                                 </div>
                             </div>
                         </div>
                         <div class="bottom">
                             <div class="column">
-                                <label>No. of Ticket</label>
-                                <p>1 Ticket</p>
+                                <label>Order No.</label>
+                                <p>110015</p>
                             </div>
                             <div class="column">
                                 <label>Amount Paid</label>
                                 <p>₦15,250</p>
-                            </div>
-                            <div class="column">
-                                <label>Order No.</label>
-                                <p>110015</p>
                             </div>
                             <div class="column">
                                 <label>Purchase Date</label>
@@ -151,23 +148,19 @@
                                     <img src="images/dot-line.png" class="dot-line">
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                    <a data-toggle="modal" data-target="#exampleModalCenterMessage" class="dropdown-item" href="#">Send Message</a>
-                                    <a data-toggle="modal" data-target="#exampleModalCenterDeactivate" class="dropdown-item" href="#">Deactivate</a>
+                                    <a data-toggle="modal" data-target="#updateTransferModal" class="dropdown-item" href="#">Update/Transfer Ticket</a>
+                                    <a data-toggle="modal" data-target="#resendModal" class="dropdown-item" href="#">Resend to mail</a>
                                 </div>
                             </div>
                         </div>
                         <div class="bottom">
                             <div class="column">
-                                <label>No. of Ticket</label>
-                                <p>1 Ticket</p>
+                                <label>Order No.</label>
+                                <p>110015</p>
                             </div>
                             <div class="column">
                                 <label>Amount Paid</label>
                                 <p>₦15,250</p>
-                            </div>
-                            <div class="column">
-                                <label>Order No.</label>
-                                <p>110015</p>
                             </div>
                             <div class="column">
                                 <label>Purchase Date</label>
@@ -190,29 +183,15 @@
                                 <p class="text"><i class="fas fa-calendar-alt"></i>Sat, Sep 07, 2019 | 07:00AM - 04:00PM</p>
                                 <p class="text"><i class="fas fa-map-marker-alt"></i>Plot 2B, Eko Hotel & Suites, VI, Lagos, Nigeria.</p>
                             </div>
-
-                            <div class="right dropdown">
-                                <a class="btn" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <img src="images/dot-line.png" class="dot-line">
-                                </a>
-                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                    <a data-toggle="modal" data-target="#exampleModalCenterMessage" class="dropdown-item" href="#">Send Message</a>
-                                    <a data-toggle="modal" data-target="#exampleModalCenterDeactivate" class="dropdown-item" href="#">Deactivate</a>
-                                </div>
-                            </div>
                         </div>
                         <div class="bottom">
                             <div class="column">
-                                <label>No. of Ticket</label>
-                                <p>1 Ticket</p>
+                                <label>Order No.</label>
+                                <p>110015</p>
                             </div>
                             <div class="column">
                                 <label>Amount Paid</label>
                                 <p>₦15,250</p>
-                            </div>
-                            <div class="column">
-                                <label>Order No.</label>
-                                <p>110015</p>
                             </div>
                             <div class="column">
                                 <label>Purchase Date</label>
@@ -229,29 +208,15 @@
                                 <p class="text"><i class="fas fa-calendar-alt"></i>Sat, Sep 07, 2019 | 07:00AM - 04:00PM</p>
                                 <p class="text"><i class="fas fa-map-marker-alt"></i>Plot 2B, Eko Hotel & Suites, VI, Lagos, Nigeria.</p>
                             </div>
-
-                            <div class="right dropdown">
-                                <a class="btn" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <img src="images/dot-line.png" class="dot-line">
-                                </a>
-                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                    <a data-toggle="modal" data-target="#exampleModalCenterMessage" class="dropdown-item" href="#">Send Message</a>
-                                    <a data-toggle="modal" data-target="#exampleModalCenterDeactivate" class="dropdown-item" href="#">Deactivate</a>
-                                </div>
-                            </div>
                         </div>
                         <div class="bottom">
                             <div class="column">
-                                <label>No. of Ticket</label>
-                                <p>1 Ticket</p>
+                                <label>Order No.</label>
+                                <p>110015</p>
                             </div>
                             <div class="column">
                                 <label>Amount Paid</label>
                                 <p>₦15,250</p>
-                            </div>
-                            <div class="column">
-                                <label>Order No.</label>
-                                <p>110015</p>
                             </div>
                             <div class="column">
                                 <label>Purchase Date</label>
@@ -262,7 +227,8 @@
 
                 </div>
 
-                <div class="modal fade success" id="exampleModalCenterMessage" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <!-- Resend Modal -->
+                <div class="modal fade success" id="resendModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered" role="document">
                         <div class="modal-content">
                             <div class="modal-header">
@@ -273,6 +239,65 @@
                             <div class="modal-body">
                                 <img src="images/check-gre-img.png">
                                 <p>Ticket has been sent to your mail.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Update/Transfer Modal -->
+                <div class="modal fade question new-user" id="updateTransferModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <span>Update/Transfer Ticket</span>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <form>
+                                    <p class="ticket-num">Ticket Info</p>
+                                    <div class="form-row">
+                                        <div class="form-group col-lg-6">
+                                            <label>First Name</label>
+                                            <input type="text" class="form-control" placeholder="First name">
+                                        </div>
+                                        <div class="form-group col-lg-6">
+                                            <label>Last Name</label>
+                                            <input type="text" class="form-control" placeholder="Last name">
+                                        </div>
+                                    </div>
+                                    <div class="form-row last">
+                                        <div class="form-group col-lg-6">
+                                            <label>Email</label>
+                                            <input type="email" class="form-control" placeholder="Email">
+                                        </div>
+                                        <div class="form-group col-lg-6">
+                                            <label>Phone</label>
+                                            <input type="number" class="form-control" placeholder="Phone number">
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary cancel-btn" data-dismiss="modal">CANCEL</button>
+                                <button type="button" class="btn btn-primary create-btn" data-dismiss="modal" data-toggle="modal" data-target="#updateTransferModal2">SAVE CHANGES</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal fade success" id="updateTransferModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="images/check-gre-img.png">
+                                <p>Changes has been saved successfully.</p>
                             </div>
                         </div>
                     </div>
@@ -307,8 +332,9 @@
                     <p class="footer-link-header-text">Use EventsFleek</p>
                     <div class="footer-links">
                         <p><a href="how-it-works.html" class="link">How it works</a></p>
-                        <p><a href="pricing.html" class="link">Pricing</a></p>
                         <p><a href="blog.html" class="link">Blog</a></p>
+                        <p><a href="faq.html" class="link">FAQ</a></p>
+                        <p><a href="about.html" class="link">About</a></p>
                     </div>
                 </div>
 
@@ -316,7 +342,8 @@
                     <p class="footer-link-header-text">Organize Events</p>
                     <div class="footer-links">
                         <p><a href="org-overview.html" class="link">Become an Organizer</a></p>
-                        <p><a href="sell-tickets.html" class="link">Sell Tickets</a></p>
+                        <p><a href="pricing.html" class="link">Pricing</a></p>
+                        <p><a href="onsite-app.html" class="link">Organizer Onsite App</a></p>
                     </div>
                 </div>
 
@@ -336,10 +363,8 @@
             <div class="footer-nav">
                 <p class="copyright-text">© 2019 Eventsfleek</p>
                 <div class="right-navs">
-                    <a href="about.html" class="right-nav-link">About</a>
-                    <a href="help.html" class="right-nav-link footer-link-remove">Help</a>
+                    <a href="privacy.html" class="right-nav-link">Privacy</a>
                     <a href="terms.html" class="right-nav-link footer-link-remove">Terms</a>
-                    <a href="privacy.html" class="right-nav-link footer-link-remove">Privacy</a>
                     <a href="contact.html" class="right-nav-link right-nav-link-end">Contact Us</a>
                 </div>
             </div>

@@ -213,19 +213,91 @@
                     <p class="event-status-text live">LIVE</p>
                     <p class="event-name">Techpoint Build 2019 Innovation Show</p>
                     <p><i class="map marker alternate icon"></i>Landmark Event Center, Victoria Island, Lagos.</p>
-                    <p class="event-date-time"><i class="calendar alternate outline icon"></i><span class="event-date">Monday, April 21, 2019</span> | <span class="event-time">10:30AM - 05:00PM</span></p>
-                    <p class="event-date-time"><i class="calendar alternate outline icon"></i><span class="event-date">Monday, April 21, 2019</span> | <span class="event-time">10:30AM - 05:00PM</span></p>
+                    <div class="event-date-time">
+                        <p>
+                            <i class="calendar alternate outline icon"></i>
+                            <span>Mon 21 Apr, 2019 | 10:30AM - 05:00PM</span>
+                        </p>
+                        <p>
+                            <i class="calendar alternate outline icon"></i>
+                            <span>Tue 22 Apr, 2019 | 10:30AM - 05:00PM</span>
+                        </p>
+                    </div>
 
                     <a href="event-page-preview.html" class="view-link">View Event</a>
 
                     <div class="section-one-links">
                         <p class="first">
-                            <a href="" class="link">End Ticket Sales</a> <span class="hor-line">|</span> <a href="" class="link">Unpublish</a> <span class="hor-line">|</span>
+                            <a href="" class="link" data-toggle="modal" data-target="#endTicketSalesModal">End Ticket Sales</a> <span class="hor-line">|</span> <a href="" class="link" data-toggle="modal" data-target="#unpublishModal">Unpublish</a> <span class="hor-line">|</span>
                         </p>
                         <p class="second">
-                            <a href="" class="link">Duplicate</a> <span class="hor-line">|</span> <a href="" class="link">Delete</a>
+                            <a href="" class="link">Duplicate</a> <span class="hor-line">|</span> <a href="" class="link" data-toggle="modal" data-target="#deleteModal">Delete</a>
                         </p>
                     </div>
+
+                    <!-- End Ticket Sales Modal -->
+                    <div class="modal fade question new-user" id="endTicketSalesModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <span>End Ticket Sales</span>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <p>Are you sure you want to end the ticket sales of this event?</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary cancel-btn" data-dismiss="modal">CANCEL</button>
+                                    <button type="button" class="btn btn-primary deactivate-btn">PROCEED</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Unpublish Modal -->
+                    <div class="modal fade question new-user" id="unpublishModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <span>Unpublish Event</span>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <p>Are you sure you want to unpublish this event?</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary cancel-btn" data-dismiss="modal">CANCEL</button>
+                                    <button type="button" class="btn btn-primary deactivate-btn">UNPUBLISH</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Delete Modal -->
+                    <div class="modal fade question new-user" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <span>Delete Event</span>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <p>Are you sure you want to delete this event?</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary cancel-btn" data-dismiss="modal">CANCEL</button>
+                                    <button type="button" class="btn btn-primary deactivate-btn">DELETE</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
 
                 <hr>
