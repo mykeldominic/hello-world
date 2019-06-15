@@ -666,6 +666,12 @@ body {
     }
 }
 
+@media screen and (max-width: 940px){
+    .traffic-table{
+        width: 620px;
+    }
+}
+
 @media screen and (max-width: 795px){
 
     .navbar {
@@ -795,12 +801,6 @@ body {
 
     .section .bottom-row {
         grid-template-columns: repeat(1, 1fr);
-    }
-}
-
-@media screen and (max-width: 490px){
-    .traffic-table{
-        width: 420px;
     }
 }
 

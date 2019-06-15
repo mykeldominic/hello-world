@@ -27,7 +27,6 @@ body {
     font-family: 'Lato', sans-serif;
     font-size: 1em;
     background: rgb(246, 247, 251, 0.4);
-    transition: .5s;
 }
 
 
@@ -135,7 +134,7 @@ body {
     right: 0;
     bottom: 0;
     background-color: rgba(0,0,0,0.55); /* Black background with opacity */
-    z-index: 3; /* Specify a stack order in case you're using a different order for other elements */
+    z-index: 5; /* Specify a stack order in case you're using a different order for other elements */
     cursor: pointer; /* Add a pointer on hover */
 }
 
@@ -387,34 +386,100 @@ body {
     font-size: 2em;
     letter-spacing: 0.02em;
     font-weight: bold;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
     color: #4B575C;
+}
+
+.main-page-content nav{
+    margin-top: 0px;
+}
+
+.main-page-content nav .nav-tabs{
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
+    background: #FFF;
+    border: none;
+    border-radius: 3px;
+}
+
+.main-page-content nav .nav-tabs .nav-link{
+    padding: 12px 30px;
+    color: #333;
+    font-size: 1em;
+    border-radius: 0px;
+    border: 1px solid transparent;
+    border-bottom: 3px solid transparent;
+}
+
+.main-page-content nav .nav-tabs .nav-link:hover {
+    color: rgb(133,88,192);
+    border-bottom: 3px solid rgb(133,88,192);
+    opacity: .7;
+}
+
+.main-page-content nav .nav-tabs .nav-link.active{
+    color: rgb(133,88,192);
+    font-weight: bold;
+    border: none;
+    border-bottom: 3px solid rgb(133,88,192);
+    background: transparent;
+}
+
+.main-page-content nav .nav-tabs .nav-link.active:hover {
+    opacity: 1;
+}
+
+.main-page-content .tab-content{
+    margin-top: 40px;
 }
 
 .main-page-content .text{
     font-size: 1.15em;
+    margin-bottom: 60px;
+    line-height: 26px;
 }
 
-.form{
-    margin-top: 50px;
+.main-page-content .text a {
+    text-decoration: underline;
 }
 
-.form .segment{
+.form {
+    max-width: 800px;
+}
+
+.form .label {
+    padding: 0;
+    margin: 0;
+    margin-bottom: 5px;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+.form input {
+    padding: 20px 12px;
+    padding-top: 18px;
+    font-family: 'Lato', sans-serif;
+}
+
+.form input.competition-name {
     margin-bottom: 40px;
 }
 
-.form .segment label{
-    font-weight: 400;
-    font-size: 1em;
-    margin-bottom: 8px;
+.form .table thead td {
+    border-top: 1px solid #fff;
 }
 
-.field-select{
-    width: 200px;
+.create-table thead tr{
+    background: #fff;
 }
 
-.ui.form input[type=email] {
-    width: 260px;
+.track-table thead tr{
+    background: #e1e1e1;
+}
+
+.form .table thead tr td .tip {
+    font-size: 0.95em;
 }
 
 .table-responsive::-webkit-scrollbar {
@@ -422,49 +487,76 @@ body {
     width: 5px;
 }
 
-.table-responsive input{
-    font-size: 1.04em;
-    padding: 15px 8px;
-}
-
-.table-responsive .table{
+.table{
     background: #fff;
     border-radius: 0 0 5px 5px;
     box-shadow: 0px 2px 7px rgba(79, 79, 79, 0.07);
+    width: 100%;
 }
 
-.table-responsive .table thead tr{
-    background: #e1e1e1;
-}
-
-.table-responsive .table thead tr th{
+.table thead tr th{
     padding-top: 8px;
     padding-bottom: 8px;
     font-weight: bold;
 }
 
-.table-responsive .table tbody tr:nth-child(even){
+.table tbody tr:nth-child(even){
     background: #f9f9f9;
 }
 
-.table-responsive .table tbody tr td{
+.table tbody tr td{
+    padding-top: 14px;
+    padding-bottom: 14px;
+}
+
+.track-table tbody tr td {
     padding-top: 18px;
     padding-bottom: 18px;
 }
 
-.table-responsive .table tbody tr td a{
+.table tbody tr td a{
     padding: 7px 20px;
     letter-spacing: 0.04em;
     border: 1.5px solid rgb(133,88,192);
     border-radius: 20px;
     color: rgb(133,88,192);
     font-size: 0.8em;
+}
+
+.table tbody tr td a:hover{
+    background: rgb(133,88,192);
+    color: #FFFFFF;
+}
+
+.main-page-content .add-link{
+    padding: 5px 9px;
+    background: #777;
+    border: 1px solid #777;
+    border-radius: 3px;
+    color: #fff;
+    cursor: pointer;
+    width: fit-content;
+}
+
+.main-page-content .add-link:hover{
+    opacity: .9;
+}
+
+.main-page-content .broadcast-btn{
+    font-family: 'Lato', sans-serif;
+    font-size: 1.1em;
+    padding: 12px 45px;
+    margin-top: 50px;
+    background: #9A6BF2;
+    box-shadow: 0px 5px 7px rgba(79, 79, 79, 0.2);
+    border: none;
+    border-radius: 3px;
+    color: #fff;
     cursor: pointer;
 }
 
-.table-responsive .table tbody tr td a:hover{
-    background: rgb(133,88,192) !important;
-    color: #FFFFFF !important;
+.main-page-content .broadcast-btn:hover{
+    opacity: .9;
 }
 
 
@@ -482,22 +574,38 @@ body {
     }
 }
 
-@media screen and (max-width: 1000px){
-    .main-page-content .form{
-        width: 90%;
+@media screen and (max-width: 1150px){
+    .main-page-content .tab-content .tab-pane .order-table{
+        width: 860px;
+    }
+
+    .main-page-content .save-btn{
+        margin-top: 10px;
+    }
+
+    .main-page-content .text{
+        width: 95%;
     }
 }
 
-@media screen and (max-width: 1250px){
-    .table{
-        width: 960px;
+@media screen and (max-width: 1050px){
+    .main-page-content .box-grid{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 20px;
+    }
+}
+
+@media screen and (max-width: 970px){
+    .track-table {
+        width: 690px;
     }
 }
 
 @media screen and (max-width: 795px){
 
     .navbar {
-        z-index: 1;
+        z-index: 4;
     }
     
     .navbar-toggler{
@@ -598,10 +706,6 @@ body {
     .main .main-page-content{
         margin-top: 0px;
     }
-
-    .order-table{
-        width: 100%;
-    }
 }
 
 @media screen and (max-width: 767px){
@@ -619,11 +723,19 @@ body {
 
 }
 
+@media screen and (max-width: 520px){
+    .create-table {
+        width: 490px;
+    }
+}
+
 @media screen and (max-width: 500px){
-    .main-page-content .form{
+    .main-page-content .tab-content .tab-pane .form{
         width: 100%;
     }
 }
+
+
 
 @media screen and (max-width: 399px){
     .navbar{
@@ -638,6 +750,21 @@ body {
         margin: 0px;
         padding: 80px 10px;
         margin-top: 0px;
+    }
+
+    .main-page-content .tab-content .head-links a{
+        margin-left: 10px;
+        padding: 12px;
+    }
+}
+
+@media screen and (max-width: 356px){
+    .main-page-content nav .nav-tabs .nav-link{
+        padding: 12px 20px;
+    }
+
+    .main-page-content .tab-content .tab-pane .discount-table{
+        width: 370px;
     }
 }
 

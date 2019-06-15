@@ -4,15 +4,12 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>EventsFleek | Email Campaigns</title>
+        <title>EventsFleek | Order Information</title>
         <link rel="icon" href="favicon.ico" />
         
         <!-- Bootstrap CSS CDN -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-
-        <!-- Datatables CSS CDN -->
-        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css"/>
 
         <!--Semantics CSS CDN -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
@@ -21,11 +18,8 @@
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
         <link rel="stylesheet" href="css/font-awesome.min.css"/>
 
-        <!-- Font -->
-        <link href="https://fonts.googleapis.com/css?family=Lato:400,700,900" rel="stylesheet">
-
         <!-- Our Custom CSS -->
-        <link rel="stylesheet" href="css/email-campaigns.css"/>
+        <link rel="stylesheet" href="css/invite-info.css"/>
         
         <!-- JS -->
         <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
@@ -129,7 +123,7 @@
                       <div class="card-body">
                         <p class="card-body-link"><a href="orders.html">Orders</a></p>
                         <p class="card-body-link"><a href="attendees.html">Attendees</a></p>
-                        <p><a href="waitlist.html" class="active">Waitlist</a></p>
+                        <p><a href="waitlist.html">Waitlist</a></p>
                       </div>
                     </div>
                 </div>
@@ -149,7 +143,8 @@
 
                     <div id="collapseThree" class="collapse show" aria-labelledby="headingThree" data-parent="#accordion">
                       <div class="card-body">
-                        <p class="card-body-link"><a href="email-campaigns.html" class="active">Email Campaigns</a></p>
+                        <p class="card-body-link"><a href="promote-event.html">Promote Event</a></p>
+                        <p class="card-body-link"><a href="sales-competition.html" class="active">Sales Competition</a></p>
                         <p class="card-body-link"><a href="tracking-links.html">Tracking Links</a></p>
                         <p><a href="discounts.html">Discounts</a></p>
                       </div>
@@ -196,7 +191,7 @@
 
             </div>
             
-        </div>
+        </div>  
         <!-- Sidebar Navigation Ends Here -->
 
         <!-- Main Page Content Starts Here -->
@@ -209,87 +204,53 @@
             
             <div class="main-page-content">
                 
-                <p class="orders-text">Email Campaigns</p>
+                <p class="orders-text"><a onclick="goBack()"><img src="images/go-back-img.png"></a>Invite Information</p>
 
-                <p class="text">Reach more attendees with</p>
+                <div class="row-one">
+                    <div class="left">
+                        <div class="amount">
+                            <h3>₦218,000</h3><!-- This is the populated Amount Due -->
+                            <p class="status">(REVENUE)</p>
+                        </div>
+                        <p class="payment-text">Attendee: <strong><span>John Alexander</span></strong></p>
+                    </div>
+                </div>
 
-                <form class="ui form">
-
-                    <div class="field segment">
-                        <label>To</label>
-                        <div class="field field-select">
-                            <select class="ui fluid dropdown">
-                                <option value="EV">Everyone</option>
-                                <option value="AO">Attendees only</option>
-                                <option value="OO">Orders only</option>
-                                <option value="WO">Waitlist only</option>
-                            </select>
+                <div class="last-row">
+                    <div class="left">
+                        <p class="info-head-text">Stats</p>
+                        <div class="stats">
+                           <div class="column">
+                                <p>Total Invites</p>
+                                <p class="text">34</p>
+                            </div>
+                            <div class="column">
+                                <p>Page Views</p>
+                                <p class="text">26</p>
+                            </div>
+                            <div class="column">
+                                <p>Tickets Sold</p>
+                                <p class="text">20</p> <!-- Must be more than or equal to orders below -->
+                            </div>
                         </div>
                     </div>
 
-                    <br>
-                    <div class="field segment">
-                        <label>Reply to</label>
-                        <input type="email" class="reply-field" placeholder="Enter email address to receive reply" required />
+                    <div class="right">
+                        <p class="info-head-text">Orders (18)</p>
+                        <div class="info-box">
+                            <p><a href="order-info.html">#131083</a></p>
+                            <p><a href="order-info.html">#131083</a></p>
+                            <p><a href="order-info.html">#131083</a></p>
+                            <p><a href="order-info.html">#131083</a></p>
+                            <p><a href="order-info.html">#131083</a></p>
+                            <p><a href="order-info.html">#131083</a></p>
+                            <p><a href="order-info.html">#131083</a></p>
+                            <p><a href="order-info.html">#131083</a></p>
+                            <p><a href="order-info.html">#131083</a></p>
+                            <p><a href="order-info.html">#131083</a></p>
+                            <p><a href="order-info.html">#131083</a></p>
+                        </div>
                     </div>
-
-                    <br><br>
-                    Mail chimp stuff here
-
-                    <br><br>
-                    <button class="btn send-btn">Send Message</button>
-
-                </form>
-
-                <br><br><br><br>
-                <p>Also find content for this table</p>
-                <div class="table-responsive">
-                    <table id="example" class="table table-borderless">
-                        <thead>
-                            <tr>
-                                <th>Name</th>
-                                <th>Email</th>
-                                <th>Phone</th>
-                                <th>Ticket Type</th>
-                                <th>Send Date</th>
-                                <th></th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Gbenga Michael</td>
-                                <td>gbengamichael@gmail.com</td>
-                                <td>09076458831</td>
-                                <td>General Admission</td>
-                                <td>19/03/2019</td>
-                                <td><a class="check-in">VIEW</a></td>
-                            </tr>
-                            <tr>
-                                <td>Tochi Daniels</td>
-                                <td>tochukwu.daniels@tochi.com</td>
-                                <td>09087654318</td>
-                                <td>VVIP</td>
-                                <td>21/03/2019</td>
-                                <td><a class="check-in">VIEW</a></td>
-                            </tr>
-                            <tr>
-                                <td>Ashton Micah</td>
-                                <td>ashtommicah@me.com</td>
-                                <td>09076548930</td>
-                                <td>VIP</td>
-                                <td>9/03/2019</td>
-                                <td><a class="check-in">VIEW</a></td>
-                            </tr>
-                            <tr>
-                                <td>Peter Cedric</td>
-                                <td>cedric@gmail.com</td>
-                                <td>07086539842</td>
-                                <td>Platinum</td>
-                                <td>1/03/2019</td>
-                                <td><a class="check-in">VIEW</a></td>
-                            </tr>
-                        </tbody>
-                    </table>
                 </div>
 
             </div>
@@ -299,7 +260,7 @@
 
             
         
-
+    
 
         <!--Dropdown-->
         <script>
@@ -308,13 +269,11 @@
             ;
         </script>
 
-        <!--Datatable-->
+        <!--Go Back-->
         <script>
-            $(document).ready(function() {
-                var table = $('#example').DataTable( {
-                    ordering: false,
-                } );
-            } );
+            function goBack() {
+                window.history.back();
+            }
         </script>
 
         <!-- Side Navigation JS -->
@@ -335,8 +294,6 @@
 
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-        <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
-        <script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
 
     </body>
 

@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>EventsFleek | Orders</title>
+        <title>EventsFleek | Promote Event</title>
         <link rel="icon" href="favicon.ico" />
         
         <!-- Bootstrap CSS CDN -->
@@ -13,31 +13,23 @@
 
         <!-- Datatables CSS CDN -->
         <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css"/>
-        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/1.5.6/css/buttons.bootstrap4.min.css"/>
 
         <!--Semantics CSS CDN -->
-        <link rel="stylesheet" href="https://cdn.rawgit.com/mdehoog/Semantic-UI/6e6d051d47b598ebab05857545f242caf2b4b48c/dist/semantic.min.css" />
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
 
         <!-- Font-Awesome CSS CDN -->
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
         <link rel="stylesheet" href="css/font-awesome.min.css"/>
 
-        <!-- Froala Editor CSS CDN -->
-        <link href='https://cdn.jsdelivr.net/npm/froala-editor@2.9.4/css/froala_editor.min.css' rel='stylesheet' type='text/css' />
-        <link href='https://cdn.jsdelivr.net/npm/froala-editor@2.9.4/css/froala_style.min.css' rel='stylesheet' type='text/css' />
-
         <!-- Font -->
         <link href="https://fonts.googleapis.com/css?family=Lato:400,700,900" rel="stylesheet">
 
         <!-- Our Custom CSS -->
-        <link rel="stylesheet" href="css/orders.css"/>
+        <link rel="stylesheet" href="css/promote-event.css"/>
         
         <!-- JS -->
         <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
-        <script type='text/javascript' src='https://cdn.jsdelivr.net/npm/froala-editor@2.9.4/js/froala_editor.min.js'></script>
-        <script type="text/javascript" src="https://cdn.rawgit.com/mdehoog/Semantic-UI/6e6d051d47b598ebab05857545f242caf2b4b48c/dist/semantic.min.js"></script>
     </head>
 
     <body>
@@ -129,15 +121,15 @@
                 </div>
 
                 <div class="sidenav-link">
-                    <button class="collapsed btn btn-link link chevron active" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                    <button class="collapsed btn btn-link link chevron" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
                         <img src="images/order-side-img.png">Orders & Attendees
                     </button>
 
-                    <div id="collapseTwo" class="collapse show" aria-labelledby="headingTwo" data-parent="#accordion">
+                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
                       <div class="card-body">
-                        <p class="card-body-link"><a href="orders.html" class="active">Orders</a></p>
+                        <p class="card-body-link"><a href="orders.html">Orders</a></p>
                         <p class="card-body-link"><a href="attendees.html">Attendees</a></p>
-                        <p><a href="waitlist.html">Waitlist</a></p>
+                        <p><a href="waitlist.html" class="active">Waitlist</a></p>
                       </div>
                     </div>
                 </div>
@@ -151,13 +143,13 @@
                 </div>
 
                 <div class="sidenav-link">
-                    <button class="collapsed btn btn-link link chevron" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    <button class="collapsed btn btn-link link chevron active" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                         <img src="images/promote-side-img.png">Promote
                     </button>
 
-                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                    <div id="collapseThree" class="collapse show" aria-labelledby="headingThree" data-parent="#accordion">
                       <div class="card-body">
-                        <p class="card-body-link"><a href="promote-event.html">Promote Event</a></p>
+                        <p class="card-body-link"><a href="promote-event.html" class="active">Promote Event</a></p>
                         <p class="card-body-link"><a href="sales-competition.html">Sales Competition</a></p>
                         <p class="card-body-link"><a href="tracking-links.html">Tracking Links</a></p>
                         <p><a href="discounts.html">Discounts</a></p>
@@ -205,8 +197,8 @@
 
             </div>
             
-        </div>  
-        <!-- Sidebar Navigation Ends Here --> 
+        </div>
+        <!-- Sidebar Navigation Ends Here -->
 
         <!-- Main Page Content Starts Here -->
         <div class="main" id="main">
@@ -218,140 +210,163 @@
             
             <div class="main-page-content">
                 
-                <p class="orders-text">Orders</p>
+                <p class="orders-text">Promote Event</p>
 
-                <div class="eventdate-filter">
-                    <p>Sort by event date</p>
-                    <select class="ui dropdown">
-                        <option value="1">Mon 21 Apr, 2019 | 10:30AM - 05:00PM</option>
-                        <option value="2">Tue 22 Apr, 2019 | 09:30AM - 05:00PM</option>
-                        <option value="3">Wed 23 Apr, 2019 | 10:00AM - 05:00PM</option>
-                    </select>
+                <div class="alert alert-info" role="alert">
+                    Please note that if you wish to send email campaigns to your attendees, orders and waitlist, we strongly recommend that you use <a href="#" class="alert-link">Constant Link</a>. You can send upto 2,000 Free emails to your contacts.
                 </div>
 
-                <nav>
-                    <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                        <a class="nav-item nav-link active" id="nav-edit-tab" data-toggle="tab" href="#nav-first" role="tab" aria-controls="nav-edit" aria-selected="true">Orders List</a>
-                        <a class="nav-item nav-link" id="nav-page-builder-tab" data-toggle="tab" href="#nav-second" role="tab" aria-controls="nav-page-builder" aria-selected="false">Email Orders</a>
+                <p class="text">
+                    <strong>Tick the channels</strong> you'll like us to help you run promotions, <strong>get to determine</strong> how much you want to spend, and let our <strong>special team</strong> dedicated to digital marketing take it from there.
+                    <br>
+                    - You can end your promotion whenever you wish and we'll refund you any unused money.
+                    <br>
+                    - Your promotion will end when your ticket sales ends and we'll also refund you any unused money.
+                </p>
+
+                <div class="cards">
+                    <div class="card">
+                        <p class="text">I recently just promoted my event through Eventsfleek promotion and in about a week, i was already having 210+ pageviews and had also generated about 100+ ticket sales.</p>
+                        <hr>
+                        <span>"</span><h6>Gbenga Adeyinka</h6>
                     </div>
-                </nav>
-                <div class="tab-content" id="nav-tabContent">
-                    <div class="tab-pane fade show active" id="nav-first" role="tabpanel" aria-labelledby="nav-edit-tab">
+                     <div class="card hide">
+                        <p class="text">I recently just promoted my event through Eventsfleek promotion and in about a week, i was already having 210+ pageviews and had also generated about 100+ ticket sales.</p>
+                        <hr>
+                        <span>"</span><h6>Gbenga Adeyinka</h6>
+                    </div>
+                    <div class="card last">
+                        <a href="pro-testimonial">See 300 more testimonials</a>
+                    </div>
+                </div>
 
-                        <p class="info-text">This is where you will see all orders for this event...</p>
+                <form class="ui form">
 
-                        <div class="table-responsive">
-                            <table id="example" class="table table-borderless">
-                                <thead>
-                                    <tr>
-                                        <th>Order #</th>
-                                        <th>Ticket Buyer</th>
-                                        <th>Email</th>
-                                        <th>Amount Due (₦)</th>
-                                        <th>Date & Time</th>
-                                        <th>Status</th>
-                                        <th></th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>110011</td>
-                                        <td>Gbenga Michael</td>
-                                        <td>gbengamichael@gmail.com</td>
-                                        <td>9,850</td>
-                                        <td>Sep 29, 2019 10:55AM</td>
-                                        <td><span class="status success">Success</span></td>
-                                        <td><a href="order-info.html">VIEW</a></td>
-                                    </tr>
-                                    <tr>
-                                        <td>110012</td>
-                                        <td>Tochi Daniels</td>
-                                        <td>tochukwu.daniels@tochi.com</td>
-                                        <td>4,750</td>
-                                        <td>Mar 30, 2019 03:15PM</td>
-                                        <td><span class="status failed">Failed</span></td>
-                                        <td><a href="order-info.html">VIEW</a></td>
-                                    </tr>
-                                    <tr>
-                                        <td>110013</td>
-                                        <td>Ashton Micah</td>
-                                        <td>ashtommicah@me.com</td>
-                                        <td>1,250</td>
-                                        <td>Oct 12, 2019 12:39PM</td>
-                                        <td><span class="status abandoned">Abandoned</span></td>
-                                        <td><a href="order-info.html">VIEW</a></td>
-                                    </tr>
-                                    <tr>
-                                        <td>110014</td>
-                                        <td>Peter Cedric</td>
-                                        <td>cedric@gmail.com</td>
-                                        <td>14,750</td>
-                                        <td>Jun 13, 2019 11:10PM</td>
-                                        <td><span class="status success">Success</span></td>
-                                        <td><a href="order-info.html">VIEW</a></td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                    <div class="field">
+                        <div class="ui checkbox">
+                            <input type="checkbox" id="add-one">
+                            <label for="add-one">
+                                Google Retargeted Ads <span class="bonus">Bonus</span>
+                            </label>
                         </div>
+                        <div class="info">
+                            You are being charged by Google, no extra cost from us.<br>
+                            We'll help you design and successfully run your Ads in a way that it will reach your specific target audience, they get to view your event page, and we'll ensure a <strong>conversion to attendee average rate of 70%</strong>.<br>
 
+                            <p>Click <a href="">here</a> to see some Google Retargeted Ads were running right now...</p>
+                        </div>
                     </div>
-                    <div class="tab-pane fade" id="nav-second" role="tabpanel" aria-labelledby="nav-page-builder-tab">
 
-                        <form class="ui form">
+                    <div class="field">
+                        <div class="ui checkbox">
+                            <input type="checkbox" id="add-two">
+                            <label for="add-two">
+                                Youtube Targeted Ads <span class="bonus">Bonus</span>
+                            </label>
+                        </div>
+                        <div class="info">
+                            You are being charged by Youtube, no extra cost from us.<br>
+                            We'll help you create, design and successfully run your Ads in a way that it will reach your specific target audience, they get to view your event page, and we'll ensure a <strong>conversion to attendee average rate of 70%</strong>.
 
-                            <div class="field segment">
-                                <label>To</label>
-                                <div class="two fields">
-                                    <div class="field">
-                                        <select id="mySelect" class="ui fluid dropdown">
-                                            <option value="all">All orders</option>
-                                            <option value="date">Orders made after date</option>
-                                            <option value="status">Orders by status</option>
-                                        </select>
-                                    </div>
-                                    <div class="field">
-                                        <div class="date-toggle-div">
-                                            <div class="ui calendar" id="pickdate">
-                                                <div class="ui input left icon">
-                                                    <i class="calendar alternate icon"></i>
-                                                    <input type="text" placeholder="Pick date">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="status-toggle-div">
-                                            <select class="ui fluid dropdown">
-                                                <option>Completed</option>
-                                                <option>Failed</option>
-                                                <option>Abandoned</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="field segment">
-                                <label>Reply to</label>
-                                <input type="email" placeholder="Enter email address to receive reply" required />
-                            </div>
-
-                            <div class="field segment">
-                                <label>Subject</label>
-                                <input type="text" name="event-title" placeholder="Enter email subject" required />
-                            </div>
-
-                            <div class="field segment">
-                                <label>Message</label>
-                                <div id="froala-editor">
-
-                                </div>
-                            </div>
-
-                            <button class="btn send-btn">Send Message</button>
-
-                        </form>
-
+                            <p>Click <a href="">here</a> to see some Youtube Targeted Ads were running right now...</p>
+                        </div>
                     </div>
-                </div>
+
+                    <div class="field">
+                        <div class="ui checkbox">
+                            <input type="checkbox" id="add-three">
+                            <label for="add-three">
+                                Personalized Targeted Email Campaigns <span class="hot">Hot</span>
+                            </label>
+                        </div>
+                        <div class="info">
+                            We charge ₦15 <strong>per event page view</strong>, and you still get to determine how much you want to spend.<br>
+                            We'll help you design and successfully run both <strong>Solo and Grouped</strong> Email Campaigns, making sure that it does not only reach your specific target audience and <strong>converts about 80%</strong>, but also present your event in a way that they get to really anticipate it, and be head over heels about it.<br>
+
+                            <p>Click <a href="">here</a> to see some Personalized Targeted Email Campaigns were running right now...</p>
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <div class="ui checkbox">
+                            <input type="checkbox" id="add-four">
+                            <label for="add-four">
+                                Facebook Targeted Ads <span class="bonus">Bonus</span>
+                            </label>
+                        </div>
+                        <div class="info">
+                            You are being charged by Facebook, no extra cost from us.<br>
+                            We'll help you create, design and successfully run your Facebook Ads in a way that it will reach your specific target audience, they get to view your event page, and we'll ensure a <strong>conversion to attendee average rate of 70%</strong>.
+
+                            <p>Click <a href="">here</a> to see some Facebook Targeted Ads were running right now...</p>
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <div class="ui checkbox">
+                            <input type="checkbox" id="add-five">
+                            <label for="add-five">
+                                Instagram Targeted Ads <span class="bonus">Bonus</span>
+                            </label>
+                        </div>
+                        <div class="info">
+                            You are being charged by Instagram, no extra cost from us.<br>
+                            We'll help you create, design and successfully run your Instagram Ads in a way that it will reach your specific target audience, they get to view your event page, and we'll ensure a <strong>conversion to attendee average rate of 70%</strong>.
+
+                            <p>Click <a href="">here</a> to see some Instagram Targeted Ads were running right now...</p>
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <div class="ui checkbox">
+                            <input type="checkbox" id="add-six">
+                            <label for="add-six">
+                                Eventsfleek Platform Targeted Ads <span class="hot">Hot</span>
+                            </label>
+                        </div>
+                        <div class="info">
+                            We charge ₦10 <strong>per event page view</strong>, and you still get to determine how much you want to spend.<br>
+                            We'll help you design and successfully run your Ads through out our platform in a non-disturbing but very captivating way, making sure it reaches your specific target audience, they get to view your event page, and we'll ensure a <strong>conversion to attendee average rate of 80%</strong><br>
+
+                            <p>Click <a href="">here</a> to see some Eventsfleek Platform Targeted Ads were running right now...</p>
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <div class="ui checkbox">
+                            <input type="checkbox" id="add-seven">
+                            <label for="add-seven">
+                                Twitter Targeted Ads <span class="bonus">Bonus</span>
+                            </label>
+                        </div>
+                        <div class="info">
+                            You are being charged by Twitter, no extra cost from us.<br>
+                            We'll help you create, design and successfully run your Twitter Ads in a way that it will reach your specific target audience, they get to view your event page, and we'll ensure a <strong>conversion to attendee average rate of 70%</strong>.
+
+                            <p>Click <a href="">here</a> to see some Twitter Targeted Ads were running right now...</p>
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <div class="ui checkbox">
+                            <input type="checkbox" id="add-eight">
+                            <label for="add-eight">
+                                LinkedIn Targeted Ads <span class="bonus">Bonus</span>
+                            </label>
+                        </div>
+                        <div class="info">
+                            You are being charged by LinkedIn, no extra cost from us.<br>
+                            We'll help you create, design and successfully run your LinkedIn Ads in a way that it will reach your specific target audience, they get to view your event page, and we'll ensure a <strong>conversion to attendee average rate of 70%</strong>.
+
+                            <p>Click <a href="">here</a> to see some LinkedIn Targeted Ads were running right now...</p>
+                        </div>
+                    </div>
+
+                    <p class="submit"><button href="" class="submit-btn">I want to run the Selected Promotions</button></p>
+
+                </form>
+
+                <br>
 
             </div>
                 
@@ -360,7 +375,7 @@
 
             
         
-    
+
 
         <!--Dropdown-->
         <script>
@@ -374,47 +389,8 @@
             $(document).ready(function() {
                 var table = $('#example').DataTable( {
                     ordering: false,
-                    buttons: [ 'copy', 'excel', 'pdf', 'print' ]
                 } );
-
-                table.buttons().container()
-                    .appendTo( '#example_wrapper .col-md-6:eq(0)' );
             } );
-        </script>
-
-        <!--Froala Editor-->
-        <script>
-            $('#froala-editor').froalaEditor({
-                fileAllowedTypes:  ['application/pdf','application/msword']
-            });
-        </script>
-
-        <!--Semantics Date Picker Script-->
-        <script>
-            $('#pickdate').calendar({
-                type: 'date'
-            });
-        </script>
-
-        <!--Toggle-select-->
-        <script>
-            if($('#mySelect').val() == 'all') {
-              $('.date-toggle-div, .status-toggle-div').hide();
-            }
-
-            $('#mySelect').change(function() {
-              if($('#mySelect').val() == 'all') {
-                $('.date-toggle-div, .status-toggle-div').hide();
-              }
-              if($('#mySelect').val() == 'date') {
-                $('.status-toggle-div').hide();
-                $('.date-toggle-div').show();
-              }
-              if($('#mySelect').val() == 'status') {
-                $('.status-toggle-div').show();
-                $('.date-toggle-div').hide();
-              }
-            });
         </script>
 
         <!-- Side Navigation JS -->
@@ -437,13 +413,6 @@
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
         <script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
-        <script src="https://cdn.datatables.net/buttons/1.5.6/js/dataTables.buttons.min.js"></script>
-        <script src="https://cdn.datatables.net/buttons/1.5.6/js/buttons.bootstrap4.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
-        <script src="https://cdn.datatables.net/buttons/1.5.6/js/buttons.html5.min.js"></script>
-        <script src="https://cdn.datatables.net/buttons/1.5.6/js/buttons.print.min.js"></script>
 
     </body>
 

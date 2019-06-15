@@ -400,6 +400,7 @@ body {
     width: 25px;
     margin-right: 15px;
     margin-top: -4px;
+    cursor: pointer;
 }
 
 .row-one {

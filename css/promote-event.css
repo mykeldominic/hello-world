@@ -27,6 +27,7 @@ body {
     font-family: 'Lato', sans-serif;
     font-size: 1em;
     background: rgb(246, 247, 251, 0.4);
+    transition: .5s;
 }
 
 
@@ -386,157 +387,151 @@ body {
     font-size: 2em;
     letter-spacing: 0.02em;
     font-weight: bold;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
     color: #4B575C;
+}
+
+.alert {
+    width: 80%;
+    line-height: 25px;
+    letter-spacing: 0.03em;
+}
+
+.alert a {
+    text-decoration: underline;
 }
 
 .main-page-content .text{
     font-size: 1.15em;
-    margin-bottom: 60px;
-    width: 60%;
+    line-height: 28px;
+    margin-top: 35px;
 }
 
-.main-page-content .add-link{
-    padding: 9px;
-    margin-bottom: 20px;
-    background: #777;
-    border: 1px solid #777;
-    border-radius: 3px;
-    color: #fff;
-    cursor: pointer;
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 40px;
+    margin-top: 25px;
 }
 
-.main-page-content .add-link:hover{
+.cards .card {
+    text-align: center;
+    justify-content: center;
+    padding: 15px;
+    border: 1px solid rgb(133,88,192);
+    border-style: dashed;
+}
+
+.card .text {
+    padding: 0;
+    margin: 0;
+    font-size: 1.1em;
+    font-style: italic;
+}
+
+.card span {
+    font-size: 2.5em;
+    font-weight: bold;
+}
+
+.card h6 {
+    margin: 0;
+    margin-top: -2px;
+    padding: 0;
+    font-size: 1.1em;
+}
+
+.cards .card.last {
     background: none;
-    color: #777;
+    border: none;
+    font-size: 1.5em;
+    font-style: italic;
 }
 
-.table-responsive::-webkit-scrollbar {
-    height: 5px;
-    width: 5px;
+.card.last a {
+    color: rgb(133,88,192);
+    line-height: 26px;
 }
-
-.table-responsive .table{
-    background: #fff;
-    border-radius: 0 0 5px 5px;
-    box-shadow: 0px 2px 7px rgba(79, 79, 79, 0.07);
-}
-
-.table-responsive .table thead tr{
-    background: #e1e1e1;
-}
-
-.table-responsive .table thead tr th{
-    padding-top: 8px;
-    padding-bottom: 8px;
-    font-weight: bold;
-}
-
-.table-responsive .table tbody tr:nth-child(even){
-    background: #f9f9f9;
-}
-
-.table-responsive .table tbody tr td{
-    padding-top: 17px;
-    padding-bottom: 5px;
-}
-
-.table-responsive .table tbody tr td input {
-    font-size: 1.1em;
-}
-
-.table-responsive .table tbody tr td input.name-field{
-    width: 90%;
-    border: 1px solid #999;
-    border-radius: 3px;
-    padding: 8px 10px;
-    font-weight: 500;
-    color: #000;
-}
-
-.table-responsive .table tbody tr td .input-group {
-    width: 90%;
-}
-
-.table-responsive .table tbody tr td .fig{
-    padding: 6px 0px;
-    font-size: 1.1em;
-    font-weight: 600;
-}
-
-.table-responsive .table tbody tr td i{
-    color: red;
-    font-size: 1.2em;
-    margin-top: 6px;
-    margin-left: 8px;
-    cursor: pointer;
-}
-
-
-/**Modal**/
-
-.modal .modal-header {
-    background: #F9FBF8;
-}
-
-.modal .modal-header h5 {
-    color: #262626;
-    font-weight: bold;
-    font-size: 1.05em;
-    letter-spacing: 0.03em;
-}
-
-.modal .modal-body {
-    padding: 25px 20px;
-    padding-bottom: 20px;
-    color: #000;
-    font-size: 1em;
-    letter-spacing: 0.01em;
-}
-
-.modal .modal-body input:focus {
-    border: none !important;
-    border-bottom: 0.5px solid rgb(133,88,192) !important;
-}
-
-.modal .modal-footer {
-    border-top: none !important;
-}
-
-.modal .modal-footer .cancel-btn {
+.card.last a:hover {
     color: rgb(133,88,192);
     font-weight: bold;
-    font-size: 1.05em;
-    background: none;
-    border: none;
+    text-decoration: underline;
 }
 
-.modal .modal-footer .remove-btn {
-    color: #fff;
+.form{
+    margin-top: 50px;
+}
+
+.ui.form .field{
+    margin-bottom: 50px;
+}
+
+.field .checkbox {
+    font-size: 1.3em;
     font-weight: bold;
-    font-size: 1em;
-    letter-spacing: 0.02em;
-    padding: 10px 40px;
-    background: rgb(133,88,192);
-    border: none;
-    margin-left: 20px;
 }
 
-
-
-.main-page-content .save-btn{
-    padding: 10px 35px;
-    margin-top: 0px;
-    background: #333;
-    border: 1px solid #333;
+.field .checkbox label span {
+    font-size: 0.7em;
+    margin-left: 5px;
+    padding: 2px 6px;
+    letter-spacing: 0.06em;
     border-radius: 3px;
-    color: #fff;
+    background: #fff;
+}
+
+.field .checkbox label span.bonus {
+    color: green;
+}
+.field .checkbox label span.hot {
+    color: orangered;
+}
+
+.field .info {
+    font-size: 1.1em;
+    line-height: 30px;
+    margin-top: 8px;
+    padding-left: 35px;
+}
+
+.field .info p {
+    padding: 10px 15px;
+    margin: 0 auto;
+    margin-top: 15px;
+    background-color: rgba(255, 255, 255, 0.6);
+    background-blend-mode: lighten;
+    font-style: italic;
+    text-align: center;
+    width: fit-content;
+}
+
+.field .info p a {
+    text-decoration: underline;
+}
+
+.submit {
+    margin-top: 80px !important;
+    text-align: center;
+}
+
+.submit-btn {
+    font-family: 'Lato', sans-serif;
+    padding: 18px 40px;
+    color: #FFF;
+    font-size: 1.2em;
+    font-weight: bold;
+    background: #9A6BF2;
+    border: none;
+    box-shadow: 0px 5px 7px rgba(79, 79, 79, 0.2);
+    border-radius: 3px;
     cursor: pointer;
 }
-
-.main-page-content .save-btn:hover{
-    background: #777;
+.submit-btn:hover {
+    opacity: .9;
+    color: #fff;
+    text-decoration: none;
 }
+
 
 /*Main Page Ends Here*/
 
@@ -553,18 +548,20 @@ body {
 }
 
 @media screen and (max-width: 1100px){
-    .table{
-        width: 815px;
+    .alert {
+        width: 100%;
     }
 }
 
-@media screen and (max-width: 1030px){
-    .main-page-content .text{
-        width: 90%;
+@media screen and (max-width: 1000px){
+    .cards {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 20px;
     }
 
-    .main-page-content .save-btn{
-        margin-top: 10px;
+    .cards .card.hide {
+        display: none;
     }
 }
 
@@ -686,7 +683,6 @@ body {
     .navbar .mr-right li{
         margin-top: -43px;
     }
-
 }
 
 @media screen and (max-width: 399px){

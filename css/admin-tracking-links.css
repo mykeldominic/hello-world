@@ -364,9 +364,7 @@ body {
 }
 
 .table-responsive .table tbody tr td input {
-    font-size: 1em;
-    font-family: 'Lato', sans-serif;
-    letter-spacing: 0.02em;
+    font-size: 1.1em;
 }
 
 .table-responsive .table tbody tr td input.name-field{
@@ -376,6 +374,16 @@ body {
     padding: 8px 10px;
     font-weight: 500;
     color: #000;
+}
+
+.table-responsive .table tbody tr td .input-group {
+    width: 90%;
+}
+
+.table-responsive .table tbody tr td .fig{
+    padding: 6px 0px;
+    font-size: 1.1em;
+    font-weight: 600;
 }
 
 .table-responsive .table tbody tr td i{
@@ -474,6 +482,12 @@ body {
     .main-page-content{
         margin: 20px;
         width: 1500px;
+    }
+}
+
+@media screen and (max-width: 1100px){
+    .table{
+        width: 815px;
     }
 }
 
@@ -586,10 +600,6 @@ body {
 
     .navbar .mr-right li{
         margin-top: -43px;
-    }
-
-    .table {
-        width: 740px;
     }
 }
 
