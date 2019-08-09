@@ -222,6 +222,10 @@ body {
     color: #9A6BF2 !important;
 }
 
+.open-nav{
+    display: none;
+}
+
 
 /*Main Page Starts Here*/
 
@@ -589,6 +593,14 @@ footer .footer-nav .right-navs .right-nav-link-end{
         margin-left: 0px;
         margin-top: 20px;
         width: 50%;
+    }
+
+    .open-nav{
+        display: block;
+        position: relative;
+        width: 30px;
+        margin-left: 10px;
+        transform: rotate(180deg);
     }
 
     .main .main-page-content{

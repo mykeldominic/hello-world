@@ -229,6 +229,10 @@ body {
     color: #9A6BF2 !important;
 }
 
+.open-nav{
+    display: none;
+}
+
 
 /* Main Page Starts Here */
 
@@ -1068,6 +1072,23 @@ body {
 
 /**Right Segment Ends Here**/
 
+.float-ticket {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin-right: 5px;
+    margin-bottom: 15px;
+    font-size: 1.5em;
+    padding: 10px 13px;
+    color: #fff;
+    background: #9A6BF2;
+    border-radius: 100%;
+    opacity: 0.6;
+    border-radius: 100%;
+    z-index: 10000;
+    display: none;
+}
+
 
 .other-events-block{
     margin-top: 100px;
@@ -1501,6 +1522,14 @@ footer .footer-nav .right-navs .right-nav-link-end{
         width: 50%;
     }
 
+    .open-nav{
+        display: block;
+        position: relative;
+        width: 30px;
+        margin-left: 10px;
+        transform: rotate(180deg);
+    }
+
     .main{
         margin-top: 30px;
     }
@@ -1583,6 +1612,10 @@ footer .footer-nav .right-navs .right-nav-link-end{
     }
 
     .segment .tags-row{
+        display: block;
+    }
+
+    .float-ticket {
         display: block;
     }
 }

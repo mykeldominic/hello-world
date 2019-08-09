@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>EventsFleek | Admin Add-ons</title>
+        <title>EventsFleek | Admin Sales Competitions</title>
         <link rel="icon" href="favicon.ico" />
         
         <!-- Bootstrap CSS CDN -->
@@ -26,7 +26,7 @@
         <link href="https://fonts.googleapis.com/css?family=Lato:400,700,900" rel="stylesheet">
 
         <!-- Our Custom CSS -->
-        <link rel="stylesheet" href="css/admin-add-ons.css"/>
+        <link rel="stylesheet" href="css/admin-sales-competitions.css"/>
         
         <!-- JS -->
         <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
@@ -96,21 +96,21 @@
                 </div>
 
                 <div class="sidenav-link">
-                    <button class="collapsed btn btn-link link chevron" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    <button class="collapsed btn btn-link link chevron active" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                         <img src="images/promote-side-img.png">Promote
                     </button>
 
-                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                    <div id="collapseThree" class="collapse show" aria-labelledby="headingThree" data-parent="#accordion">
                         <div class="card-body">
                             <p class="card-body-link"><a href="admin-email-campaigns.html">Email Campaigns</a></p>
-                            <p class="card-body-link"><a href="admin-sales-competitions.html">Sales Competitions</a></p>
+                            <p class="card-body-link"><a href="admin-sales-competitions.html" class="active">Sales Competitions</a></p>
                             <p><a href="admin-tracking-links.html">Tracking Links</a></p>
                         </div>
                     </div>
                 </div>
 
                 <div class="sidenav-link">
-                    <a href="admin-add-ons.html"><p class="link active"><img src="images/add-ons-side-img.png">Add-ons</p></a>
+                    <a href="admin-add-ons.html"><p class="link"><img src="images/add-ons-side-img.png">Add-ons</p></a>
                 </div>
 
                 <div class="sidenav-link">
@@ -136,187 +136,109 @@
             
             <div class="main-page-content">
 
-                <p class="orders-text">Add-ons</p>
+                <p class="orders-text">Sales Competitions</p>
                 
                 <nav>
                     <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                        <a class="nav-item nav-link active" id="nav-edit-tab" data-toggle="tab" href="#nav-first" role="tab" aria-controls="nav-edit" aria-selected="true">Add-ons</a>
-                        <a class="nav-item nav-link" id="nav-page-builder-tab" data-toggle="tab" href="#nav-second" role="tab" aria-controls="nav-page-builder" aria-selected="false">Orders</a>
+                        <a class="nav-item nav-link active" id="nav-edit-tab" data-toggle="tab" href="#nav-first" role="tab" aria-controls="nav-edit" aria-selected="true">Competitions</a>
+                        <a class="nav-item nav-link" id="nav-page-builder-tab" data-toggle="tab" href="#nav-second" role="tab" aria-controls="nav-page-builder" aria-selected="false">Track</a>
                     </div>
                 </nav>
                 <div class="tab-content" id="nav-tabContent">
                     <div class="tab-pane fade show active" id="nav-first" role="tabpanel" aria-labelledby="nav-edit-tab">
 
-                        <p class="info-text">This is where you will see all add-ons added by Event organizers.</p>
+                        <p class="info-text">Here is a list of all sales competitions.</p>
 
                         <div class="table-responsive">
                             <table id="example" class="table table-borderless add-on-table">
                                 <thead>
                                     <tr>
                                         <th>Event Name</th>
-                                        <th>Add-on Name</th>
-                                        <th>Options</th>
-                                        <th>Price(₦)</th>
-                                        <th>Quantity</th>
-                                        <th>Available</th>
-                                        <th>Status</th>
-                                        <th></th>
+                                        <th>Competition Name</th>
+                                        <th>Option Name</th>
+                                        <th>Option Value</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <th>Techpoint Build 201...</th>
-                                        <td>Techpoint T-Shirt</td>
+                                        <th>Techpoint Build 2019</th>
+                                        <td>Techpoint Sales Competition</td>
                                         <td>
-                                            <p>Large</p>
-                                            <p>Extra Large</p>
+                                            <p>Winner</p>
+                                            <p>First Runner Up</p>
+                                            <p>Second Runner Up</p>
                                         </td>
                                         <td>
-                                            <p>1,500</p>
-                                            <p>1,110</p>
+                                            <p>N20,000</p>
+                                            <p>Premier Ticket Lion King</p>
+                                            <p>50% Burnaboy Concert Event</p>
                                         </td>
-                                        <td>
-                                            <p>300</p>
-                                            <p>210</p>
-                                        </td>
-                                        <td>
-                                            <p>210</p>
-                                            <p>103</p>
-                                        </td>
-                                        <td><span class="status active">Active</span></td>
-                                        <td><a class="deactivate-btn" data-toggle="modal" data-target="#exampleModalCenterDeactivate">Deactivate</a></td>
                                     </tr>
                                     <tr>
-                                        <th>CCHUB Conference 20...</th>
-                                        <td>Breakfast</td>
+                                        <th>VIP Settlement Fest</th>
+                                        <td>Settlement Fest Competition</td>
                                         <td>
-                                            <p>Tea & Bread</p>
-                                            <p>Toast Doughnut</p>
+                                            <p>First</p>
+                                            <p>Second</p>
                                         </td>
                                         <td>
-                                            <p>1,500</p>
-                                            <p>1,110</p>
+                                            <p>N140,000</p>
+                                            <p>Business Class Ticket To China</p>
                                         </td>
-                                        <td>
-                                            <p>300</p>
-                                            <p>210</p>
-                                        </td>
-                                        <td>
-                                            <p>210</p>
-                                            <p>103</p>
-                                        </td>
-                                        <td><span class="status inactive">Inactive</span></td>
-                                        <td><a class="deactivate-btn" data-toggle="modal" data-target="#exampleModalCenterDeactivate">Deactivate</a></td>
-                                    </tr>
-                                    <tr>
-                                        <th>CCHUB Conference 20...</th>
-                                        <td>Breakfast</td>
-                                        <td>
-                                            <p>Tea & Bread</p>
-                                            <p>Toast Doughnut</p>
-                                        </td>
-                                        <td>
-                                            <p>1,500</p>
-                                            <p>1,110</p>
-                                        </td>
-                                        <td>
-                                            <p>300</p>
-                                            <p>210</p>
-                                        </td>
-                                        <td>
-                                            <p>210</p>
-                                            <p>103</p>
-                                        </td>
-                                        <td><span class="status deactivated">Deactivated</span></td>
-                                        <td><a class="reactivate-btn">Reactivate</a></td>
                                     </tr>
                                 </tbody>
                             </table>
                         </div>
 
-                        <!-- Deactivate Modal -->
-                        <div class="modal fade question new-user" id="exampleModalCenterDeactivate" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" data-backdrop="static" data-keyboard="false">
-                            <div class="modal-dialog modal-dialog-centered" role="document">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <span>Deactivate Add-on</span>
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                            <span aria-hidden="true">&times;</span>
-                                        </button>
-                                    </div>
-                                    <div class="modal-body">
-                                        <form class="ui form">
-                                            <div class="field">
-                                                <p class="text">Are you sure you want to deactivate this add-on?</p>
-                                            </div>
-                                            <div class="field last">
-                                                <label>Reason</label>
-                                                <textarea rows="2" placeholder="Enter reason here" required></textarea>
-                                            </div>
-                                        </form>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary cancel-btn" data-dismiss="modal">CANCEL</button>
-                                        <button type="button" class="btn btn-primary create-btn" data-dismiss="modal" data-toggle="modal" data-target="#exampleModalSuccess2">DEACTIVATE</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="modal fade success" id="exampleModalSuccess2" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                            <div class="modal-dialog modal-dialog-centered" role="document">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                            <span aria-hidden="true">&times;</span>
-                                        </button>
-                                    </div>
-                                    <div class="modal-body">
-                                        <img src="images/check-gre-img.png">
-                                        <p>Add-on deactivated successfully.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
                     </div>
                     <div class="tab-pane fade" id="nav-second" role="tabpanel" aria-labelledby="nav-page-builder-tab">
 
-                        <p class="info-text">This is where you'll see purchases of Add-ons.</p>
+                        <p class="info-text">Here is a list of all invites sent by attendees according to the most revenue.</p>
 
                         <div class="table-responsive">
-                            <table id="example2" class="table table-borderless order-table">
+                            <table class="table table-borderless track-table">
                                 <thead>
                                     <tr>
                                         <th>Event Name</th>
-                                        <th>Add-on Name</th>
-                                        <th>Option</th>
-                                        <th>Buyer</th>
-                                        <th>Email</th>
-                                        <th>Phone</th>
+                                        <th>Attendee Name</th>
+                                        <th>Total Invites</th>
+                                        <th>Page Views</th>
+                                        <th>Tickets Sold</th>
+                                        <th>Revenue (₦)</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <th>Techpoint Build 201...</th>
-                                        <td>Techpoint T-Shirt</td>
-                                        <td>
-                                            <p>Large - <span>1</span></p>
-                                            <p>Extra Large - <span>3</span></p>
-                                        </td>
-                                        <td>Adeyinka Junior</td>
-                                        <td>junior.adeyinka@gmail.com</td>
-                                        <td>09065582156</td>
+                                        <th>Techpoint Build 2019</th>
+                                        <td>Azonobi Chukwuemeka</td>
+                                        <td>10</td>
+                                        <td>8</td>
+                                        <td>5</td>
+                                        <td>80,000</td>
                                     </tr>
                                     <tr>
-                                        <th>Davido Concert Tour...</th>
-                                        <td>Davido Polo</td>
-                                        <td>
-                                            <p>Large - <span>2</span></p>
-                                        </td>
-                                        <td>Adeyinka Junior</td>
-                                        <td>junior.adeyinka@gmail.com</td>
-                                        <td>09065582156</td>
+                                        <th>VIP Settlement Fest</th>
+                                        <td>Justin Nwaeze</td>
+                                        <td>10</td>
+                                        <td>8</td>
+                                        <td>5</td>
+                                        <td>80,000</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Techpoint Build 2019</th>
+                                        <td>Gbenga Adeyinka</td>
+                                        <td>10</td>
+                                        <td>8</td>
+                                        <td>5</td>
+                                        <td>80,000</td>
+                                    </tr>
+                                    <tr>
+                                        <th>VIP Settlement Fest</th>
+                                        <td>Solomon Peters</td>
+                                        <td>10</td>
+                                        <td>8</td>
+                                        <td>5</td>
+                                        <td>80,000</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -344,16 +266,45 @@
                 table.buttons().container()
                     .appendTo( '#example_wrapper .col-md-6:eq(0)' );
             } );
+        </script>
 
-            $(document).ready(function() {
-                var table = $('#example2').DataTable( {
-                    ordering: false,
-                    buttons: [ 'copy', 'excel', 'pdf', 'print' ]
-                } );
+        <!--Froala Editor-->
+        <script>
+            $('#froala-editor').froalaEditor({
+                fileAllowedTypes:  ['application/pdf','application/msword']
+            });
+        </script>
 
-                table.buttons().container()
-                    .appendTo( '#example2_wrapper .col-md-6:eq(0)' );
-            } );
+        <!--Semantics Date Picker Script-->
+        <script>
+            $('#pickdate').calendar({
+                type: 'date'
+            });
+        </script>
+
+        <!--Toggle-select-->
+        <script>
+            if($('#mySelect').val() == 'all') {
+              $('.category-toggle-div, .interests-toggle-div, .status-toggle-div').hide();
+            }
+
+            $('#mySelect').change(function() {
+              if($('#mySelect').val() == 'all') {
+                $('.category-toggle-div, .interests-toggle-div, .status-toggle-div').hide();
+              }
+              if($('#mySelect').val() == 'category') {
+                $('.interests-toggle-div, .status-toggle-div').hide();
+                $('.category-toggle-div').show();
+              }
+              if($('#mySelect').val() == 'interests') {
+                $('.interests-toggle-div').show();
+                $('.category-toggle-div, .status-toggle-div').hide();
+              }
+              if($('#mySelect').val() == 'status') {
+                $('.status-toggle-div').show();
+                $('.category-toggle-div, .interests-toggle-div').hide();
+              }
+            });
         </script>
 
         <!-- Side Navigation JS -->

@@ -34,7 +34,7 @@ select:focus {
 }
 
 input:focus, textarea:focus {
-    border: 0.5px solid #9A6BF2 !important;
+    border: 0.5px solid rgb(133,88,192) !important;
 }
 
 body {
@@ -236,65 +236,96 @@ body {
 }
 
 .main-page-content{
-    padding: 70px 50px;
-    padding-bottom: 0;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-column-gap: 50px;
-    grid-row-gap: 20px;
+    padding: 0px;
 }
 
-.main-page-content .contact h2{
+.main-page-content p{
+    font-size: 1.2em;
+    letter-spacing: 0.02em;
+    margin-bottom: 25px;
+    color: #2F2F2F;
+}
+
+.sub-nav {
+    background: #7f60bc;
+    color: #eee !important;
+    padding: 5px 50px;
+    margin: 0 !important;
+    text-align: center;
+}
+.sub-nav span {
+    color: #FFF !important;
+    font-weight: bold;
+}
+
+.section {
+    padding: 40px 50px;
+    margin: 0;
+}
+
+.section-1 {
+    font-size: 2.4em;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+    background: url(../images/slider-3-450x600.jpg) no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.section-b {
+    font-size: 2.0em;
+}
+
+.section-1 span {
+    font-size: 0.65em;
+}
+
+.video-player {
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    background: #ccc;
+    height: 450px;
+    border-radius: 5px;
+}
+
+h1 {
+    font-size: 2.7em;
+    font-weight: bold;
+    text-align: center;
+    color: #7f60bc;
+}
+.section h2 {
     font-size: 2.5em;
     font-weight: bold;
+    text-align: center;
 }
-
-.contact hr {
-    margin-top: 40px;
-    margin-bottom: 40px;
-}
-
-.contact a {
-    color: #9A6BF2;
-}
-
-.form-group .groups {
-    display: grid;
-    grid-template-columns: 1fr;
-    margin-bottom: 15px;
-}
-
-.groups label {
-    font-size: 0.9em;
-}
-
-.groups input, .groups textarea {
-    font-family: 'Lato', sans-serif;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-}
-
-.groups textarea {
-    padding: 10px;
-}
-
-.save-btn {
-    margin-top: 20px;
-    padding: 13px 40px;
-    font-family: 'Lato', sans-serif;
-    font-size: 1em;
+h3 {
+    font-size: 1.7em;
     font-weight: bold;
-    letter-spacing: 0.03em;
-    text-transform: capitalize;
-    color: #fff;
-    background: #9A6BF2;
-    border: none;
-    border-radius: 3px;
-    cursor: pointer;
+    text-align: center;
 }
 
-.save-btn:hover {
-    opacity: .9;
+.section-3 {
+    width: 75%;
+    margin: 0 auto;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 5px;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.tip {
+    font-size: 1em !important;
+    color: #777 !important;
+    text-align: center;
+    font-style: italic;
+    margin: 0;
+    margin-top: -40px;
+    margin-bottom: 30px !important;
 }
 
 
@@ -449,6 +480,17 @@ footer .footer-nav .right-navs .right-nav-link-end{
     }
 }
 
+@media screen and (max-width: 1120px){
+    .form-row .form-group {
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 15px;
+    }
+
+    .form-group .none {
+        display: none;
+    }
+}
+
 @media screen and (max-width: 1050px){
     .navbar{
         padding: 7px 40px;
@@ -529,6 +571,10 @@ footer .footer-nav .right-navs .right-nav-link-end{
         padding-right: 20px;
     }
 
+    .deactivate-div {
+        width: 90%;
+    }
+
     footer{
         padding-left: 20px;
         padding-right: 20px;
@@ -541,21 +587,6 @@ footer .footer-nav .right-navs .right-nav-link-end{
 }
 
 @media screen and (max-width: 700px){
-    .main-page-content{
-        grid-template-columns: 1fr;
-        grid-gap: 40px;
-    }
-
-    .main-page-content .contact h2{
-        font-size: 2em;
-        font-weight: bold;
-    }
-
-    .contact hr {
-        margin-top: 20px;
-        margin-bottom: 20px;
-    }
-
     footer .footer-nav .footer-link-remove{
         display: none;
     }
@@ -574,6 +605,11 @@ footer .footer-nav .right-navs .right-nav-link-end{
     form .form-box {
         grid-template-columns: repeat(1, 1fr);
         grid-gap: 30px;
+    }
+
+    .form-box .form-row.social {
+        grid-row: 2;
+        margin-bottom: 25px;
     }
 
     footer{
@@ -602,6 +638,10 @@ footer .footer-nav .right-navs .right-nav-link-end{
     .main-page-content{
         padding: 30px 10px;
         padding-bottom: 50px;
+    }
+
+    .deactivate-div {
+        width: 95%;
     }
 
     footer{

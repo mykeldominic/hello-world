@@ -82,7 +82,7 @@ body {
 .navbar .mr-right{
     margin-right: 0px;
     margin-top: -5px;
-    margin-bottom: 3px;
+    margin-bottom: 5px;
 }
 
 .navbar-expand-lg .navbar-nav .nav-link {
@@ -91,8 +91,8 @@ body {
 }
 
 .navbar .mr-right li{
-    margin-right: 10px;
-    margin-left: 10px;
+    margin-right: 12px;
+    margin-left: 12px;
     margin-top: 15px;
 }
 
@@ -177,6 +177,10 @@ body {
 .nav-item.dropdown .dropdown-menu .dropdown-item:focus {
     background: #fff !important;
     color: #9A6BF2 !important;
+}
+
+.open-nav{
+    display: none;
 }
 
 
@@ -556,7 +560,20 @@ body {
 }
 
 
-
+.float-button {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin-right: 10px;
+    margin-bottom: 15px;
+    font-size: 1.5em;
+    padding: 10px 13px;
+    color: #fff;
+    background: #9A6BF2;
+    border-radius: 100%;
+    opacity: 0.6;
+    z-index: 10000;
+}
 
 
 /* Footer Starts Here */
@@ -795,6 +812,14 @@ footer .footer-nav .right-navs .right-nav-link-end{
 @media screen and (max-width: 991px){
     .navbar{
         padding: 7px 30px;
+    }
+
+    .open-nav{
+        display: block;
+        position: relative;
+        width: 30px;
+        margin-left: 10px;
+        transform: rotate(180deg);
     }
 
     .left .text-div {
