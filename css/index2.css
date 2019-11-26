@@ -1,3 +1,7 @@
+html{
+    scroll-behavior: smooth;
+}
+
 *{
     box-sizing: border-box;
 }
@@ -201,6 +205,7 @@ body {
 .hero-section .left {
     position: relative;
     width: 100%;
+    z-index: 1;
 }
 
 .left .text-div {
@@ -285,7 +290,7 @@ body {
 
 .hero-section .right {
     width: 100%;
-    z-index: -1 !important;
+    /* z-index: -1 !important; */
 }
 
 .right .hero-image {
@@ -293,6 +298,22 @@ body {
     height: 450px;
     object-fit: cover;
     object-position: center center;
+}
+
+.right .hero-image-btn {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    padding: 10px 20px;
+    color: #fff;
+    font-size: 0.9em;
+    background: linear-gradient(115.29deg, #9A6BF2 22.36%, #E173E9 90.45%);
+    border-radius: 5px;
+    opacity: 0.8;
+}
+.right .hero-image-btn:hover {
+    text-decoration: none;
+    opacity: 1;
 }
 
 .main .section{
@@ -811,7 +832,14 @@ footer .footer-nav .right-navs .right-nav-link-end{
 
 @media screen and (max-width: 991px){
     .navbar{
+        position: fixed;
         padding: 7px 30px;
+        z-index: 1000;
+    }
+
+    .navbar .mr-right {
+        margin-top: 5px;
+        margin-bottom: 20px;
     }
 
     .open-nav{
@@ -820,10 +848,20 @@ footer .footer-nav .right-navs .right-nav-link-end{
         width: 30px;
         margin-left: 10px;
         transform: rotate(180deg);
+        opacity: 0.4;
+    }
+
+    .main .hero-section {
+        padding-top: 50px;
     }
 
     .left .text-div {
         padding-left: 30px;
+    }
+
+    .text-div h1 {
+        font-size: 2.5em;
+        padding-right: 30px;
     }
 
     .main .section{
@@ -859,6 +897,7 @@ footer .footer-nav .right-navs .right-nav-link-end{
     .left .text-div {
         position: relative;
         margin-top: 80px;
+        color: #FFFFFF;
     }
 
     .text-div .sub-text {
@@ -881,11 +920,16 @@ footer .footer-nav .right-navs .right-nav-link-end{
         right: 0;
         width: 100%;
         z-index: -1 !important;
+        background: #000;
     }
 
     .right .hero-image {
         height: 400px;
         opacity: .5;
+    }
+
+    .right .hero-image-btn {
+        display: none;
     }
 
     .section .section-host {
@@ -903,17 +947,16 @@ footer .footer-nav .right-navs .right-nav-link-end{
 
 @media screen and (max-width: 767px){
     .navbar{
+        position: fixed;
         padding: 7px 20px;
-        z-index: 7;
     }
 
-    .navbar .mr-right{
-        margin-top: 5px;
-        margin-bottom: -15px;
+    .navbar .mr-right {
+        margin-bottom: 15px;
     }
 
     .navbar .mr-right li{
-        margin-bottom: 10px;
+        margin-bottom: 5px;
     }
 
     .left .text-div {
@@ -986,7 +1029,6 @@ footer .footer-nav .right-navs .right-nav-link-end{
 
 @media screen and (max-width: 550px){
     .text-div h1 {
-        font-size: 2.5em;
         padding-right: 10px;
     }
 
